@@ -421,7 +421,7 @@
                                         "class": "",
                                         "id": ""
                                     },
-                                    "return_format": "array",
+                                    "return_format": "url",
                                     "preview_size": "medium",
                                     "library": "all",
                                     "min_width": "",
@@ -440,7 +440,7 @@
                 },
                 "layout_text_image": {
                     "key": "layout_text_image",
-                    "name": "text_image",
+                    "name": "referent",
                     "label": "Référent",
                     "display": "block",
                     "sub_fields": [
@@ -665,5 +665,5 @@
     ],
     "active": true,
     "description": "",
-    "modified": 1615384128
+    "modified": 1615393432
 }
