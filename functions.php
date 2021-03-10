@@ -28,3 +28,4 @@ if ( ! function_exists( 'suffice_child_enqueue_child_styles' ) ) {
 add_action( 'wp_enqueue_scripts', 'WHS_enqueue_child_styles' );
 
 /*Écrivez ici vos propres fonctions */
+require('functions/functions-sections.php');
