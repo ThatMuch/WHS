@@ -50,8 +50,6 @@ function whs_sections() {
       if (get_row_layout() == 'text_image') : whs_section_text_img(); endif;
       if (get_row_layout() == 'text') : whs_section_text(); endif;
       if (get_row_layout() == 'store') : whs_section_method(); endif;
-      if (get_row_layout() == 'programme') : whs_section_program(); endif;
-      if (get_row_layout() == 'referent') : whs_section_referent(); endif;
     endwhile;
   endif;
   return ob_get_flush();
@@ -73,28 +71,28 @@ function whs_section_text() {
 }
 /* TEXT + IMAGE
 /––––––––––––––––––––––––*/
-/* function whs_section_text_img() {
+function whs_section_text_img() {
   ob_start('sanitize_output');
     include (get_template_directory().'/templates/section-text-image.php');
   return ob_get_flush();
 }
- */
+
 /* LINK
 /––––––––––––––––––––––––*/
-/* function whs_section_link() {
+function whs_section_link() {
   ob_start('sanitize_output');
     include (get_template_directory().'/templates/section-link.php');
   return ob_get_flush();
 }
- */
+
 /* SERVICES
 /––––––––––––––––––––––––*/
-/* function whs_section_services() {
+function whs_section_services() {
   ob_start('sanitize_output');
     include (get_template_directory().'/templates/section-services.php');
   return ob_get_flush();
 }
- */
+
 /* TEAM
 /––––––––––––––––––––––––*/
 function whs_section_team() {
@@ -105,11 +103,11 @@ function whs_section_team() {
 
 /* PORTFOLIO
 /––––––––––––––––––––––––*/
-/* function whs_section_portfolio() {
+function whs_section_portfolio() {
   ob_start('sanitize_output');
     include (get_template_directory().'/templates/section-portfolio.php');
   return ob_get_flush();
-} */
+}
 
 /* TESTIMONIALS
 /––––––––––––––––––––––––*/
@@ -121,35 +119,35 @@ function whs_section_testimonials() {
 
 /* PRICE
 /––––––––––––––––––––––––*/
-/* function whs_section_price() {
+function whs_section_price() {
   ob_start('sanitize_output');
     include (get_template_directory().'/templates/section-price.php');
   return ob_get_flush();
-} */
+}
 
 /* LOGOS
 /––––––––––––––––––––––––*/
-/* function whs_section_logos() {
+function whs_section_logos() {
   ob_start('sanitize_output');
     include (get_template_directory().'/templates/section-logos.php');
   return ob_get_flush();
-} */
+}
 
 /* CAROUSEL
 /––––––––––––––––––––––––*/
-/* function whs_section_carousel() {
+function whs_section_carousel() {
   ob_start('sanitize_output');
     include (get_template_directory().'/templates/section-carousel.php');
   return ob_get_flush();
-} */
+}
 
 /* GALLERY
 /––––––––––––––––––––––––*/
-/* function whs_section_gallery() {
+function whs_section_gallery() {
   ob_start('sanitize_output');
     include (get_template_directory().'/templates/section-gallery.php');
   return ob_get_flush();
-} */
+}
 
 /* CONTACT
 /––––––––––––––––––––––––*/
@@ -161,11 +159,11 @@ function whs_section_contact() {
 
 /* STATS
 /––––––––––––––––––––––––*/
-/* function whs_section_stats() {
+function whs_section_stats() {
   ob_start('sanitize_output');
     include (get_template_directory().'/templates/section-stats.php');
   return ob_get_flush();
-} */
+}
 
 /* FAQ
 /––––––––––––––––––––––––*/
@@ -183,30 +181,16 @@ function whs_section_header() {
 }
 /* Articles
 /––––––––––––––––––––––––*/
-/* function whs_section_articles() {
+function whs_section_articles() {
   ob_start('sanitize_output');
     include (get_template_directory().'/templates/section-articles.php');
   return ob_get_flush();
-} */
+}
 /* Méthode
 /––––––––––––––––––––––––*/
 function whs_section_method() {
   ob_start('sanitize_output');
     include (get_theme_file_path().'/templates/section-method.php');
-  return ob_get_flush();
-}
-/* Programme
-/––––––––––––––––––––––––*/
-function whs_section_program() {
-  ob_start('sanitize_output');
-    include (get_theme_file_path().'/templates/section-program.php');
-  return ob_get_flush();
-}
-/* Référent
-/––––––––––––––––––––––––*/
-function whs_section_referent() {
-  ob_start('sanitize_output');
-    include (get_theme_file_path().'/templates/section-referent.php');
   return ob_get_flush();
 }
 
