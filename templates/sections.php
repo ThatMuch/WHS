@@ -26,6 +26,7 @@
   </div>
   <div class="sections">
     <?php whs_sections() ?>
+
   </div>
   <?php endwhile; endif ?>
 

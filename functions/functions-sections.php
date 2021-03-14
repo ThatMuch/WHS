@@ -33,6 +33,7 @@ function whs_sections() {
   ob_start('sanitize_output');
   if (have_rows('sections')):
     while (have_rows('sections')): the_row();
+
      // if (get_row_layout() == 'articles') : whs_section_articles(); endif;
      // if (get_row_layout() == 'carousel') : whs_section_carousel(); endif;
       if (get_row_layout() == 'contact') : whs_section_contact(); endif;
@@ -207,6 +208,7 @@ function whs_section_program() {
 function whs_section_referent() {
   ob_start('sanitize_output');
     include (get_theme_file_path().'/templates/section-referent.php');
+
   return ob_get_flush();
 }
 
