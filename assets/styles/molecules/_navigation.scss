@@ -10,123 +10,239 @@
 ==================================================================================*/
 .admin-bar {
     .navbar {
-        top: 32px;
+        top: inherit;
     }
 }
 
-nav.navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 200;
-    width: 100vw;
-    height: $size-navbar;
-    background-color: $color-primary;
-
-    .logo  {
-        width: 12rem;
-        height: calc(#{$size-navbar} - 20px);
-        background-repeat: no-repeat;
-        background-size: contain !important;
-    }
-
-    .navbar-collapse.show {
-        background-color: $color-primary;
-        width: 100%;
-        position: absolute;
+.main-menu {
+    @include breakpoint(both) {
+        position: fixed;
+        top: 98px;
+        background: $color_11;
         left: 0;
-        top: 70px;
-        padding: 15px;
-
-        a {
-            color: #fff !important;
-        }
+        right: 0;
     }
 
-    .nav-link {
-        font-family: $text-ff;
-        text-transform: uppercase;
-        font-weight: 700;
-        font-size: 13px;
-        color: #fff !important;
 
-        &:hover {
-            color: $color-secondary !important;
+    .navbar-nav {
+        margin-left: auto;
 
-            &::after {
-                content: '';
-                width: calc(100% - 25px);
-                position: absolute;
-                left: 50%;
-                bottom: 2px;
-                transform: translate(-50%, 0);
-                border-width: 0 0 1px;
-                border-style: solid;
-                border-color: $color-secondary;
-            }
-        }
-
-        @include breakpoint(laptop) {
-            &.active {
-                position: relative;
-
-                &::after {
-                    content: '';
-                    width: calc(100% - 25px);
-                    position: absolute;
-                    left: 50%;
-                    bottom: 2px;
-                    transform: translate(-50%, 0);
-                    border-width: 0 0 1px;
-                    border-style: solid;
-                    border-color: #fff;
-                }
-
-                &:hover:after {
-                    border-color: $color-secondary;
-                }
-            }
-        }
-    }
-
-    .header__rs {
-        .footer__rs__item {
-            margin-right: 1.5rem;
-
-            a {
-                font-size: 1rem;
-            }
+        .nav-item {
+            position: relative;
+            min-width: 135px;
+            min-height: 44px;
 
             &:last-child {
-                margin-right: 0 !important;
+                position: relative;
+                left: -30px;
+
+                @include breakpoint(both) {
+                    left: 0;
+                }
             }
 
-            i {
-                color: $white !important;
-                height: 17px;
+            @include breakpoint(ipad) {
+                min-width: 115px;
             }
 
-            &:hover i {
-                color: $color-secondary;
+
+            &:after {
+                content: "";
+                background: $color_3;
+                width: 0;
+                height: 0;
+                position: absolute;
+                border-radius: 50%;
+                transition: 0.5s;
+                top: 50%;
+                left: 50%;
+            }
+
+            &:hover, &.active {
+                &:after {
+                    width: 44px;
+                    height: 44px;
+                    margin-left: -22px;
+                    margin-top: -22px;
+                }
+
+                .nav-link {
+                    font-family: $font_3;
+                    font-weight: 700;
+                    letter-spacing: 1.65px;
+                }
+
+                .nav-link::after {
+                    right: -8px;
+                }
+            }
+
+            .dropdown-menu {
+                border: 0;
+                background: $color_10;
+                border-radius: 0 0 6px 6px;
+                border-width: 26px 0 0;
+                border-color: $color_11;
+                border-style: solid;
+                left: 30px;
+
+                .dropdown-item {
+                    text-transform: uppercase;
+                    font-size: 15px;
+
+                    &.active, &:active {
+                        background-color: $color_3;
+                    }
+                }
+            }
+
+            @include breakpoint(desktop) {
+                .dropdown-menu {
+                    display: block;
+                    transition: 0.8s;
+                    top: 200%;
+                    visibility: hidden;
+                    opacity: 0;
+                    height: 0;
+                    overflow: hidden;
+                }
+
+                &:hover {
+                    .dropdown-menu {
+                        visibility: visible;
+                        height: auto;
+                        opacity: 1;
+                        top: 100%;
+                    }
+                }
+            }
+
+
+            @include breakpoint(laptop) {
+                .dropdown-menu {
+                    display: block;
+                    transition: 0.8s;
+                    top: 200%;
+                    visibility: hidden;
+                    opacity: 0;
+                    height: 0;
+                    overflow: hidden;
+                }
+
+                &:hover {
+                    .dropdown-menu {
+                        visibility: visible;
+                        height: auto;
+                        opacity: 1;
+                        top: 100%;
+                    }
+                }
+            }
+
+
+            @include breakpoint(ipad) {
+                .dropdown-menu {
+                    display: block;
+                    transition: 0.8s;
+                    top: 200%;
+                    visibility: hidden;
+                    opacity: 0;
+                    height: 0;
+                    overflow: hidden;
+                }
+
+                &:hover {
+                    .dropdown-menu {
+                        visibility: visible;
+                        height: auto;
+                        opacity: 1;
+                        top: 100%;
+                    }
+                }
+            }
+
+
+            .nav-link {
+                text-transform: uppercase;
+                color: $color_6;
+                letter-spacing: 0.8px;
+                position: absolute;
+                z-index: 2;
+                top: 0;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                left: 0;
+                font-size: 11px;
+                transition: 0.2s;
+            }
+
+            .dropdown-toggle {
+                &::after {
+                    border: 0;
+                    background: url(../img/arrow-menu-down.svg) no-repeat scroll 0 0 / 100%;
+                    width: 12px;
+                    height: 8px;
+                    position: absolute;
+                    right: -5px;
+                    transition: 0.2s;
+
+                    @include breakpoint(ipad) {
+                        right: -8px;
+                    }
+
+
+                    @include breakpoint(both) {
+                        right: 30px;
+                    }
+                }
+
+                &:hover::after {
+                    right: -8px;
+
+                    @include breakpoint(ipad) {
+                        right: -12px;
+                    }
+
+
+                    @include breakpoint(both) {
+                        right: 30px;
+                    }
+                }
             }
         }
     }
+}
 
-    @media (max-width: 992px) {
-        .header__rs {
-            display: none;
-        }
+.navbar-toggler {
+    position: relative;
+    width: 30px;
+    height: 23px !important;
+    margin-left: 10px;
+    min-height: inherit;
+
+    &:focus {
+        box-shadow: inherit;
     }
 
-    .navbar-toggler {
-        border: none;
+    span {
+        background: $color_6;
+        position: absolute;
+        height: 2px;
+        left: 0;
+        right: 0;
+        top: 0;
 
-        &:focus {
-            box-shadow: none;
+        &:nth-child(2) {
+            top: 50%;
+            margin-top: -1px;
         }
 
-        &-icon {
-            filter: invert(100%);
+        &:nth-child(3) {
+            top: auto;
+            bottom: 0;
         }
     }
 }

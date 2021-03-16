@@ -1,0 +1,108 @@
+<?
+
+/**
+ * @author      ThatMuch
+ * @version     0.1.0
+ * @since       mars_1.0.0
+ */
+?>
+<!DOCTYPE html>
+<html <?php language_attributes(); ?>>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1, initial-scale=1">
+	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
+	<link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"
+  />
+	<?php mars_gtm('head') ?>
+	<!--=== OPEN-GRAPH TAGS ===-->
+	<?php mars_ogtags() ?>
+	<!--=== PRELOAD FONTS ===-->
+	<?php // mars_preload_fonts() ?>
+	<!--=== WP HEAD ===-->
+	<?php wp_head(); ?>
+</head>
+
+<body id="top" <?php body_class(); ?>>
+	<?php mars_gtm('body') ?>
+
+	<?php $custom_logo_id = get_theme_mod('custom_logo');
+	$image = wp_get_attachment_image_src($custom_logo_id, 'full'); ?>
+<div class="sticky-top header-wrapper">
+	<?php if ( have_rows( 'tarif_classic', 'option' ) ) : ?>
+		<?php while ( have_rows( 'tarif_classic', 'option' ) ) : the_row(); ?>
+		<?php if( get_sub_field('discount') ) : ?>
+			<div class="header-top">
+				<?php echo get_sub_field('discount'); ?>% de promotion sur les places de la rentrée de MAI
+			</div>
+		<?php endif; ?>
+			<?php endwhile; ?>
+	<?php endif; ?>
+	<div class="header-area">
+        <div class="container-fluid">
+			<div class="navbar navbar-expand-lg align-items-center">
+					<a class="navbar-brand" href="<?php echo  site_url(); ?>">
+						<img src="<?php echo $image[0]; ?>" alt="We Hate School">
+					</a>
+					<div class="main-menu collapse navbar-collapse justify-content-center" id="navbar">
+						<?php
+						wp_nav_menu(array(
+							'theme_location' => 'mainmenu', // Defined when registering the menu
+							'menu_id'        => 'menu-main',
+							'container'      => false,
+							'depth'          => 2,
+							'menu_class'     => 'navbar-nav nav',
+							'walker'         => new Bootstrap_NavWalker(), // This controls the display of the Bootstrap Navbar
+							'fallback_cb'    => 'Bootstrap_NavWalker::fallback', // For menu fallback
+						));
+						?>
+						<a href="#" class="btn-one"><span>Réserver votre place</span></a>
+					</div>
+					    <button class="navbar-toggler menu-collapse" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+	<?php if (is_page() && !is_front_page() || is_single()) :
+		$background_image = get_the_post_thumbnail_url();
+		?>
+		<header class="page-header <?php echo $background_image ? "hasBg" : "default"?>" style="background-image: url(<?php echo $background_image ? $background_image : get_template_directory_uri()."/assets/images/bg.png";?>)">
+			<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
+		</header>
+		<?php elseif (is_home()) :
+			$background_image_home = get_the_post_thumbnail_url(get_option('page_for_posts'));
+			?>
+					<header class="page-header <?php echo $background_image_home ? "hasBg" : "default"?>" style="background-image: url(<?php echo $background_image_home ? $background_image_home : get_template_directory_uri()."/assets/images/bg.png";?>)">
+			<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
+		</header>
+		<?php elseif (is_archive() || is_category()) :
+			$category = get_queried_object();
+			$image = get_field('image', $category);
+			?>
+			<header class="page-header <?php echo $image ? "hasBg" : "default"?>" style="background-image: url(<?php echo $image ? $image['url'] : $bg_default; ?>">
+				<h1 class="page-title screen-reader-text">
+					<?php
+					if (is_day()) :
+						echo get_the_date();
+					elseif (is_month()) :
+						echo get_the_date(_x('F Y', 'monthly archives date format', 'stanlee'));
+					elseif (is_year()) :
+						echo get_the_date(_x('Y', 'yearly archives date format', 'stanlee'));
+					else :
+						single_cat_title();
+					endif;
+					?>
+				</h1>
+			</header>
+	<?php endif; ?>
+	<div id="content" class="site-content">

@@ -88,3 +88,63 @@ header {
         }
     }
 }
+
+.header-area {
+    background-color: $color_11;
+
+    .navbar {
+        padding: 25px 15px;
+
+        @include breakpoint(mobile) {
+            padding: 25px 0;
+        }
+    }
+
+    .btn-one {
+        margin-left: auto;
+
+        @include breakpoint(both) {
+            justify-content: center;
+            margin: 0 0 5px;
+
+            &::after {
+                right: 50%;
+                margin-left: -35px;
+            }
+        }
+    }
+}
+
+.header-wrapper {
+    width: 100vw;
+    overflow: hidden;
+}
+
+.header-top {
+    background: $color_6;
+    text-align: center;
+    color: $color_1;
+    font-size: 15px;
+    position: relative;
+    text-transform: uppercase;
+    padding: 10px 15px;
+
+    &::before {
+        content: "";
+        background: url(assets/images/sommet-top.svg) no-repeat scroll 0 0;
+        position: absolute;
+        top: 0;
+        right: 10%;
+        position: absolute;
+        top: 0;
+        right: 10%;
+        width: 250px;
+        height: 251px;
+    }
+
+    @include breakpoint(mobile) {
+        &::before {
+            display: none;
+        }
+    }
+}
