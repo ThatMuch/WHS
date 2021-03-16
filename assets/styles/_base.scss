@@ -117,3 +117,140 @@ footer .inner {
         font-family: $font_2;
     }
 }
+
+.bg {
+    &__white {
+        background-color: $color_12;
+
+        &--two {
+            background-color: $color_14;
+        }
+
+        &--three {
+            background-color: $color_15;
+        }
+
+        &--four {
+            background-color: $color_19;
+        }
+    }
+
+    &__black {
+        background-color: $color_6;
+        color: #fff;
+    }
+
+    &__gradient {
+        background: linear-gradient(90deg, $color_11, $color_20);
+    }
+
+    &__yellow {
+        background: $color_21;
+    }
+}
+
+.line {
+    background-image: url(../img/sommet-white.svg);
+    background-repeat: no-repeat;
+    background-position: left -200px;
+
+    &__white--two {
+        background-image: url(../img/sommet-white-2.svg);
+        background-position: top center;
+        background-repeat: no-repeat;
+    }
+
+    &__white--three {
+        background-image: url(../img/sommet-white-3.svg);
+        background-position: top center;
+        background-repeat: no-repeat;
+    }
+
+    &__white--four {
+        background-image: url(../img/sommet-white-4.svg);
+        background-position: top left;
+        background-repeat: no-repeat;
+    }
+
+    &__white--five {
+        background-image: url(../img/sommet-white-5.svg);
+        background-position: top center;
+        background-repeat: no-repeat;
+    }
+
+    &__white--six {
+        background-image: url(../img/sommet-white-6.svg);
+        background-position: top center;
+        background-repeat: no-repeat;
+    }
+
+    &__black {
+        background-image: url(../img/sommet-black.svg);
+        background-position: center right;
+        background-repeat: no-repeat;
+
+        &--two {
+            background-image: url(../img/sommet-black-2.svg);
+            background-position: top left;
+            background-repeat: no-repeat;
+        }
+
+        &--three {
+            background-image: url(../img/sommet-black-3.svg);
+            background-position: top left;
+            background-repeat: no-repeat;
+        }
+
+        &--four {
+            background-image: url(../img/sommet-black-4.svg);
+            background-position: top left;
+            background-repeat: no-repeat;
+        }
+
+        &--five {
+            background-image: url(../img/sommet-black-5.svg);
+            background-position: top left;
+            background-repeat: no-repeat;
+        }
+    }
+}
+
+.row {
+    &-15 {
+        margin-left: -7.5px;
+        margin-right: -7.5px;
+
+        [class*="col-"] {
+            padding-left: 7.5px;
+            padding-right: 7.5px;
+        }
+    }
+}
+
+.c-white {
+    color: $color_13;
+}
+
+.c-yellow {
+    color: $color_1;
+}
+
+.c-primary {
+    color: $color_5;
+}
+
+.c-orange {
+    color: $color_4;
+}
+
+.c-green {
+    color: $color_3;
+}
+
+.c-gray {
+    color: $color_7;
+}
+
+.c-black {
+    color: $color_6;
+}

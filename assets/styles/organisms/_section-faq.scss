@@ -1,57 +1,79 @@
-.section-faq {
-    &__accordion {
-        background-color: $color-grey;
-        border-radius: 39px;
-        padding: 10px 20px;
+.promotion {
+    background: url(assets/images/promotion.jpg) no-repeat scroll center (bottom / cover);
+    color: #fff;
+    margin-top: 30px;
+    padding: 80px;
 
-        .card {
-            border: none;
-            background-color: transparent;
+    @include breakpoint(tablet) {
+        padding: 50px;
+    }
 
-            &:not(:last-child) {
-                position: relative;
 
-                &:after {
-                    content: "";
-                    display: block;
-                    width: calc(100% + 40px);
-                    height: 1px;
-                    background-color: #fff;
-                    bottom: 0;
-                    left: -20px;
-                    position: absolute;
-                }
+    @include breakpoint(mobile) {
+        padding: 20px;
+    }
+
+
+    &__item {
+        margin-bottom: 50px;
+
+        @include breakpoint(mobile) {
+            margin-bottom: 20px;
+        }
+
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__title {
+        letter-spacing: 1.25px;
+        cursor: pointer;
+        position: relative;
+
+        &::before {
+            content: "";
+            position: absolute;
+            height: 2px;
+            width: 24px;
+            background: #fff;
+            right: 0;
+            top: 50%;
+            margin-top: -1px;
+        }
+
+        &.collapsed {
+            &::after {
+                content: "";
+                position: absolute;
+                width: 2px;
+                height: 24px;
+                background: #fff;
+                right: 11px;
+                top: 50%;
+                margin-top: -12px;
             }
         }
 
-        .card-header {
-            background-color: transparent;
-            border: none;
+        h2 {
+            margin: 0;
+            font-family: $font_1;
+            font-weight: 300;
+        }
+
+        .slogan {
+            margin: 0;
+            font-size: 13px;
             text-transform: uppercase;
-            font-weight: 700;
-            color: $color-primary;
-            padding: 1rem;
-
-            @media screen and (max-width: 767px) {
-                font-size: 16px;
-            }
-
-            &-expand {
-                transition-duration: $transition_fast;
-                height: 3px;
-                width: 36px;
-                background-color: $color-primary;
-                display: block;
-                margin: 0 auto;
-            }
-
-            &:hover {
-                cursor: pointer;
-            }
         }
+    }
 
-        .card-header:not(.collapsed) .card-header-expand {
-            transform: rotate(45deg);
+    &__text {
+        padding: 20px 0;
+
+        p:last-child {
+            margin-bottom: 0;
         }
     }
 }

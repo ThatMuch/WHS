@@ -23,7 +23,7 @@ main#sections {
 
         &__title {
             margin-bottom: 2rem;
-            text-align: left;
+            text-align: inherit;
 
             &.decorated {
                 position: relative;
@@ -69,8 +69,26 @@ main#sections {
     }
 }
 
-.toto {
-    background-color: $color-primary;
+.section {
+    &__area {
+        padding: 70px 0;
+    }
+
+    &__title {
+        margin-bottom: 50px;
+        text-align: center !important;
+        color: $color_6;
+
+        h2 {
+            letter-spacing: 3.25px;
+            margin: 0 0 30px;
+        }
+
+        p {
+            font-size: 18px;
+            letter-spacing: .67px;
+        }
+    }
 }
 
 @import "section-text";
