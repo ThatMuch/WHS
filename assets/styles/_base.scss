@@ -43,7 +43,7 @@ html body {
     flex-direction: column;
     align-items: center;
     min-height: 100vh;
-    background-color: $html__bgcolor !important;
+    background-color: $color_10 !important;
     color: $text-c;
 }
 
@@ -96,11 +96,11 @@ footer .inner {
     width: 100%;
 }
 
-.container {
+/* .container {
     @include breakpoint(desktopLg) {
         max-width: 1250px !important;
     }
-}
+} */
 
 .color {
     &-white {

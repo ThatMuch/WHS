@@ -16,7 +16,7 @@
 	$fond = get_sub_field('fond');
 ?>
 <?php  ?>
-  <section class="hero__area">
+  <section class="hero__area bg__gradient">
 	  <a class="scrollUp" href="#promo"></a>
     <div class="container">
                 <div class="row">
