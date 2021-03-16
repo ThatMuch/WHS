@@ -16,26 +16,20 @@
 	$fond = get_sub_field('fond');
 ?>
 <?php  ?>
-  <section class="section section-header">
+  <section class="section hero__area">
+	  <a class="scrollUp" href="#promo"></a>
     <div class="container">
-    <div class="section-header__content">
-        <!-- Title -->
-        <?php if(get_sub_field('lead') ) : ?>
-            <h1 class="section__title animate__animated animate__slideInDown"> <?php echo  get_sub_field('title'); ?></h1>
-        <?php endif; ?>
-        <!-- Title -->
-        <!-- Lead -->
-        <?php if(get_sub_field('lead') ) : ?>
-            <h2 class="section__lead animate__animated animate__slideInDown"> <?php echo  get_sub_field('lead'); ?></h2>
-        <?php endif; ?>
-        <!-- Lead -->
-        <!-- Button -->
-        <?php if ( get_sub_field('link') ) : $link = get_sub_field('link'); ?>
-                    <a class="btn btn-primary animate__animated animate__fadeIn" href="<?php echo  $link['url']; ?>">
-                        <?php echo  $link['title']; ?>
-                    </a>
-                <?php endif; ?>
-                <!-- Button -->
-    </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="hero__text">
+                            <h1><?php the_sub_field( 'title' ); ?></h1>
+                            <p><?php the_sub_field( 'lead' ); ?></p>
+							<?php $link = get_sub_field( 'link' ); ?>
+							<?php if ( $link ) : ?>
+								<a href="<?php echo esc_url( $link['url'] ); ?>" target="<?php echo esc_attr( $link['target'] ); ?>" class="btn-one yellow center"><span><?php echo esc_html( $link['title'] ); ?></span></a>
+							<?php endif; ?>
+                        </div>
+                    </div>
+                </div>
       </div>
  </section>

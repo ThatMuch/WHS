@@ -1,50 +1,63 @@
-.section-header {
-    background-color: #fff;
-    position: relative;
-    height: $size-header;
-    overflow: hidden;
-    color: $color-black;
+.hero {
+    &__area {
+        position: relative;
 
-    .section__title {
-        color: $color-black;
-    }
+        &::before {
+            content: "";
+            background: url(assets/images/hero_bg.svg) no-repeat scroll 0 0;
+            width: 78px;
+            height: 110px;
+            position: absolute;
+            top: 20%;
+            right: 10%;
+        }
 
-    @include breakpoint(tablet) {
-        display: flex;
-        align-items: center;
-    }
+        .scrollUp {
+            bottom: 5px;
+            background-image: none;
 
-
-    .section-background-image {
-        height: 100%;
-        width: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        background-size: cover;
-    }
-
-    &__content {
-        width: 100%;
-
-        @include breakpoint(tablet) {
-            width: 75%;
+            &:after {
+                content: "";
+                background: url(assets/images/arrow-up.svg) no-repeat scroll center center;
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+                position: absolute;
+                left: 0;
+                transform: rotate(180deg);
+            }
         }
     }
 
-    .section__lead {
-        animation-delay: .2s;
-        line-height: 60px;
-        letter-spacing: 1px;
-        margin-bottom: 3rem;
-        font-weight: 400;
-        font-family: $text-ff;
-        text-transform: initial;
-        color: $color-black;
+    &__text {
+        min-height: calc(100vh - 140px);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-size: 26px;
+        letter-spacing: .67px;
+
+        @include breakpoint(tablet) {
+            min-height: 600px;
+        }
+
 
         @include breakpoint(mobile) {
-            font-size: 22px;
-            line-height: 30px;
+            min-height: 500px;
+        }
+
+
+        h1 {
+            font-family: $font_5;
+            font-weight: 900;
+        }
+
+        .btn-one {
+            margin-top: 50px;
+            font-family: $font_3;
+            font-weight: 700;
         }
     }
 }

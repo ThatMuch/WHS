@@ -6,35 +6,36 @@
  *
  */
 
-/* Responsive */
-@mixin breakpoint($device) {
-    @if $device == desktopLg {
-        @media screen and (min-width: 1366px) {
+// Responsive
+@mixin breakpoint($point) {
+    @if $point == desktop {
+        @media only screen and (min-width: 1375px) {
             @content;
         }
     }
-    @else if $device == desktop {
-        @media screen and (min-width: 1200px) {
+
+    @if $point == laptop {
+        @media only screen and (min-width: 1200px) and (max-width: 1375px) {
             @content;
         }
     }
-    @else if $device == laptop {
-        @media screen and (min-width: 992px) {
+    @else if $point == ipad {
+        @media only screen and (min-width: 991px) and (max-width: 1200px) {
             @content;
         }
     }
-    @else if $device == tablet {
-        @media screen and (min-width: 768px) {
+    @else if $point == tablet {
+        @media only screen and (min-width: 768px) and (max-width: 991px) {
             @content;
         }
     }
-    @else if $device == phablet {
-        @media screen and (min-width: 451px) {
+    @else if $point == mobile {
+        @media only screen and (max-width: 767px) {
             @content;
         }
     }
-    @else if $device == mobile {
-        @media screen and (max-width: 450px) {
+    @else if $point == both {
+        @media only screen and (max-width: 991px) {
             @content;
         }
     }
@@ -93,5 +94,30 @@ $amplifier-heading: 1.5;
         height: 1em;
         margin-top: 0.2em;
         background: $bgColor;
+    }
+}
+
+// Margin & Padding fix
+$spaceamounts: 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 75, 100, 150, 200;
+$sides: top, bottom, left, right;
+
+@each $space in $spaceamounts {
+    @each $side in $sides {
+        .m#{str-slice($side, 0, 1)}-#{$space} {
+            margin-#{$side}: #{$space}px !important;
+        }
+
+        .p#{str-slice($side, 0, 1)}-#{$space} {
+            padding-#{$side}: #{$space}px !important;
+        }
+    }
+}
+
+// Font Size
+$sizeamounts: 14, 15, 16, 18, 20, 21, 22, 24, 26, 28, 30, 32, 69;
+
+@each $size in $sizeamounts {
+    .f-#{$size} {
+        font-size: #{$size}px !important;
     }
 }

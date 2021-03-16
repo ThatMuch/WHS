@@ -71,6 +71,14 @@ aside {
     }
 }
 
+p {
+    margin-bottom: 20px;
+
+    strong {
+        font-family: $font_6;
+    }
+}
+
 article,
 .element,
 nav,
@@ -91,5 +99,21 @@ footer .inner {
 .container {
     @include breakpoint(desktopLg) {
         max-width: 1250px !important;
+    }
+}
+
+.color {
+    &-white {
+        color: #fff !important;
+    }
+
+    &-red {
+        color: $color_4 !important;
+    }
+}
+
+.ff {
+    &--segoe {
+        font-family: $font_2;
     }
 }

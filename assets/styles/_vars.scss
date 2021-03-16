@@ -25,10 +25,32 @@ $element_width_mobile: 95vw; // default width of the .element content-div
 /*==================================================================================
   COLORS
 ==================================================================================*/
+// Colors
+$color_0: #E9E9EA;
+$color_1: #FFEF9E;
+$color_2: #EABBAA;
+$color_3: #A7CCBF;
+$color_4: #DE6E5F;
+$color_5: #2E667A;
+$color_6: #323530;
+$color_7: #AFAEAE;
+$color_9: #E9D1BE;
+$color_10: #F1F1F1;
+$color_11: #F5F5F6;
+$color_12: #F2F2F2;
+$color_13: #ffffff;
+$color_14: #F3F3F3;
+$color_15: #F4F4F4;
+$color_16: #EBEBEB;
+$color_17: #E1E1E1;
+$color_18: #F9F9F9;
+$color_19: #ECECEC;
+$color_20: #E5E5E6;
+$color_21: #FFED9F;
 
 /* Presets
 /––––––––––––––––––––––––*/
-$color-primary: #EFAC8E;
+$color-primary: $color_1;
 $color-primary-darker: #E6887C;
 $color-secondary: #655A90;
 $color-secondary-darker: #4B4683;
@@ -46,6 +68,13 @@ $color-input-value: #495057;
 /*=============================================
   FONTS
 =============================================*/
+// Fonts
+$font_1: "Avenir LT 35";
+$font_2: "Segoe UI";
+$font_3: "Avenir Next LT Pro";
+$font_4: "Avenir Next LT Pro CN";
+$font_5: "Cocogoose Classic";
+$font_6: "Avenir Next LT Pro Demi";
 
 /* set base values */
 $text-fz: 1em;
@@ -54,7 +83,7 @@ $text-ff: "Montserrat", sans-serif;
 $text-c: $color-black;
 $text-fw: 400;
 $text-lh: 2;
-$text-heading: "Montserrat", sans-serif;
+$text-heading: $font_5;
 
 /* type scale */
 $text-xs: calc(1em / (#{$text-scale-ratio} * #{$text-scale-ratio}));

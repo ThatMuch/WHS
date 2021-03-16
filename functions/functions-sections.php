@@ -172,7 +172,7 @@ function whs_section_contact() {
 /––––––––––––––––––––––––*/
 function whs_section_faq() {
   ob_start('sanitize_output');
-    include (get_template_directory().'/templates/section-faq.php');
+    include (get_theme_file_path().'/templates/section-faq.php');
   return ob_get_flush();
 }
 /* Header

@@ -6,11 +6,10 @@
  *
  */
 h1, h2, h3, h4, h5, h6 {
-    font-family: $text-heading;
-    font-weight: 700;
-    position: relative;
-    margin-bottom: 2rem;
+    font-family: $font_2;
     text-transform: uppercase;
+    letter-spacing: 1.25px;
+    margin-bottom: 20px;
 }
 
 h1 {
@@ -18,7 +17,11 @@ h1 {
 }
 
 h2 {
-    @include heading-size(5);
+    font-size: 30px;
+
+    @include breakpoint(mobile) {
+        font-size: 25px;
+    }
 }
 
 h3 {
@@ -27,15 +30,18 @@ h3 {
 
 h4 {
     @include heading-size(3);
+
     text-transform: initial;
 }
 
 h5 {
     @include heading-size(2);
+
     text-transform: initial;
 }
 
 h6 {
     @include heading-size(1);
+
     text-transform: initial;
 }
