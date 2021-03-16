@@ -721,9 +721,7 @@
                 "param": "page_template",
                 "operator": "==",
                 "value": "templates\/sections.php"
-            }
-        ],
-        [
+            },
             {
                 "param": "page",
                 "operator": "==",
@@ -753,5 +751,5 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1615741417
+    "modified": 1615809668
 }

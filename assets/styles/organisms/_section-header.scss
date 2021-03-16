@@ -3,9 +3,10 @@
     position: relative;
     height: $size-header;
     overflow: hidden;
+    color: $color-black;
 
     .section__title {
-        color: $color-light;
+        color: $color-black;
     }
 
     @include breakpoint(tablet) {
@@ -33,13 +34,13 @@
 
     .section__lead {
         animation-delay: .2s;
-        color: #fff;
         line-height: 60px;
         letter-spacing: 1px;
         margin-bottom: 3rem;
         font-weight: 400;
         font-family: $text-ff;
         text-transform: initial;
+        color: $color-black;
 
         @include breakpoint(mobile) {
             font-size: 22px;

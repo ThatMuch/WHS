@@ -26,12 +26,13 @@ function whs_sections_backendtitle( $title, $field, $layout, $i ) {
   return $title;
 }
 add_filter('acf/fields/flexible_content/layout_title/name=sections', 'whs_sections_backendtitle', 10, 4);
-
 /* GATHER SECTIONS
 /––––––––––––––––––––––––*/
 function whs_sections() {
+
   ob_start('sanitize_output');
   if (have_rows('sections')):
+
     while (have_rows('sections')): the_row();
 
      // if (get_row_layout() == 'articles') : whs_section_articles(); endif;
@@ -56,7 +57,6 @@ function whs_sections() {
     endwhile;
   endif;
   return ob_get_flush();
-  var_dump('coco');
 }
 
 
@@ -179,7 +179,7 @@ function whs_section_faq() {
 /––––––––––––––––––––––––*/
 function whs_section_header() {
   ob_start('sanitize_output');
-    include (get_template_directory().'/templates/section-header.php');
+    include (get_theme_file_path().'/templates/section-header.php');
   return ob_get_flush();
 }
 /* Articles
