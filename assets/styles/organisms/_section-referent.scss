@@ -1,0 +1,73 @@
+.author {
+    text-align: right;
+
+    @include breakpoint(mobile) {
+        text-align: center;
+    }
+
+
+    &-area {
+        min-height: 650px;
+    }
+
+    &-wrapper {
+        position: relative;
+        top: -105px;
+    }
+
+    &__name {
+        color: $color_6;
+        margin-bottom: 50px;
+
+        @include breakpoint(mobile) {
+            color: #fff;
+            margin: 20px 0;
+        }
+
+
+        h2 {
+            letter-spacing: -0.4px;
+            margin-bottom: 10px;
+            margin-right: 20px;
+        }
+
+        p {
+            margin: 0;
+            font-size: 21px;
+            text-transform: uppercase;
+        }
+    }
+
+    &__text {
+        font-size: 18px;
+
+        a {
+            color: #fff;
+            text-transform: uppercase;
+            text-decoration: underline;
+
+            &:hover {
+                text-decoration: none;
+            }
+        }
+
+        .btn-one {
+            text-decoration: none;
+            font-family: $font_3;
+            font-weight: 700;
+            width: 100px;
+            margin-left: auto;
+            min-width: auto;
+            margin-top: 20px;
+
+            @include breakpoint(mobile) {
+                margin-right: auto;
+            }
+
+
+            &:after {
+                right: 0;
+            }
+        }
+    }
+}
