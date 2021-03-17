@@ -29,17 +29,17 @@
 						<span>19 place Tabareau, 69004 Lyon</span>
 					</div>
 					<div class="footer__menu">
-						<ul>
-							<li><a href="#">accueil</a></li>
-							<li><a href="#">entreprises</a></li>
-							<li><a href="#">contact</a></li>
-							<li><a href="#">programme</a></li>
-							<li><a href="#">écoles</a></li>
-							<li><a href="#">faq</a></li>
-							<li><a href="#">calendrier</a></li>
-							<li><a href="#">podcast</a></li>
-							<li><a href="#">mentions légales & CGV</a></li>
-						</ul>
+						<?php
+				wp_nav_menu(array(
+					'theme_location' => 'submenu', // Defined when registering the menu
+					'menu_id'        => 'sub-main',
+					'container'      => false,
+					'depth'          => 2,
+					'menu_class'     => '',
+					'walker'         => new Bootstrap_NavWalker(), // This controls the display of the Bootstrap Navbar
+					'fallback_cb'    => 'Bootstrap_NavWalker::fallback', // For menu fallback
+				));
+				?>
 					</div>
 				</div>
 			</div>
