@@ -393,7 +393,7 @@
                                     "key": "field_60423d310a096",
                                     "label": "Texte",
                                     "name": "text",
-                                    "type": "textarea",
+                                    "type": "wysiwyg",
                                     "instructions": "",
                                     "required": 0,
                                     "conditional_logic": 0,
