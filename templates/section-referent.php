@@ -14,7 +14,7 @@
                                 <p><?php the_sub_field( 'name' ); ?></p>
                             </div>
                             <div class="author__text">
-                                <p><?php the_sub_field( 'text' ); ?></p>
+                                <?php the_sub_field( 'text' ); ?>
                                 <a href="#">en savoir plus</a>
 								<?php $link = get_sub_field( 'link' ); ?>
 								<?php if ( $link ) : ?>

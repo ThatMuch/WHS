@@ -1,50 +1,50 @@
-.section-team {
-    .section__title {
-        color: white;
-        margin-bottom: 3rem !important;
+.team {
+    img {
+        width: 100%;
+    }
 
-        &:before {
-            background: white;
+    &__text {
+        margin-top: 70px;
+        font-size: 18px;
+
+        h2 {
+            letter-spacing: .22px;
+            margin: 0 0 30px;
+        }
+
+        ul {
+            margin: 0 0 20px;
+            padding: 0;
+            list-style: none;
+
+            li {
+                position: relative;
+
+                &:before {
+                    content: "\-";
+                    margin-right: 10px;
+                }
+            }
         }
     }
 
-    &__member {
-        margin-bottom: 30px;
-        text-align: center;
-        background-color: #fff;
-        padding: 60px 30px;
-        height: 100%;
-        border-radius: $border-radius;
-        box-shadow: $shadow;
+    &__title {
+        color: #fff;
+        margin-bottom: 50px;
 
-        &__img {
-            height: 200px;
-            width: 200px;
-            background-color: #ccc;
-            margin-left: auto;
-            margin-right: auto;
-            margin-bottom: 2rem;
-            border-radius: $border-radius;
+        @include breakpoint(both) {
+            color: $color_6;
         }
+    }
 
-        &__desc {
-            text-align: justify;
-        }
+    &-wrapper {
+        position: relative;
+        top: -290px;
+        margin-bottom: -290px;
 
-        &__job {
-            margin-bottom: 1.5rem;
-        }
-
-        &__rs {
-            li {
-                list-style: none;
-                display: inline-block;
-                font-size: 25px;
-
-                &:not(:last-child) {
-                    margin-right: 1rem;
-                }
-            }
+        @include breakpoint(mobile) {
+            top: -190px;
+            margin-bottom: -190px;
         }
     }
 }

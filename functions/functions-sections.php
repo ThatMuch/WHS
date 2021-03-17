@@ -100,7 +100,7 @@ function whs_section_text() {
 /––––––––––––––––––––––––*/
 function whs_section_team() {
   ob_start('sanitize_output');
-    include (get_template_directory().'/templates/section-team.php');
+    include (get_theme_file_path().'/templates/section-team.php');
   return ob_get_flush();
 }
 

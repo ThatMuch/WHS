@@ -79,7 +79,7 @@ $font_6: "Avenir Next LT Pro Demi";
 /* set base values */
 $text-fz: 1em;
 $text-scale-ratio: 1.2;
-$text-ff: "Montserrat", sans-serif;
+$text-ff: $font_1, sans-serif;
 $text-c: $color-black;
 $text-fw: 400;
 $text-lh: 2;
