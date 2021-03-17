@@ -7,7 +7,7 @@
  */
 
 header {
-    margin-top: $header_height;
+    margin-top: inherit;
 }
 
 .page__header {
@@ -53,7 +53,7 @@ header {
     background-position: center;
     background-repeat: no-repeat;
     background-color: rgba($color-primary, 0.5);
-    margin-top: $header_height;
+    margin-top: inherit;
     width: 100%;
     display: grid;
     place-items: center;
