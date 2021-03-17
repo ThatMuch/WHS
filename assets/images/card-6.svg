@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="129" height="114" viewBox="0 0 129 114">
+  <g id="Group_402" data-name="Group 402" transform="translate(-251 -1041)">
+    <g id="Union_24" data-name="Union 24" transform="translate(251 1041)" fill="none">
+      <path d="M0,0H129V114H0Z" stroke="none"/>
+      <path d="M 1 1 L 1 113 L 128 113 L 128 1 L 1 1 M 0 0 L 129 0 L 129 114 L 0 114 L 0 0 Z" stroke="none" fill="#ffef9e"/>
+    </g>
+    <path id="Subtraction_26" data-name="Subtraction 26" d="M105,91H58.417C69.177,84.021,95.255,65.425,105,43.459V91h0Zm-59.35,0H0V45.544C10.074,65.859,32.921,82.74,45.645,91ZM105,11.914A28.712,28.712,0,0,0,92.157,0H105V11.914ZM51.979,10.84v0A44.565,44.565,0,0,0,35.984,0h32a44.5,44.5,0,0,0-16,10.838ZM0,10.284V0H11.85A28.807,28.807,0,0,0,0,10.278Z" transform="translate(263 1053)" fill="#e9d1be"/>
+  </g>
+</svg>

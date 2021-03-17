@@ -1,0 +1,153 @@
+/**
+ *
+ * @author      ThatMuch
+ * @version     0.1.0
+ * @since       mars_1.0.0.0
+ *
+ */
+.footer__top {
+    margin-top: 70px;
+    padding: 20px 0 40px;
+    position: relative;
+    z-index: 2;
+
+    &:before {
+        content: "";
+        background: url(./assets/images//sommet.svg) no-repeat scroll right top;
+        position: absolute;
+        height: 407px;
+        width: 100%;
+        top: -20px;
+        right: 50px;
+
+        @include breakpoint(tablet) {
+            background-size: 150px;
+            top: 40px;
+        }
+
+
+        @include breakpoint(mobile) {
+            display: none;
+        }
+    }
+
+    .social-bookmarks {
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            li {
+                a {
+                    display: flex;
+                    width: 45px;
+                    height: 45px;
+                    align-items: center;
+                    justify-content: center;
+                    background: $color_5;
+                    border-radius: 7px;
+                    margin: 0 15px;
+                    transition: 0.2s;
+
+                    &:hover {
+                        background: #fff;
+                        text-decoration: none;
+                        cursor: pointer;
+
+                        img {
+                            filter: none;
+                        }
+                    }
+
+                    img {
+                        filter: brightness(10);
+                        transition: 0.2s filter linear;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.footer {
+    position: relative;
+    z-index: 3;
+    background: transparent;
+
+    &__area {
+        background: $color_5;
+        padding: 40px 0;
+        color: #fff;
+        position: relative;
+        overflow: hidden;
+
+        &:before {
+            content: "";
+            background: url(./assets/images//panneau_se_former.svg) no-repeat scroll left bottom;
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            bottom: -5px;
+            left: 0;
+
+            @include breakpoint(tablet) {
+                background-size: 150px;
+            }
+
+
+            @include breakpoint(mobile) {
+                display: none;
+            }
+        }
+    }
+
+    &__logo {
+        text-align: center;
+        margin-bottom: 30px;
+
+        img {
+            filter: invert(100%);
+        }
+    }
+
+    &__text {
+        justify-content: center;
+        margin-bottom: 30px;
+        align-items: center;
+    }
+
+    &__menu {
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+
+            li {
+                flex: 0 0 33.33%;
+                max-width: 33.33%;
+                text-align: center;
+
+                @include breakpoint(mobile) {
+                    flex: 0 0 50%;
+                    max-width: 50%;
+                }
+
+
+                a {
+                    color: #fff;
+                    text-transform: uppercase;
+                    text-align: center;
+                    padding: 15px;
+                    display: inline-block;
+                    letter-spacing: 1.25px;
+                }
+            }
+        }
+    }
+}
