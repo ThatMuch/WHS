@@ -47,17 +47,17 @@ function whs_acf_op_init() {
             'menu_title'  => __('Support'),
             'parent_slug' => $parent['menu_slug'],
         ));
-        
+
 
             /**
              * Post Type: Podcasts.
              */
-        
+
             $labels = [
                 "name" => __( "Podcasts", "WHS" ),
                 "singular_name" => __( "Podcast", "WHS" ),
             ];
-        
+
             $args = [
                 "label" => __( "Podcasts", "WHS" ),
                 "labels" => $labels,
@@ -80,10 +80,10 @@ function whs_acf_op_init() {
                 "query_var" => true,
                 "supports" => [ "title", "editor", "thumbnail" ],
             ];
-        
+
             register_post_type( "podcast-post", $args );
-        
-        
+
+
     }
 }
 }
@@ -91,16 +91,16 @@ function whs_acf_op_init() {
 function cptui_register_my_cpts_events() {
 
 	/**
-	 * Post Type: Rentrées.
+	 * Post Type: Événements.
 	 */
 
 	$labels = [
-		"name" => __( "Rentrées", "WHS" ),
-		"singular_name" => __( "Rentrée", "WHS" ),
+		"name" => __( "Événements", "WHS" ),
+		"singular_name" => __( "Événement", "WHS" ),
 	];
 
 	$args = [
-		"label" => __( "Rentrées", "WHS" ),
+		"label" => __( "Événements", "WHS" ),
 		"labels" => $labels,
 		"description" => "",
 		"public" => true,
