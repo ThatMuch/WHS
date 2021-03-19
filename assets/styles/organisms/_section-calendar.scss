@@ -1,0 +1,116 @@
+.events {
+    &__box {
+        font-size: 18px;
+        margin-bottom: 40px;
+        letter-spacing: -0.4px;
+
+        > h2 {
+            text-align: center;
+            font-size: 21px;
+        }
+
+        &.striped {
+            .events__body:nth-child(even) {
+                background: $color_18;
+            }
+        }
+    }
+
+    &__body {
+        display: flex;
+        align-items: center;
+        border-top: 1px solid $color_17;
+        border-bottom: 1px solid $color_17;
+        padding: 15px 0 10px;
+
+        @include breakpoint(mobile) {
+            flex-wrap: wrap;
+        }
+    }
+
+    &__date {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 80px;
+
+        p {
+            font-size: 14px;
+            text-transform: uppercase;
+        }
+
+        h2 {
+            font-size: 45px;
+            line-height: 45px;
+            font-family: $font_1;
+            margin: 0;
+            font-weight: 300;
+        }
+    }
+
+    &__time {
+        width: 70px;
+        text-align: center;
+        margin-right: 20px;
+    }
+
+    &__text {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    &__link {
+        margin-left: auto;
+        width: 185px;
+        margin-right: 15px;
+
+        @include breakpoint(mobile) {
+            margin-top: 10px;
+            width: 100%;
+        }
+    }
+}
+
+.page-tabs {
+    background: $color_13;
+
+    .nav-tabs {
+        li {
+            flex: 1;
+
+            a {
+                background: $color_16;
+                color: $color_7;
+                text-transform: uppercase;
+                font-size: 24px;
+                display: block;
+                text-align: center;
+                padding: 22px;
+                transition: 0.2s;
+
+                @include breakpoint(mobile) {
+                    font-size: 14px;
+                    padding: 15px;
+                }
+
+
+                &:hover, &.active {
+                    color: $color_6;
+                    background: $color_13;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+
+    .tab-content {
+        padding: 50px;
+
+        @include breakpoint(mobile) {
+            padding: 30px 15px;
+        }
+    }
+}
