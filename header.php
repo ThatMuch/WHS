@@ -76,21 +76,43 @@
 	<?php if (is_page() && !is_front_page() || is_single()) :
 		$background_image = get_the_post_thumbnail_url();
 		?>
-		<header class="page-header <?php echo $background_image ? "hasBg" : "default"?>" style="background-image: url(<?php echo $background_image ? $background_image : get_template_directory_uri()."/assets/images/bg.png";?>)">
-			<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
+		<header class="page-hero__area <?php echo $background_image ? "hasBg" : "default"?>" style="background-image: url(<?php echo $background_image ? $background_image : get_template_directory_uri()."/assets/images/bg.png";?>)">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="page-hero__title">
+						<h1 class="color-pro"><?php single_post_title(); ?></h1>
+					</div>
+				</div>
+			</div>
+		</div>
+
 		</header>
 		<?php elseif (is_home()) :
 			$background_image_home = get_the_post_thumbnail_url(get_option('page_for_posts'));
 			?>
-					<header class="page-header <?php echo $background_image_home ? "hasBg" : "default"?>" style="background-image: url(<?php echo $background_image_home ? $background_image_home : get_template_directory_uri()."/assets/images/bg.png";?>)">
-			<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
+					<header class="page-hero__area <?php echo $background_image_home ? "hasBg" : "default"?>" style="background-image: url(<?php echo $background_image_home ? $background_image_home : get_template_directory_uri()."/assets/images/bg.png";?>) ">
+					<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="page-hero__title">
+						<h1 class="color-pro"><?php single_post_title(); ?></h1>
+					</div>
+				</div>
+			</div>
+		</div>
 		</header>
 		<?php elseif (is_archive() || is_category()) :
 			$category = get_queried_object();
 			$image = get_field('image', $category);
 			?>
-			<header class="page-header <?php echo $image ? "hasBg" : "default"?>" style="background-image: url(<?php echo $image ? $image['url'] : $bg_default; ?>">
-				<h1 class="page-title screen-reader-text">
+			<header class="page-hero__area <?php echo $image ? "hasBg" : "default"?>" style="background-image: url(<?php echo $image ? $image['url'] : $bg_default; ?>)">
+
+					<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="page-hero__title">
+										<h1 class="color-pro">
 					<?php
 					if (is_day()) :
 						echo get_the_date();
@@ -103,6 +125,11 @@
 					endif;
 					?>
 				</h1>
+					</div>
+				</div>
+			</div>
+		</div>
+
 			</header>
 	<?php endif; ?>
 	<div id="content" class="site-content">
