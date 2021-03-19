@@ -16,7 +16,8 @@ button, .btn {
     letter-spacing: 1px;
     line-height: normal;
     min-height: 48px;
-    transition-duration: $transition_slow;
+
+    //transition-duration: $transition_slow;
 
     &:hover, &:active, &:focus {
         outline: none;
