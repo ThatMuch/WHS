@@ -58,7 +58,7 @@ function whs_sections() {
 
       if (get_row_layout() == 'program_steps') : whs_section_program_steps(); endif;
       if (get_row_layout() == 'program_details') : whs_section_program_details(); endif;
-      if (get_row_layout() == 'list_img') : whs_section_list_img(); endif;
+      if (get_row_layout() == 'liste_img') : whs_section_list_img(); endif;
       if (get_row_layout() == 'events') : whs_section_events(); endif;
       if (get_row_layout() == 'program_prices') : whs_section_program_prices(); endif;
       if (get_row_layout() == 'program_faq') : whs_section_program_faq(); endif;
