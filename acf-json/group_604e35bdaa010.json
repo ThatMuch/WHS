@@ -434,6 +434,25 @@
                     "display": "block",
                     "sub_fields": [
                         {
+                            "key": "field_6054ad10f3ab0",
+                            "label": "Titre",
+                            "name": "title",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
                             "key": "field_604e3aa394807",
                             "label": "",
                             "name": "items",
@@ -1273,5 +1292,5 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1616160878
+    "modified": 1616162078
 }

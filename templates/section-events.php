@@ -93,4 +93,3 @@ $categories = get_categories($args); ?>
 		</div>
 	</div>
 </div>
-<?php get_footer() ?>
