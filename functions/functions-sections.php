@@ -206,7 +206,7 @@ function whs_section_team() {
 /––––––––––––––––––––––––*/
 function whs_section_testimonials() {
   ob_start('sanitize_output');
-    include (get_template_directory().'/templates/section-testimonials.php');
+    include (get_theme_file_path().'/templates/section-testimonials.php');
   return ob_get_flush();
 }
 
