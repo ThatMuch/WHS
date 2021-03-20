@@ -77,3 +77,32 @@
         }
     }
 }
+
+.faq {
+    margin-top: 100px;
+
+    &__title {
+        h5 {
+            font-size: 21px;
+            font-family: $font_1;
+            font-weight: 300;
+            text-align: center;
+            letter-spacing: 3.25px;
+        }
+    }
+
+    .promotion {
+        background: $color_6;
+        margin-top: 40px;
+
+        &__title {
+            margin-bottom: 0;
+            border-bottom: 1px solid #fff;
+            padding-bottom: 45px;
+
+            @include breakpoint(mobile) {
+                padding-bottom: 25px;
+            }
+        }
+    }
+}

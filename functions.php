@@ -31,6 +31,8 @@ endif;
 
 function my_scripts() {
             wp_enqueue_script( 'read-more', get_stylesheet_directory_uri().'/assets/scripts/readmore.js',true, array(), '', false );
+             wp_enqueue_script('custom-script', get_stylesheet_directory_uri().'/script.min.js', array('jquery'),'', false);
+
 }
 add_action( 'wp_enqueue_scripts', 'my_scripts' );
 

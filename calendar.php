@@ -11,18 +11,6 @@
 ?>
 <?php /* Template Name: Calendrier */ ?>
 <?php
-function get_posts_by_cat($cat) {
-	$args = array(
-    'post_type'=> 'events',
-    'order'    => 'DESC',
-	'hide_empty'=> true,
-	//'cat'=> $cat->ID
-);
-
-$the_query = new WP_Query( $args );
-return $the_query;
-}
-
 $taxonomy = 'events_categories';
 $categories = get_terms($taxonomy);
 ?>
