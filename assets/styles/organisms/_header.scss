@@ -10,6 +10,54 @@ header {
     margin-top: inherit;
 }
 
+.page-hero {
+    &__area {
+        position: relative;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-attachment: scroll;
+        width: 100vw;
+        padding: 60px 0;
+    }
+
+    &__title {
+        text-align: center;
+
+        h1 {
+            margin: 0;
+            font-size: 40px;
+            letter-spacing: .4px;
+            font-family: $font_2;
+            font-weight: 400;
+            font-weight: 400;
+            color: transparent;
+            text-transform: uppercase;
+            -webkit-text-stroke: 1px #fff;
+
+            &.color-blue {
+                -webkit-text-stroke: 1px $color_5;
+            }
+
+            &.color-yellow {
+                -webkit-text-stroke: 1px $color_2;
+            }
+
+            &.color-brown {
+                -webkit-text-stroke: 1px $color_9;
+            }
+
+            &.color-green {
+                -webkit-text-stroke: 1px $color_3;
+            }
+
+            &.color-pro {
+                -webkit-text-stroke: 1px $color_1;
+            }
+        }
+    }
+}
+
 .page__header {
     display: flex;
     align-items: center;

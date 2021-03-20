@@ -147,6 +147,18 @@ footer .inner {
     &__yellow {
         background: $color_21;
     }
+
+    &__primary {
+        background: $color_5 !important;
+
+        .section__title {
+            color: #fff;
+        }
+    }
+
+    &__green {
+        background: $color_3 !important;
+    }
 }
 
 .line {

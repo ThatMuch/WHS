@@ -51,9 +51,21 @@ function whs_sections() {
       if (get_row_layout() == 'testimonials') : whs_section_testimonials(); endif;
       if (get_row_layout() == 'text_image') : whs_section_text_img(); endif;
       if (get_row_layout() == 'text') : whs_section_text(); endif;
+      if (get_row_layout() == 'texte') : whs_section_texte(); endif;
       if (get_row_layout() == 'store') : whs_section_method(); endif;
       if (get_row_layout() == 'programme') : whs_section_program(); endif;
       if (get_row_layout() == 'referent') : whs_section_referent(); endif;
+
+      if (get_row_layout() == 'program_steps') : whs_section_program_steps(); endif;
+      if (get_row_layout() == 'program_details') : whs_section_program_details(); endif;
+      if (get_row_layout() == 'liste_img') : whs_section_list_img(); endif;
+      if (get_row_layout() == 'events') : whs_section_events(); endif;
+      if (get_row_layout() == 'program_prices') : whs_section_program_prices(); endif;
+      if (get_row_layout() == 'program_faq') : whs_section_program_faq(); endif;
+      if (get_row_layout() == 'liste_icons') : whs_section_liste_icons(); endif;
+      if (get_row_layout() == 'card') : whs_section_card(); endif;
+      if (get_row_layout() == 'formidable') : whs_section_formidable(); endif;
+      if (get_row_layout() == 'thematique') : whs_section_thematique(); endif;
     endwhile;
   endif;
   return ob_get_flush();
@@ -65,11 +77,89 @@ function whs_sections() {
 ==================================================================================*/
 // add your custom sections here...
 
+/* thematique
+/––––––––––––––––––––––––*/
+function whs_section_thematique() {
+  ob_start('sanitize_output');
+    include (get_theme_file_path().'/templates/section-thematique.php');
+  return ob_get_flush();
+}
+/* formidable
+/––––––––––––––––––––––––*/
+function whs_section_formidable() {
+  ob_start('sanitize_output');
+    include (get_theme_file_path().'/templates/section-formidable.php');
+  return ob_get_flush();
+}
+/* card
+/––––––––––––––––––––––––*/
+function whs_section_card() {
+  ob_start('sanitize_output');
+    include (get_theme_file_path().'/templates/section-card.php');
+  return ob_get_flush();
+}
+/* liste_icons
+/––––––––––––––––––––––––*/
+function whs_section_liste_icons() {
+  ob_start('sanitize_output');
+    include (get_theme_file_path().'/templates/section-liste_icons.php');
+  return ob_get_flush();
+}
+/* program_faq
+/––––––––––––––––––––––––*/
+function whs_section_program_faq() {
+  ob_start('sanitize_output');
+    include (get_theme_file_path().'/templates/section-program_faq.php');
+  return ob_get_flush();
+}
+/* program_prices
+/––––––––––––––––––––––––*/
+function whs_section_program_prices() {
+  ob_start('sanitize_output');
+    include (get_theme_file_path().'/templates/section-program_prices.php');
+  return ob_get_flush();
+}
+/* events
+/––––––––––––––––––––––––*/
+function whs_section_events() {
+  ob_start('sanitize_output');
+    include (get_theme_file_path().'/templates/section-events.php');
+  return ob_get_flush();
+}
+/* list_img
+/––––––––––––––––––––––––*/
+function whs_section_list_img() {
+  ob_start('sanitize_output');
+    include (get_theme_file_path().'/templates/section-list_img.php');
+  return ob_get_flush();
+}
+/* program_steps
+/––––––––––––––––––––––––*/
+function whs_section_program_steps() {
+  ob_start('sanitize_output');
+    include (get_theme_file_path().'/templates/section-program_steps.php');
+  return ob_get_flush();
+}
+/* program_details
+/––––––––––––––––––––––––*/
+function whs_section_program_details() {
+  ob_start('sanitize_output');
+    include (get_theme_file_path().'/templates/section-program_details.php');
+  return ob_get_flush();
+}
+
 /* TEXT
 /––––––––––––––––––––––––*/
 function whs_section_text() {
   ob_start('sanitize_output');
     include (get_template_directory().'/templates/section-text.php');
+  return ob_get_flush();
+}
+/* TEXTE
+/––––––––––––––––––––––––*/
+function whs_section_texte() {
+  ob_start('sanitize_output');
+    include (get_theme_file_path().'/templates/section-texte.php');
   return ob_get_flush();
 }
 /* TEXT + IMAGE
@@ -116,7 +206,7 @@ function whs_section_team() {
 /––––––––––––––––––––––––*/
 function whs_section_testimonials() {
   ob_start('sanitize_output');
-    include (get_template_directory().'/templates/section-testimonials.php');
+    include (get_theme_file_path().'/templates/section-testimonials.php');
   return ob_get_flush();
 }
 
