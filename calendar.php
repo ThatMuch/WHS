@@ -11,25 +11,21 @@
 ?>
 <?php /* Template Name: Calendrier */ ?>
 <?php
-
-$args = array(
-    'post_type'=> 'events',
-    'order'    => 'DESC',
-	'hide_empty'=> 1,
-);
-
 function get_posts_by_cat($cat) {
 	$args = array(
     'post_type'=> 'events',
     'order'    => 'DESC',
-	'hide_empty'=> 1,
-	'cat'=> $cat->cat_ID
+	'hide_empty'=> true,
+	//'cat'=> $cat->ID
 );
+
 $the_query = new WP_Query( $args );
 return $the_query;
 }
 
-$categories = get_categories($args); ?>
+$taxonomy = 'events_categories';
+$categories = get_terms($taxonomy);
+?>
 <?php get_header(); ?>
 <div class="section__area bg__white--three">
 	<div class="container">
@@ -42,8 +38,9 @@ $categories = get_categories($args); ?>
 					<ul class="nav nav-tabs" role="tablist">
 						<?php $y = 0; ?>
 						<?php foreach ($categories as $category) :?>
+						<?php //var_dump($category);?>
 							<li role="presentation">
-								<a data-bs-toggle="tab" class="nav-item <?php echo $y === 0 ? ' active' : '' ; ?>" data-bs-target="#tab-<?php echo $category->cat_ID ;?>">
+								<a data-bs-toggle="tab" class="nav-item <?php echo $y === 0 ? ' active' : '' ; ?>" data-bs-target="#tab-<?php echo $category->term_id ;?>">
 									<?php echo $category->name; ?></a>
 								</li>
 						<?php $y++; endforeach; ?>
@@ -51,17 +48,31 @@ $categories = get_categories($args); ?>
 					<div class="tab-content">
 						<?php $i = 0; ?>
 						<?php foreach ($categories as $category) :?>
-							<div id="tab-<?php echo $category->cat_ID ;?>" class="tab-pane fade <?php echo $i === 0 ? ' in active show' : '' ; ?>" role="tabpanel" aria-labelledby="<?php echo $category->cat_ID ;?>-tab">
+							<div id="tab-<?php echo $category->term_id ;?>" class="tab-pane fade <?php echo $i === 0 ? ' in active show' : '' ; ?>" role="tabpanel" aria-labelledby="<?php echo $category->term_id ;?>-tab">
 								<div class="events">
 									<div class="events__wrapper">
-										<?php $the_query = get_posts_by_cat($category); ?>
+										<?php 	$args = array(
+													'post_type'=> 'events',
+													'order'    => 'DESC',
+													'hide_empty'=> true,
+													  'tax_query' => array(
+														array(
+															'taxonomy' => 'events_categories',
+															'field' => 'term_id',
+															'terms' => $category->term_id,
+														)
+													)
+												);
+												$the_query = new WP_Query( $args ); ?>
 										<?php if( $the_query->have_posts() ) : ?>
-											<?php while( $the_query->have_posts() ) : $the_query->the_post(); ?>
+
+											<?php while( $the_query->have_posts() ) : $the_query->the_post();?>
 												<div class="events__box <?php echo get_field('lien') ? 'striped' : '' ?>">
 													<h2>avril</h2>
 													<div class="events__body">
 														<div class="events__date">
-															<?php // echo get_field('date'); ?>
+															<?php // TODO: Display date
+															// echo get_field('date'); ?>
 															<p>avril</p>
 															<h2>27</h2>
 														</div>
@@ -69,7 +80,7 @@ $categories = get_categories($args); ?>
 
 														</div>
 														<div class="events__text">
-															1ère leçon du podcast bavardages
+															<?php the_title();?>
 														</div>
 														<?php if ( get_field('lien') ) : ?>
 															<div class="events__link">
