@@ -32,10 +32,10 @@ $categories = get_terms($taxonomy);
 
 											<?php while( $post_query->have_posts() ) : $post_query->the_post();?>
                                 <div class="promotion__item">
-                                    <div class="promotion__title collapsed" data-toggle="collapse" data-target="#promotion-1" aria-expanded="true">
+                                    <div class="promotion__title collapsed" data-bs-toggle="collapse" data-bs-target="#promotion-<?php echo $category->term_id ?>" aria-expanded="true">
                                         <h4><?php the_title();?></h4>
                                     </div>
-                                    <div id="promotion-1" class="collapse promotion__body" data-parent="#promotion">
+                                    <div id="promotion-<?php echo $category->term_id ?>" class="collapse promotion__body" data-bs-parent="#<?php echo $category->slug ?>">
                                         <div class="promotion__text">
                                             <?php the_content();?>
                                         </div>

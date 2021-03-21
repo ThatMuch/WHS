@@ -61,7 +61,7 @@
 						?>
 						<a href="#" class="btn-one"><span>Réserver votre place</span></a>
 					</div>
-					    <button class="navbar-toggler menu-collapse" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+					    <button class="navbar-toggler menu-collapse" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
                             <span></span>
                             <span></span>
                             <span></span>
