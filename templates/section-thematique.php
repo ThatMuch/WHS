@@ -1,5 +1,9 @@
 <section class="section__area">
 	<div class="container">
+		<?php if( get_sub_field('them_title') ) : ?>
+			<h2 class="text-center mb-5"><?php echo get_sub_field('them_title'); ?></h2>
+		<?php endif; ?>
+
 		<div class="row row-15">
 			<?php if ( have_rows( 'items' ) ) : ?>
 				<?php while ( have_rows( 'items' ) ) : the_row(); ?>
