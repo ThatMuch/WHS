@@ -1157,6 +1157,25 @@
                     "display": "block",
                     "sub_fields": [
                         {
+                            "key": "field_6058cc67c426a",
+                            "label": "Titre",
+                            "name": "them_title",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
                             "key": "field_605237aed23d5",
                             "label": "",
                             "name": "items",
@@ -1292,5 +1311,5 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1616162078
+    "modified": 1616432254
 }

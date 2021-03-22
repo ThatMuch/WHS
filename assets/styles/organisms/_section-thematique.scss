@@ -1,0 +1,31 @@
+.card-box {
+    height: 100%;
+    border-bottom: 15px solid $color_12;
+    text-align: center;
+    font-size: 18px;
+    padding: 40px 15px;
+
+    &__image {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 140px;
+
+        img {
+            max-width: 100px;
+            max-height: 100px;
+        }
+    }
+
+    h2 {
+        font-family: $font_2;
+        font-size: 14px;
+        letter-spacing: 1.25px;
+        text-transform: uppercase;
+        margin: 0 0 20px;
+    }
+
+    p {
+        margin-bottom: 0;
+    }
+}
