@@ -848,7 +848,7 @@
                     "key": "layout_605235c7d23c4",
                     "name": "card",
                     "label": "card",
-                    "display": "block",
+                    "display": "table",
                     "sub_fields": [
                         {
                             "key": "field_60523624d23c5",
@@ -1311,5 +1311,5 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1616432254
+    "modified": 1616435675
 }
