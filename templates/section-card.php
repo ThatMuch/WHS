@@ -1,3 +1,4 @@
+<!-- // FIXME: Image de fond -->
 <section class="section__area bg__white--two line__white--three">
 	<div class="container">
 		<div class="row row-15">
