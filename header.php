@@ -59,7 +59,7 @@
 							'fallback_cb'    => 'Bootstrap_NavWalker::fallback', // For menu fallback
 						));
 						?>
-						<a href="#" class="btn-one"><span>Réserver votre place</span></a>
+						<button data-bs-toggle="modal" data-bs-target="#ContactModal" class="btn-one wow-modal-id-1"><span>Réserver votre place</span></button>
 					</div>
 					    <button class="navbar-toggler menu-collapse" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
                             <span></span>
@@ -132,3 +132,22 @@
 			</header>
 	<?php endif; ?>
 	<div id="content" class="site-content <?php if(is_home()){echo "bg__white--four";}  ;?>">
+
+	<!-- Modal -->
+<div class="modal fade" id="ContactModal" tabindex="-1" aria-labelledby="ContactModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="ContactModalLabel">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>

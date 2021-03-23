@@ -149,7 +149,7 @@ button.link {
     border: 1px solid #2E667A;
     padding: 12px 20px;
     min-width: 125px;
-    border-radius: 0;
+    border-radius: 5px;
 
     &:hover {
         color: #2E667A;
@@ -283,7 +283,6 @@ button.link {
     border: 1px solid #2E667A;
     padding: 12px 20px;
     min-width: 125px;
-    border-radius: 0;
     line-height: 35px;
     height: 48px;
 
