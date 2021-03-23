@@ -8,11 +8,16 @@
 //=> templates/wp-home.php
 
 .blog {
+    .reverse-row:nth-child(even) {
+        flex-direction: row-reverse;
+    }
+
     &__categories {
         margin-top: 200px;
         background-color: $color-grey;
         height: 536px;
         position: relative;
+
         &__title {
             text-transform: uppercase;
             font-weight: 700;
@@ -39,5 +44,49 @@
 
     .pagination {
         justify-content: center;
+    }
+}
+
+.podcast {
+    position: relative;
+    margin-bottom: 30px;
+
+    img {
+        width: 100%;
+    }
+
+    h2 {
+        margin: 0;
+        font-family: $font_1;
+        color: #fff;
+        font-size: 24px;
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        text-align: center;
+        left: 0;
+        margin-top: -20px;
+    }
+
+    button {
+        border: 0;
+        position: absolute;
+        width: 53px;
+        left: 50%;
+        margin-left: -26px;
+        bottom: 20px;
+        background: transparent;
+        transition: 0.2s;
+
+        &:hover {
+            opacity: .6;
+        }
+    }
+}
+
+.post {
+    &__title {
+        font-size: 21px;
+        font-weight: 700;
     }
 }

@@ -132,4 +132,4 @@
 
 			</header>
 	<?php endif; ?>
-	<div id="content" class="site-content">
+	<div id="content" class="site-content <?php if(is_home()){echo "bg__white--four";}  ;?>">

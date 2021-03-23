@@ -31,3 +31,5 @@ function showImagesOnView(images) {
     }
   }
 }
+
+console.log('toto');

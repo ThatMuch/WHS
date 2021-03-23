@@ -233,3 +233,11 @@ function wpc_mime_types($mimes) {
 	return $mimes;
 }
 add_filter('upload_mimes', 'wpc_mime_types');
+
+/* 2.11 MANAGE EXCERPT LENGTH
+/––––––––––––––––––––––––––––––––––––––*/
+
+function my_excerpt_length($length){
+return 200;
+}
+add_filter("excerpt_length", "my_excerpt_length");
