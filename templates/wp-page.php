@@ -7,9 +7,9 @@
 ?>
 
 <?php get_header(); ?>
-<main id="page">
+<main id="page" class="section__area bg__white line">
 
-      <section class="container pt-5 pb-5">
+      <section class="container pt-5">
     <?php while (have_posts()) : the_post(); ?>
         <?php the_content(); ?>
     <?php endwhile; ?>

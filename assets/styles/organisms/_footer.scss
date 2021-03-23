@@ -6,10 +6,11 @@
  *
  */
 .footer__top {
-    margin-top: 70px;
     padding: 20px 0 40px;
-    position: relative;
+    position: absolute;
     z-index: 2;
+    width: 100%;
+    bottom: 442px;
 
     &:before {
         content: "";

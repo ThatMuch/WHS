@@ -1,4 +1,4 @@
-<div class="section__area">
+<div class="section__area 00">
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-9 mx-auto">
@@ -12,4 +12,5 @@
 				</div>
 			</div>
 		</div>
+</div>
 </div>

@@ -1,4 +1,4 @@
-    <div class="section__area bg__black line__black--two">
+    <div class="section__area section__area-formidable bg__black line__black--two">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12 text-center">
@@ -10,4 +10,4 @@
                     </div>
                 </div>
             </div>
-        </div>
+    </div>

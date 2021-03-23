@@ -39,7 +39,7 @@
             width: 24px;
             background: #fff;
             right: 0;
-            top: 50%;
+            top: 30%;
             margin-top: -1px;
         }
 
@@ -51,7 +51,7 @@
                 height: 24px;
                 background: #fff;
                 right: 11px;
-                top: 50%;
+                top: 30%;
                 margin-top: -12px;
             }
         }
@@ -79,7 +79,7 @@
 }
 
 .faq {
-    margin-top: 100px;
+    margin-bottom: 100px;
 
     &__title {
         h5 {
@@ -99,6 +99,10 @@
             margin-bottom: 0;
             border-bottom: 1px solid #fff;
             padding-bottom: 45px;
+
+            h4 {
+                margin-bottom: 0;
+            }
 
             @include breakpoint(mobile) {
                 padding-bottom: 25px;

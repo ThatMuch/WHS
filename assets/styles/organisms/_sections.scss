@@ -72,6 +72,10 @@ main#sections {
 .section {
     &__area {
         padding: 70px 0;
+
+        &-formidable {
+            padding: 70px 0 170px;
+        }
     }
 
     &__title {

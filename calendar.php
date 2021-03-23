@@ -15,6 +15,7 @@ $taxonomy = 'events_categories';
 $categories = get_terms($taxonomy);
 ?>
 <?php get_header(); ?>
+<main>
 <div class="section__area bg__white--three">
 	<div class="container">
 		<div class="row">
@@ -91,4 +92,5 @@ $categories = get_terms($taxonomy);
 		</div>
 	</div>
 </div>
+														</main>
 <?php get_footer() ?>

@@ -2,11 +2,11 @@
 $taxonomy = 'faqs_categories';
 $categories = get_terms($taxonomy);
 ?>
-<section class="section__area bg__white--five pb-0">
+<section class="section__area bg__white--five">
 	<div class="container">
 		                <div class="row mt-100">
                     <div class="col-md-12">
-                        <div class="section__title">
+                        <div class="section__title mb-5">
                             <h2><?php the_sub_field( 'title' );?></h2>
                         </div>
                         <?php foreach ($categories as $category) : ?>
