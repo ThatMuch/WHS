@@ -12,7 +12,7 @@
 <?php /* Template Name: Sections */ ?>
 
 <?php get_header(); ?>
-<main id="sections" class="pb-0">
+<main id="sections" class="<?php echo !is_front_page() ? 'pb-0' : '' ?>">
 
 
   <?php if (have_posts()): while (have_posts()): the_post() ?>
