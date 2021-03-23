@@ -276,3 +276,19 @@ button.link {
         }
     }
 }
+
+.btn-submit {
+    background: #2E667A;
+    color: #fff;
+    border: 1px solid #2E667A;
+    padding: 12px 20px;
+    min-width: 125px;
+    border-radius: 0;
+    line-height: 35px;
+    height: 48px;
+
+    &:hover {
+        color: #2E667A;
+        background: transparent;
+    }
+}
