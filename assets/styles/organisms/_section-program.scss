@@ -6,6 +6,8 @@
 
 
 #promo {
+    overflow: hidden;
+
     .is-mobile {
         margin: 0 auto;
         padding-bottom: 3rem;
@@ -20,6 +22,77 @@
 
         .d-flex {
             justify-content: center;
+        }
+    }
+
+    .is-desktop {
+        .promo-image-box {
+            svg {
+                max-width: 100%;
+                transform: translateY(82px);
+
+                #CTA_inspirer {
+                    cursor: pointer;
+
+                    &.hover {
+                        path, circle {
+                            fill: #A7CCBF;
+                        }
+                    }
+
+                    path, circle {
+                        fill: #fff;
+                    }
+                }
+
+                #CTA_former {
+                    cursor: pointer;
+
+                    &.hover {
+                        path, circle {
+                            fill: #FFEF9E;
+                        }
+                    }
+
+                    path, circle {
+                        fill: #fff;
+                    }
+                }
+
+                #CTA_accompagner {
+                    cursor: pointer;
+
+                    &.hover {
+                        polygon {
+                            fill: #2E667A;
+                        }
+
+                        path {
+                            fill: #FFEF9E;
+                        }
+
+                        text, tspan {
+                            fill: #2E667A;
+                        }
+                    }
+
+                    rect, path, polygon {
+                        fill: #fff;
+                    }
+
+                    .st9 {
+                        fill: black;
+                    }
+
+                    .st10, rect {
+                        stroke: black;
+                    }
+
+                    text, tspan {
+                        fill: black;
+                    }
+                }
+            }
         }
     }
 }
