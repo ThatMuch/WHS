@@ -6,7 +6,7 @@
             "key": "field_605a1f5dcd9eb",
             "label": "Formulaire MailChimp",
             "name": "formulaire_mailchimp",
-            "type": "acfe_code_editor",
+            "type": "cf7",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -15,14 +15,9 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
-            "placeholder": "",
-            "mode": "text\/html",
-            "lines": 1,
-            "indent_unit": 4,
-            "maxlength": "",
-            "rows": "",
-            "max_rows": ""
+            "allow_null": 0,
+            "multiple": 0,
+            "disable": ""
         }
     ],
     "location": [
@@ -49,5 +44,5 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1616519064
+    "modified": 1616575277
 }

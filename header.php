@@ -134,19 +134,18 @@
 	<div id="content" class="site-content <?php if(is_home()){echo "bg__white--four";}  ;?>">
 
 	<!-- Modal -->
-<div class="modal fade" id="ContactModal" tabindex="-1" aria-labelledby="ContactModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
+<div class="modal fade" id="ContactModal" tabindex="-1" aria-labelledby="ContactModalLabel" aria-hidden="true" data-bs-backdrop="static">
+  <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="ContactModalLabel">Modal title</h5>
+        <h5 class="modal-title" id="ContactModalLabel">Réservez votre place</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        ...
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <?php if ( get_field('formulaire_mailchimp', 'option') ) : ?>
+			<?php echo do_shortcode(get_field('formulaire_mailchimp', 'option')); ?>
+		<?php endif; ?>
+
       </div>
     </div>
   </div>
