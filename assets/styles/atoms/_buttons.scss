@@ -166,6 +166,7 @@ button.link {
 }
 
 .btn-one {
+    font-weight: 700;
     color: $color_6;
     text-transform: uppercase;
     position: relative;
@@ -295,6 +296,7 @@ button.link {
     min-width: 125px;
     line-height: 35px;
     height: 48px;
+    font-weight: 700;
 
     &:hover {
         color: #2E667A;
