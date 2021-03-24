@@ -16,6 +16,27 @@
 /––––––––––––––––––––––––*/
 var $vpWidth = jQuery(window).width();
 
+function responsive() {
+  if (isMobile()) {
+    $('body').addClass('mobile');
+  }
+  else {
+    $('body').removeClass('mobile');
+  }
+}
+
+function isMobile() {
+  if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || window.innerWidth <= '767') {
+    return true
+  }
+  else {
+    return false
+  }
+}
+
+window.addEventListener('resize',responsive,false)
+window.addEventListener('load',responsive,false)
+
 /* Touch Device
 /––––––––––––––––––––––––*/
 var $root = $('html');

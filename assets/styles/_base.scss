@@ -268,3 +268,22 @@ footer .inner {
 .c-black {
     color: $color_6;
 }
+
+// Responsive
+.mobile {
+    .is-mobile {
+        display: block;
+    }
+
+    .is-desktop {
+        display: none;
+    }
+}
+
+.is-mobile {
+    display: none;
+}
+
+.is-desktop {
+    display: block;
+}
