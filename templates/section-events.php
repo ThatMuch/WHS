@@ -50,34 +50,80 @@ $categories = get_terms($taxonomy); ?>
 													)
 												);
 												$the_query = new WP_Query( $args ); ?>
-										<?php if( $the_query->have_posts() ) : ?>
-											<?php while( $the_query->have_posts() ) : $the_query->the_post(); ?>
+
+																								<?php
+												// Format posts
+												$formatted_posts = array();
+												$months = array();
+
+												while( $the_query->have_posts() ) {
+													$the_query->the_post();
+													$full_date = date_create_from_format('Y-m-d H:i:s', get_field('date'));
+													$date = explode(' ', date_i18n('F j H:i', $full_date->getTimestamp()));
+
+													array_push($formatted_posts, array(
+														'date'=> $full_date,
+														'month' => $date[0],
+														'day' => $date[1],
+														'time' => str_replace(":","h",$date[2]),
+														'title' => get_the_title(),
+														'link' => get_field('lien')
+													));
+												};
+
+												// Sort posts by date
+												usort($formatted_posts, function ($a, $b) {
+													if ($a['date'] == $b['date']) {
+														return 0;
+													}
+  													return $a['date']< $b['date'] ? -1 : 1;
+												});
+
+
+
+												// Store months
+
+												foreach ($formatted_posts as $key => $value) {
+													if(!array_key_exists($value['month'], $months)) {
+														$months[$value['month']] = array();
+													}
+													array_push($months[$value['month']], $value);
+												}
+
+												?>
+
+											<?php if( $the_query->have_posts() ) : ?>
+											<?php //var_dump($the_query->have_posts()) ;?>
+											<?php foreach( $months as $month => $value) : ?>
 												<div class="events__box <?php echo get_field('lien') ? 'striped' : '' ?>">
-													<h2>avril</h2>
+													<h2><?php echo $month;?></h2>
+													<?php foreach( $value as $event_post) : ?>
 													<div class="events__body">
 														<div class="events__date">
-															<?php // echo get_field('date'); ?>
-															<p>avril</p>
-															<h2>27</h2>
+															<p><?php echo $event_post['month'];?></p>
+															<h2><?php echo $event_post['day'];?></h2>
 														</div>
 														<div class="events__time">
-
+															<?php echo $event_post['time'];?>
 														</div>
 														<div class="events__text">
-															1ère leçon du podcast bavardages
+															<?php echo $event_post['title'];?>
 														</div>
-														<?php if ( get_field('lien') ) : ?>
-															<div class="events__link">
-															<a href="<?php echo get_field('lien'); ?>" class="btn-one yellow"><span>Réserver votre place</span></a>
+														<?php if ( $event_post['link'] ) : ?>
+														<div class="events__link">
+															<a href="<?php echo $event_post['link']; ?>" class="btn-one yellow"><span>Réserver votre place</span></a>
 														</div>
 														<?php endif; ?>
 													</div>
 
-										<?php  endwhile; ?>
-										<?php endif; wp_reset_postdata(); ?>
+										<?php  endforeach; ?>
+										</div>
+										<?php  endforeach; ?>
+										<?php endif;
+										wp_reset_postdata(); ?>
 
 									</div>
-								</div>
+
 							</div>
 							</div>
 						<?php $i++; endforeach; ?>

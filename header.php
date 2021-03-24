@@ -59,7 +59,7 @@
 							'fallback_cb'    => 'Bootstrap_NavWalker::fallback', // For menu fallback
 						));
 						?>
-						<a href="#" class="btn-one"><span>Réserver votre place</span></a>
+						<button data-bs-toggle="modal" data-bs-target="#ContactModal" class="btn-one wow-modal-id-1"><span>Réserver votre place</span></button>
 					</div>
 					    <button class="navbar-toggler menu-collapse" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
                             <span></span>
@@ -132,3 +132,21 @@
 			</header>
 	<?php endif; ?>
 	<div id="content" class="site-content <?php if(is_home()){echo "bg__white--four";}  ;?>">
+
+	<!-- Modal -->
+<div class="modal fade" id="ContactModal" tabindex="-1" aria-labelledby="ContactModalLabel" aria-hidden="true" data-bs-backdrop="static">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="ContactModalLabel">Réservez votre place</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <?php if ( get_field('formulaire_mailchimp', 'option') ) : ?>
+			<?php echo do_shortcode(get_field('formulaire_mailchimp', 'option')); ?>
+		<?php endif; ?>
+
+      </div>
+    </div>
+  </div>
+</div>

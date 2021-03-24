@@ -16,7 +16,7 @@
                 "id": ""
             },
             "display_format": "F j H:i",
-            "return_format": "F j H:i",
+            "return_format": "Y-m-d H:i:s",
             "first_day": 1
         },
         {
@@ -60,5 +60,5 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1615747711
+    "modified": 1616527427
 }
