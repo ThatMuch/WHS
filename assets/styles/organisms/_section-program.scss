@@ -3,3 +3,23 @@
         margin-bottom: 30px;
     }
 }
+
+
+#promo {
+    .is-mobile {
+        margin: 0 auto;
+        padding-bottom: 3rem;
+
+        .carousel-indicators {
+            bottom: -2rem;
+        }
+
+        .promo-text-box {
+            text-align: center;
+        }
+
+        .d-flex {
+            justify-content: center;
+        }
+    }
+}
