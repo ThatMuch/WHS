@@ -1,0 +1,261 @@
+/**
+ *
+ * @author      ThatMuch
+ * @version     0.1.0
+ * @since       mars_1.0.0.0
+ *
+ */
+/*==================================================================================
+  NAV
+==================================================================================*/
+.admin-bar {
+    .navbar {
+        top: inherit;
+    }
+}
+
+.main-menu {
+    @include breakpoint(both) {
+        position: fixed;
+        top: 98px;
+        background: $color_11;
+        left: 0;
+        right: 0;
+    }
+
+
+    .navbar-nav {
+        margin-left: auto;
+
+        .nav-item {
+            position: relative;
+            min-width: 135px;
+            min-height: 44px;
+
+            &:last-child {
+                position: relative;
+                left: -30px;
+
+                @include breakpoint(both) {
+                    left: 0;
+                }
+            }
+
+            @include breakpoint(ipad) {
+                min-width: 115px;
+            }
+
+
+            &:after {
+                content: "";
+                background: $color_3;
+                width: 0;
+                height: 0;
+                position: absolute;
+                border-radius: 50%;
+                transition: 0.5s;
+                top: 50%;
+                left: 50%;
+            }
+
+            &:hover {
+                .dropdown-menu {
+                    visibility: visible;
+                    height: auto;
+                    opacity: 1;
+                    top: 100%;
+                }
+            }
+
+            &:hover, &.active {
+                &:after {
+                    width: 44px;
+                    height: 44px;
+                    margin-left: -22px;
+                    margin-top: -22px;
+                }
+
+                .nav-link {
+                    font-family: $font_3;
+                    font-weight: 700;
+                    letter-spacing: 1.65px;
+                }
+
+                .nav-link::after {
+                    right: -8px;
+                }
+            }
+
+            .dropdown-menu {
+                border: 0;
+                background: $color_10;
+                border-radius: 0 0 6px 6px;
+                border-width: 26px 0 0;
+                border-color: $color_11;
+                border-style: solid;
+                left: 0;
+
+                .dropdown-item {
+                    text-transform: uppercase;
+                    font-size: 15px;
+
+                    &.active, &:active {
+                        background-color: $color_3;
+                    }
+                }
+            }
+
+            @include breakpoint(desktop) {
+                .dropdown-menu {
+                    display: block;
+                    transition: 0.8s;
+                    top: 200%;
+                    visibility: hidden;
+                    opacity: 0;
+                    height: 0;
+                    overflow: hidden;
+                }
+
+                &:hover {
+                    .dropdown-menu {
+                        visibility: visible;
+                        height: auto;
+                        opacity: 1;
+                        top: 100%;
+                    }
+                }
+            }
+
+
+            @include breakpoint(laptop) {
+                .dropdown-menu {
+                    display: block;
+                    transition: 0.8s;
+                    top: 200%;
+                    visibility: hidden;
+                    opacity: 0;
+                    height: 0;
+                    overflow: hidden;
+                }
+
+                &:hover {
+                    .dropdown-menu {
+                        visibility: visible;
+                        height: auto;
+                        opacity: 1;
+                        top: 100%;
+                    }
+                }
+            }
+
+
+            @include breakpoint(ipad) {
+                .dropdown-menu {
+                    display: block;
+                    transition: 0.8s;
+                    top: 200%;
+                    visibility: hidden;
+                    opacity: 0;
+                    height: 0;
+                    overflow: hidden;
+                }
+
+                &:hover {
+                    .dropdown-menu {
+                        visibility: visible;
+                        height: auto;
+                        opacity: 1;
+                        top: 100%;
+                    }
+                }
+            }
+
+
+            .nav-link {
+                text-transform: uppercase;
+                color: $color_6;
+                letter-spacing: 0.8px;
+                position: absolute;
+                z-index: 2;
+                top: 0;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                left: 0;
+                font-size: 11px;
+                transition: 0.2s;
+            }
+
+            .dropdown-toggle {
+                &::after {
+                    border: 0;
+                    background: url(assets/images/arrow-menu-down.svg) no-repeat scroll 0 0 / 100%;
+                    width: 12px;
+                    height: 8px;
+                    position: absolute;
+                    right: -5px;
+                    transition: 0.2s;
+
+                    @include breakpoint(ipad) {
+                        right: -8px;
+                    }
+
+
+                    @include breakpoint(both) {
+                        right: 30px;
+                    }
+                }
+
+                &:hover::after {
+                    right: -8px;
+
+                    @include breakpoint(ipad) {
+                        right: -12px;
+                    }
+
+
+                    @include breakpoint(both) {
+                        right: 30px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.navbar-toggler {
+    position: relative;
+    width: 30px;
+    height: 23px !important;
+    margin-left: 10px;
+    min-height: inherit;
+
+    &:focus {
+        box-shadow: inherit;
+    }
+
+    span {
+        background: $color_6;
+        position: absolute;
+        height: 2px;
+        left: 0;
+        right: 0;
+        top: 0;
+
+        &:nth-child(2) {
+            top: 50%;
+            margin-top: -1px;
+        }
+
+        &:nth-child(3) {
+            top: auto;
+            bottom: 0;
+        }
+    }
+}
+
+.nav-item {
+    cursor: pointer;
+}

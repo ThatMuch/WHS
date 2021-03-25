@@ -1,0 +1,224 @@
+.programeetree {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+
+    &__box {
+        position: relative;
+        margin-bottom: 50px;
+        z-index: 1;
+
+        &:nth-child(even) {
+            .programeetree__text {
+                right: -230px;
+                left: auto;
+
+                &::after {
+                    left: -100px;
+                    right: auto;
+                }
+            }
+
+            .programeetree__number {
+                span {
+                    transform: rotate(-17deg);
+                }
+            }
+        }
+
+        &:nth-child(1), &:nth-child(5), &:nth-child(8) {
+            .programeetree__text {
+                span {
+                    color: $color_1;
+                }
+            }
+
+            .programeetree__number {
+                span {
+                    background: $color_1;
+                }
+            }
+        }
+
+        &:nth-child(2) {
+            .programeetree__number {
+                width: 58px;
+                height: 58px;
+
+                span {
+                    font-size: 35px;
+                    top: 7px;
+                    bottom: 7px;
+                    left: 7px;
+                    right: 7px;
+                }
+            }
+        }
+
+        &:nth-child(3) {
+            .programeetree__number {
+                width: 79px;
+                height: 79px;
+
+                span {
+                    font-size: 57px;
+                    top: 9px;
+                    bottom: 9px;
+                    left: 9px;
+                    right: 9px;
+                }
+            }
+        }
+
+        &:nth-child(4) {
+            .programeetree__number {
+                width: 93px;
+                height: 93px;
+
+                span {
+                    font-size: 67px;
+                    top: 11px;
+                    bottom: 11px;
+                    left: 11px;
+                    right: 11px;
+                }
+            }
+        }
+
+        &:nth-child(5) {
+            .programeetree__number {
+                width: 118px;
+                height: 118px;
+
+                span {
+                    font-size: 77px;
+                    top: 13px;
+                    bottom: 13px;
+                    left: 13px;
+                    right: 13px;
+                }
+            }
+
+            .programeetree__text {
+                min-width: 210px;
+                left: -260px;
+
+                span {
+                    min-height: 86px;
+                }
+            }
+        }
+
+        &:nth-child(6) {
+            .programeetree__number {
+                width: 159px;
+                height: 159px;
+
+                span {
+                    font-size: 87px;
+                    top: 15px;
+                    bottom: 15px;
+                    left: 15px;
+                    right: 15px;
+                }
+            }
+
+            .programeetree__text {
+                min-width: 210px;
+                right: -260px;
+
+                span {
+                    min-height: 86px;
+                }
+            }
+        }
+
+        &:nth-child(7) {
+            .programeetree__number {
+                width: 210px;
+                height: 210px;
+
+                span {
+                    font-size: 97px;
+                    top: 17px;
+                    bottom: 17px;
+                    left: 17px;
+                    right: 17px;
+                }
+            }
+
+            .programeetree__text {
+                min-width: 210px;
+                left: -260px;
+
+                span {
+                    min-height: 86px;
+                }
+            }
+        }
+
+        &:nth-child(8) {
+            .programeetree__number {
+                width: 297px;
+                height: 297px;
+
+                span {
+                    font-size: 235px;
+                    top: 21px;
+                    bottom: 21px;
+                    left: 21px;
+                    right: 21px;
+                    transform: rotate(0);
+                }
+            }
+
+            .programeetree__text {
+                position: relative;
+                top: 0;
+                margin: 60px auto 0;
+                right: auto;
+
+                &:after {
+                    width: 5px;
+                    height: 70px;
+                    top: -60px;
+                    left: 50%;
+                    margin-left: -2.5px;
+                }
+
+                span {
+                    min-height: 86px;
+                    font-family: $font_2;
+                    text-transform: uppercase;
+                    font-size: 25px;
+                }
+            }
+        }
+    }
+}
+
+.programee-button {
+    width: 355px;
+    margin: 30px auto 0;
+    position: relative;
+
+    &::before {
+        content: "";
+        background: url(assets/images/download.svg) no-repeat scroll 0 0;
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        left: 50%;
+        margin-left: -10px;
+        z-index: 2;
+        top: -10px;
+    }
+
+    .btn-one {
+        font-family: $font_3;
+        font-size: 12px;
+        font-weight: 700;
+    }
+}

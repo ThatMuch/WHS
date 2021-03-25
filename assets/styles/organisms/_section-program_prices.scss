@@ -1,0 +1,135 @@
+.price-box {
+    // margin-bottom: 15px;
+    padding: 15px 15px 30px;
+    text-align: center;
+    height: 100%;
+    border-bottom: 15px solid $color_10;
+    display: flex;
+    flex-direction: column;
+
+    @include breakpoint(mobile) {
+        height: auto;
+        border: 0;
+        margin-bottom: 15px;
+    }
+
+
+    &.bg {
+        &__black {
+            color: $color_1;
+        }
+
+        &__white--ff {
+            .price-box__body {
+                p {
+                    color: $color_6;
+                }
+            }
+        }
+    }
+
+    .btn-yellow {
+        min-width: 315px;
+        margin-top: auto;
+
+        &.white {
+            border-color: $color_6;
+            color: $color_6;
+
+            &::before {
+                border-color: $color_6;
+            }
+
+            &:hover {
+                color: #fff;
+
+                &::before {
+                    background: $color_6;
+                }
+            }
+        }
+    }
+
+    ul {
+        margin: 0 0 40px;
+        padding: 0;
+        list-style: none;
+
+        li {
+            margin-bottom: 20px;
+        }
+    }
+
+    h2 {
+        font-family: $font_1;
+        font-weight: 300;
+        font-size: 24px;
+    }
+
+    &__title {
+        margin-top: 30px;
+    }
+
+    &__body {
+        margin: auto auto 40px;
+        max-width: 390px;
+        min-height: 200px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        h3 {
+            font-family: $font_1;
+            color: $color_7;
+            margin: 0;
+            font-size: 35px;
+            line-height: 35px;
+            position: relative;
+
+            &:after {
+                content: "";
+                position: absolute;
+                top: 12%;
+                left: 0;
+                width: 100%;
+                border: 1px solid $color_7;
+            }
+        }
+
+        h1 {
+            color: $color_4;
+            font-family: $font_1;
+            font-size: 98px;
+            line-height: 98px;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            color: $color_1;
+            font-size: 14px;
+            margin: 0;
+            text-transform: uppercase;
+        }
+
+        .f-18 {
+            line-height: 35px;
+            letter-spacing: .67px;
+        }
+    }
+
+    &__off {
+        position: absolute;
+        background: $color_4;
+        color: #fff;
+        width: 75px;
+        height: 75px;
+        display: grid;
+        place-items: center;
+        font-size: 25px;
+
+        @include breakpoint(mobile) {
+            position: relative;
+        }
+    }
+}

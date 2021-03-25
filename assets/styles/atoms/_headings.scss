@@ -1,0 +1,47 @@
+/**
+ *
+ * @author      ThatMuch
+ * @version     0.1.0
+ * @since       mars_1.0.0.0
+ *
+ */
+h1, h2, h3, h4, h5, h6 {
+    font-family: $font_2;
+    text-transform: uppercase;
+    letter-spacing: 1.25px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    @include heading-size(6);
+}
+
+h2 {
+    font-size: 30px;
+
+    @include breakpoint(mobile) {
+        font-size: 25px;
+    }
+}
+
+h3 {
+    @include heading-size(4);
+}
+
+h4 {
+    @include heading-size(3);
+
+    text-transform: initial;
+}
+
+h5 {
+    @include heading-size(2);
+
+    text-transform: initial;
+}
+
+h6 {
+    @include heading-size(1);
+
+    text-transform: initial;
+}

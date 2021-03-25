@@ -1,0 +1,72 @@
+.testimonials {
+    padding: 90px 30px;
+    text-align: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center;
+    background-size: cover;
+    height: 100%;
+    color: #fff;
+    font-size: 18px;
+    letter-spacing: 0.67px;
+    overflow: hidden;
+    position: relative;
+    transition: 0.9s;
+
+    &:after {
+        content: "";
+        background: $color_1;
+        position: absolute;
+        top: -100%;
+        left: 0;
+        right: 0;
+        height: 100%;
+        opacity: .8;
+        transition: 0.9s;
+    }
+
+    &:hover {
+        color: $color_6;
+
+        &::after {
+            top: 0;
+        }
+    }
+
+    &__title {
+        min-height: 80px;
+        position: relative;
+        z-index: 1;
+
+        h2 {
+            font-family: $font_1;
+            font-size: 26px;
+            font-weight: 300;
+            letter-spacing: 1.25px;
+        }
+    }
+
+    &__subtitle {
+        min-height: 100px;
+        position: relative;
+        z-index: 1;
+        font-size: 14px;
+        font-weight: 300;
+    }
+
+    &__text {
+        position: relative;
+        z-index: 1;
+        font-size: 18px;
+
+        &::before {
+            content: "\«";
+            margin-right: 5px;
+        }
+
+        &::after {
+            content: "\»";
+            margin-left: 5px;
+        }
+    }
+}

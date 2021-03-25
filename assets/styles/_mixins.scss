@@ -1,0 +1,123 @@
+/**
+ *
+ * @author      ThatMuch
+ * @version     0.1.0
+ * @since       mars_1.0.0.0
+ *
+ */
+
+// Responsive
+@mixin breakpoint($point) {
+    @if $point == desktop {
+        @media only screen and (min-width: 1375px) {
+            @content;
+        }
+    }
+
+    @if $point == laptop {
+        @media only screen and (min-width: 1200px) and (max-width: 1375px) {
+            @content;
+        }
+    }
+    @else if $point == ipad {
+        @media only screen and (min-width: 991px) and (max-width: 1200px) {
+            @content;
+        }
+    }
+    @else if $point == tablet {
+        @media only screen and (min-width: 768px) and (max-width: 991px) {
+            @content;
+        }
+    }
+    @else if $point == mobile {
+        @media only screen and (max-width: 767px) {
+            @content;
+        }
+    }
+    @else if $point == both {
+        @media only screen and (max-width: 991px) {
+            @content;
+        }
+    }
+}
+
+/* HEADINGS
+/––––––––––––––––––––––––*/
+// Create a step size
+/* This is the percentage each heading will be reduced by. */
+$step-size-heading: 0.33333;
+
+/* Amplifier value */
+$amplifier-heading: 1.5;
+
+/* The mixin */
+/* The mixin */
+@mixin heading-size($size) {
+    font-size: $size * $step-size-heading * $amplifier-heading + rem;
+
+    @if $size > 3 {
+        @include breakpoint(mobile) {
+            font-size: ($size - 1) * $step-size-heading * $amplifier-heading + rem;
+        }
+    }
+}
+
+@mixin ellipsis($width: 100%) {
+    max-width: $width;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+@mixin multiLineEllipsis($lineHeight: 1.2em, $lineCount: 1, $bgColor: white) {
+    overflow: hidden;
+    position: relative;
+    line-height: $lineHeight;
+    max-height: $lineHeight * $lineCount;
+
+    //text-align: justify;
+    margin-right: -1em;
+    padding-right: 1em;
+
+    &:before {
+        content: '...';
+        position: absolute;
+        right: 1em;
+        bottom: 0;
+    }
+
+    &:after {
+        content: '';
+        position: absolute;
+        right: 0;
+        width: 1em;
+        height: 1em;
+        margin-top: 0.2em;
+        background: $bgColor;
+    }
+}
+
+// Margin & Padding fix
+$spaceamounts: 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 75, 100, 150, 200;
+$sides: top, bottom, left, right;
+
+@each $space in $spaceamounts {
+    @each $side in $sides {
+        .m#{str-slice($side, 0, 1)}-#{$space} {
+            margin-#{$side}: #{$space}px !important;
+        }
+
+        .p#{str-slice($side, 0, 1)}-#{$space} {
+            padding-#{$side}: #{$space}px !important;
+        }
+    }
+}
+
+// Font Size
+$sizeamounts: 14, 15, 16, 18, 20, 21, 22, 24, 26, 28, 30, 32, 69;
+
+@each $size in $sizeamounts {
+    .f-#{$size} {
+        font-size: #{$size}px !important;
+    }
+}

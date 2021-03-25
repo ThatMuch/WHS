@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="53" height="50.696" viewBox="0 0 53 50.696">
+  <defs>
+    <clipPath id="clip-path">
+      <rect width="29" height="7" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="Group_397" data-name="Group 397" transform="translate(-296.5 -893.305)">
+    <rect id="Rectangle_561" data-name="Rectangle 561" width="53" height="50.696" rx="25.348" transform="translate(296.5 893.305)" fill="#fff"/>
+    <g id="Repeat_Grid_45" data-name="Repeat Grid 45" transform="translate(308.5 915.418)" clip-path="url(#clip-path)">
+      <g transform="translate(-411 -1760)">
+        <circle id="Ellipse_149" data-name="Ellipse 149" cx="2.5" cy="2.5" r="2.5" transform="translate(411 1760)" fill="#323530"/>
+      </g>
+      <g transform="translate(-399 -1760)">
+        <circle id="Ellipse_149-2" data-name="Ellipse 149" cx="2.5" cy="2.5" r="2.5" transform="translate(411 1760)" fill="#323530"/>
+      </g>
+      <g transform="translate(-387 -1760)">
+        <circle id="Ellipse_149-3" data-name="Ellipse 149" cx="2.5" cy="2.5" r="2.5" transform="translate(411 1760)" fill="#323530"/>
+      </g>
+    </g>
+  </g>
+</svg>

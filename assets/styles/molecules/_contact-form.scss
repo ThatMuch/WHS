@@ -1,0 +1,43 @@
+/**
+ *
+ * @author      ThatMuch
+ * @version     0.1.0
+ * @since       mars_1.0.0.0
+ *
+ */
+.contact-form {
+    margin-top: 40px;
+}
+
+.single-form {
+    display: flex;
+
+    @include breakpoint(mobile) {
+        display: block;
+    }
+
+
+    .btn-submit {
+        margin-top: 30px;
+    }
+
+    &:first-child span:first-child input:not([type=submit]) {
+        border-right: 0 !important;
+    }
+
+    input:not([type=submit]), textarea {
+        color: #323530;
+        width: 100%;
+        border: 1px solid #AFAEAE;
+        padding: 15px 20px;
+        background-color: $color_12;
+    }
+
+    input:not([type=submit]) {
+        border-bottom: 0 !important;
+    }
+}
+
+.wpcf7-form-control-wrap {
+    width: 100%;
+}

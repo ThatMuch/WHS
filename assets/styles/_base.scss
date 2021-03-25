@@ -1,0 +1,289 @@
+/**
+ *
+ * @author      ThatMuch
+ * @version     0.1.0
+ * @since       mars_1.0.0.0
+ *
+ */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: contain;
+    -webkit-tap-highlight-color: transparent;
+}
+
+*:focus {
+    outline: 0;
+}
+
+html {
+    max-width: 100vw;
+    height: 100%;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    color: $text-c;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+html body {
+    // used as wrapper for sticky footer
+    font-family: $text-ff;
+    font-size: $text-fz; // only used for rem-handling, the actual font-size is $body__fontsize
+    line-height: $text-lh;
+    letter-spacing: 1px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    background-color: $color_10 !important;
+    color: $text-c;
+}
+
+main {
+    position: relative;
+    margin-top: inherit;
+    padding-bottom: 150px !important;
+
+    article,
+    .element {
+        padding: 1rem 0;
+    }
+}
+
+aside {
+    position: relative;
+    margin-top: $size-navbar;
+
+    .widget {
+        padding: 1rem 0;
+        border-bottom: 1px solid $color-grey;
+
+        .nav-link {
+            padding: 0 0 0.5rem 0;
+        }
+    }
+}
+
+p {
+    margin-bottom: 20px;
+
+    strong {
+        font-family: $font_6;
+    }
+}
+
+article,
+.element,
+nav,
+footer .inner {
+    // width: $element_width;
+    //  max-width: $element_maxwidth;
+    margin: 0 auto;
+
+    @include breakpoint(mobile) {
+        width: $element_width_mobile;
+    }
+}
+
+.site-content {
+    width: 100%;
+    position: relative;
+}
+
+/* .container {
+    @include breakpoint(desktopLg) {
+        max-width: 1250px !important;
+    }
+} */
+
+.color {
+    &-white {
+        color: #fff !important;
+    }
+
+    &-red {
+        color: $color_4 !important;
+    }
+}
+
+.ff {
+    &--segoe {
+        font-family: $font_2;
+    }
+}
+
+.bg {
+    &__white {
+        background-color: $color_12;
+
+        &--two {
+            background-color: $color_14;
+        }
+
+        &--three {
+            background-color: $color_15;
+        }
+
+        &--four {
+            background-color: $color_19;
+        }
+    }
+
+    &__black {
+        background-color: $color_6;
+        color: #fff;
+    }
+
+    &__gradient {
+        background: linear-gradient(90deg, $color_11, $color_20);
+    }
+
+    &__yellow {
+        background: $color_21;
+    }
+
+    &__primary {
+        background: $color_5 !important;
+
+        .section__title {
+            color: #fff;
+        }
+    }
+
+    &__green {
+        background: $color_3 !important;
+    }
+}
+
+.line {
+    background-image: url(./assets/images/sommet-white.svg);
+    background-repeat: no-repeat;
+    background-position: left 0;
+
+    &__white--two {
+        background-image: url(./assets/images/sommet-white-2.svg);
+        background-position: top center;
+        background-repeat: no-repeat;
+    }
+
+    &__white--three {
+        background-image: url(./assets/images/sommet-white-3.svg);
+        background-position: top center;
+        background-repeat: no-repeat;
+    }
+
+    &__white--four {
+        background-image: url(./assets/images/sommet-white-4.svg);
+        background-position: top left;
+        background-repeat: no-repeat;
+    }
+
+    &__white--five {
+        background-image: url(./assets/images/sommet-white-5.svg);
+        background-position: top center;
+        background-repeat: no-repeat;
+    }
+
+    &__white--six {
+        background-image: url(./assets/images/sommet-white-6.svg);
+        background-position: top center;
+        background-repeat: no-repeat;
+    }
+
+    &__black {
+        background-image: url(./assets/images/sommet-black.svg);
+        background-position: center right;
+        background-repeat: no-repeat;
+
+        &--two {
+            background-image: url(./assets/images/sommet-black-2.svg);
+            background-position: top left;
+            background-repeat: no-repeat;
+        }
+
+        &--three {
+            background-image: url(./assets/images/sommet-black-3.svg);
+            background-position: top left;
+            background-repeat: no-repeat;
+        }
+
+        &--four {
+            background-image: url(./assets/images/sommet-black-4.svg);
+            background-position: top left;
+            background-repeat: no-repeat;
+        }
+
+        &--five {
+            background-image: url(./assets/images/sommet-black-5.svg);
+            background-position: top left;
+            background-repeat: no-repeat;
+        }
+    }
+}
+
+.row {
+    &-15 {
+        margin-left: -7.5px;
+        margin-right: -7.5px;
+
+        [class*="col-"] {
+            padding-left: 7.5px;
+            padding-right: 7.5px;
+        }
+    }
+}
+
+.c-white {
+    color: $color_13;
+}
+
+.c-yellow {
+    color: $color_1;
+}
+
+.c-primary {
+    color: $color_5;
+}
+
+.c-orange {
+    color: $color_4;
+}
+
+.c-green {
+    color: $color_3;
+}
+
+.c-gray {
+    color: $color_7;
+}
+
+.c-black {
+    color: $color_6;
+}
+
+// Responsive
+.mobile {
+    .is-mobile {
+        display: block;
+    }
+
+    .is-desktop {
+        display: none;
+    }
+}
+
+.is-mobile {
+    display: none;
+}
+
+.is-desktop {
+    display: block;
+}
