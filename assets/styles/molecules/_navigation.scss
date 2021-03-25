@@ -14,6 +14,17 @@
     }
 }
 
+.navbar-brand {
+    width: 12rem;
+    height: calc(#{$size-navbar} - 20px);
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+}
+
 .main-menu {
     @include breakpoint(both) {
         position: fixed;

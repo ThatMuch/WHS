@@ -241,3 +241,22 @@ function my_excerpt_length($length){
 return 200;
 }
 add_filter("excerpt_length", "my_excerpt_length");
+
+
+
+function wpc_customize_register($wp_customize) {
+	$wp_customize->add_section('wpc_logo_section', array(
+			'title'          => __('Logo Gif', 'textdomain'),
+			'priority'       => 30,
+			'description'    => __('Upload a logo to replace the default site name and description in the header', 'textdomain')
+		)
+	);
+	$wp_customize->add_setting('wpc_logo');
+	$wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'wpc_logo', array(
+			'label'      => __('Logo Gif', 'textdomain'),
+			'section'    => 'wpc_logo_section',
+			'settings'   => 'wpc_logo')
+		)
+	);
+}
+add_action('customize_register', 'wpc_customize_register');

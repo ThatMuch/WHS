@@ -45,7 +45,7 @@
         <div class="container-fluid">
 			<div class="navbar navbar-expand-lg align-items-center">
 					<a class="navbar-brand" href="<?php echo  site_url(); ?>">
-						<img src="<?php echo $image[0]; ?>" alt="We Hate School">
+						<img id="logo_brand" src="<?php echo $image[0]; ?>" alt="We Hate School">
 					</a>
 					<div class="main-menu collapse navbar-collapse justify-content-center" id="navbar">
 						<?php
@@ -59,7 +59,7 @@
 							'fallback_cb'    => 'Bootstrap_NavWalker::fallback', // For menu fallback
 						));
 						?>
-						<button data-bs-toggle="modal" data-bs-target="#ContactModal" class="btn-one wow-modal-id-1"><span>Réserver votre place</span></button>
+						<button data-bs-toggle="modal" data-bs-target="#ContactModal" class="btn-one wow-modal-id-1"><span>Nous contacter</span></button>
 					</div>
 					    <button class="navbar-toggler menu-collapse" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
                             <span></span>

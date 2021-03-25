@@ -8,12 +8,6 @@
             text-align: center;
             font-size: 21px;
         }
-
-        &.striped {
-            .events__body:nth-child(even) {
-                background: $color_18;
-            }
-        }
     }
 
     &__body {
@@ -22,6 +16,10 @@
         border-top: 1px solid $color_17;
         border-bottom: 1px solid $color_17;
         padding: 15px 0 10px;
+
+        &:hover {
+            background: $color_18;
+        }
 
         @include breakpoint(mobile) {
             flex-wrap: wrap;
