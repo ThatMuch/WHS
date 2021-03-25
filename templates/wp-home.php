@@ -122,7 +122,7 @@ $categories = get_terms($taxonomy); ?>
 											<?php if( $the_query->have_posts() ) : ?>
 											<?php //var_dump($the_query->have_posts()) ;?>
 											<?php foreach( $months as $month => $value) : ?>
-												<div class="events__box <?php echo get_field('lien') ? 'striped' : '' ?>">
+												<div class="events__box">
 													<h2><?php echo $month;?></h2>
 													<?php foreach( $value as $event_post) : ?>
 													<div class="events__body">
