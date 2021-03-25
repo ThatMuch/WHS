@@ -45,7 +45,7 @@
         <div class="container-fluid">
 			<div class="navbar navbar-expand-lg align-items-center">
 					<a class="navbar-brand" href="<?php echo  site_url(); ?>">
-						<img src="<?php echo $image[0]; ?>" alt="We Hate School">
+						<img id="logo_brand" src="<?php echo $image[0]; ?>" alt="We Hate School">
 					</a>
 					<div class="main-menu collapse navbar-collapse justify-content-center" id="navbar">
 						<?php
