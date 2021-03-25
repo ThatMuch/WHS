@@ -114,10 +114,31 @@ $categories = get_terms($taxonomy);
 														</div>
 														<?php if ( $event_post['link'] ) : ?>
 														<div class="events__link">
-															<a href="<?php echo $event_post['link']; ?>" class="btn-one yellow"><span>Réserver votre place</span></a>
+															<a data-bs-toggle="modal" data-bs-target="#EventModal" class="btn-one yellow"><span>Réservez votre place</span></a>
 														</div>
 														<?php endif; ?>
 													</div>
+
+	<!-- Modal -->
+<div class="modal fade" id="EventModal" tabindex="-1" aria-labelledby="EventModalLabel" aria-hidden="true" data-bs-backdrop="static">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="EventModalLabel">Réservez votre place</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+			<iframe id="inlineFrameExample"
+				title="Inline Frame Example"
+				width="100%"
+				height="600"
+				src="<?php echo $event_post['link'];?>">
+			</iframe>
+
+      </div>
+    </div>
+  </div>
+</div>
 
 										<?php  endforeach; ?>
 										</div>
