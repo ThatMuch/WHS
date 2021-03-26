@@ -8,13 +8,13 @@
 						<?php if ( have_rows( 'rs', 'option' ) ) : ?>
 							<?php while ( have_rows( 'rs', 'option' ) ) : the_row(); ?>
 							<?php if( get_sub_field('linkedin')): ?>
-								<li><a href="<?php the_sub_field( 'linkedin' ); ?>"><img src="<?php echo get_stylesheet_directory_uri().'/assets/images/linkedin.svg';?>" alt="logo_linkedin"></a></li>
+								<li><a href="<?php the_sub_field( 'linkedin' ); ?>" target="_blank"><img src="<?php echo get_stylesheet_directory_uri().'/assets/images/linkedin.svg';?>" alt="logo_linkedin"></a></li>
 							<?php endif;?>
 							<?php if( get_sub_field('instagram')): ?>
-						<li><a href="<?php the_sub_field( 'instagram' ); ?>"><img src="<?php echo get_stylesheet_directory_uri().'/assets/images/instagram.svg';?>" alt="logo_instagram"></a></li>
+						<li><a href="<?php the_sub_field( 'instagram' ); ?>" target="_blank"><img src="<?php echo get_stylesheet_directory_uri().'/assets/images/instagram.svg';?>" alt="logo_instagram"></a></li>
 <?php endif;?>
 						<?php if( get_sub_field('facebook')): ?>
-						<li><a href="<?php the_sub_field( 'facebook' ); ?>"><img src="<?php echo get_stylesheet_directory_uri().'/assets/images/facebook.svg';?>" alt="logo_facebook"></a></li>
+						<li><a href="<?php the_sub_field( 'facebook' ); ?>" target="_blank"><img src="<?php echo get_stylesheet_directory_uri().'/assets/images/facebook.svg';?>" alt="logo_facebook"></a></li>
 						<?php endif;?>
 							<?php endwhile; ?>
 						<?php endif; ?>
