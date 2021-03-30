@@ -3,7 +3,7 @@
 		<div class="row">
 			<div class="col-lg-9 mx-auto">
 				<div class="text-center">
-					<h2 class="mb-50"><?php the_sub_field( 'title' ); ?></h2>
+					<h2 ><?php the_sub_field( 'title' ); ?></h2>
 					<?php the_sub_field( 'text' ); ?>
 				</div>
 			</div>

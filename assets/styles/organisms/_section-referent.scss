@@ -8,6 +8,14 @@
 
     &-area {
         min-height: 650px;
+
+        .order-md-1 img {
+            @include breakpoint(mobile) {
+                width: 200px;
+                margin: 0 auto;
+                display: block;
+            }
+        }
     }
 
     &-wrapper {
@@ -34,6 +42,10 @@
             margin: 0;
             font-size: 21px;
             text-transform: uppercase;
+
+            @include breakpoint(mobile) {
+                font-size: 16px;
+            }
         }
     }
 
