@@ -12,6 +12,12 @@
     width: 100%;
     bottom: 442px;
 
+    @include breakpoint(mobile) {
+        position: relative;
+        bottom: 0;
+    }
+
+
     &:before {
         content: "";
         background: url(./assets/images//sommet.svg) no-repeat scroll right top;
