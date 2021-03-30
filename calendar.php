@@ -93,16 +93,14 @@ $categories = get_terms($taxonomy);
 													}
 													array_push($months[$value['month']], $value);
 												}
-
 												?>
 
 										<?php if( $the_query->have_posts() ) : ?>
-											<?php //var_dump($the_query->have_posts()) ;?>
 											<?php foreach( $months as $month => $value) : ?>
 												<div class="events__box">
 													<h2 class="fw-normal"><?php echo $month;?></h2>
 													<?php foreach( $value as $event_post) : ?>
-														<?php //var_dump($event_post) ;?>
+
 													<div class="events__body">
 														<div class="events__date">
 															<p class="month"><?php echo $event_post['month'];?></p>

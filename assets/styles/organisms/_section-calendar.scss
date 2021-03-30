@@ -9,6 +9,7 @@
         font-size: 18px;
         margin-bottom: 40px;
         letter-spacing: -0.4px;
+        border-bottom: 1px solid $color_17;
 
         > h2 {
             text-align: center;
@@ -20,9 +21,6 @@
         display: flex;
         align-items: center;
         border-top: 1px solid $color_17;
-        border-bottom: 1px solid $color_17;
-
-        //padding: 15px 0 10px;
 
         &:hover {
             background: $color_18;
@@ -56,6 +54,7 @@
     }
 
     &__time {
+        padding-top: 10px;
         width: 70px;
         text-align: center;
         margin-right: 20px;
