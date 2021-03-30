@@ -1,6 +1,6 @@
 {
     "key": "group_604e59921904d",
-    "title": "Rentrée",
+    "title": "Events",
     "fields": [
         {
             "key": "field_604e599f9a45a",
@@ -34,6 +34,48 @@
             },
             "default_value": "",
             "placeholder": ""
+        },
+        {
+            "key": "field_6063921c63cc6",
+            "label": "Nombre de place",
+            "name": "places",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_6063931f44e25",
+            "label": "Rentrée",
+            "name": "rentree",
+            "type": "checkbox",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "true": "Rentrée"
+            },
+            "allow_custom": 0,
+            "default_value": [],
+            "layout": "vertical",
+            "toggle": 0,
+            "return_format": "value",
+            "save_custom": 0
         }
     ],
     "location": [
@@ -60,5 +102,5 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1616527427
+    "modified": 1617138615
 }
