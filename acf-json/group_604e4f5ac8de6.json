@@ -96,10 +96,10 @@
                     "placeholder": ""
                 },
                 {
-                    "key": "field_604e551ab8dcf",
-                    "label": "Reduction",
-                    "name": "discount",
-                    "type": "number",
+                    "key": "field_6061af62f930f",
+                    "label": "Promotion",
+                    "name": "promotion",
+                    "type": "group",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -108,13 +108,48 @@
                         "class": "",
                         "id": ""
                     },
-                    "default_value": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "%",
-                    "min": "",
-                    "max": 100,
-                    "step": ""
+                    "layout": "block",
+                    "acfe_seamless_style": 0,
+                    "acfe_group_modal": 0,
+                    "sub_fields": [
+                        {
+                            "key": "field_604e551ab8dcf",
+                            "label": "Reduction",
+                            "name": "discount",
+                            "type": "number",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "%",
+                            "min": "",
+                            "max": 100,
+                            "step": ""
+                        },
+                        {
+                            "key": "field_6061afb6f9310",
+                            "label": "Lien",
+                            "name": "link",
+                            "type": "url",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": ""
+                        }
+                    ]
                 }
             ]
         },
@@ -317,5 +352,5 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1616164910
+    "modified": 1617014808
 }

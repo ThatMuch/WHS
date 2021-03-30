@@ -1,4 +1,4 @@
-        <div class="section__area bg__white--five pb-0">
+        <div id="tarification" class="section__area bg__white--five pb-0">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
