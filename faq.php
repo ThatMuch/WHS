@@ -22,7 +22,7 @@ $categories = get_terms(array(
 	<div class="container">
 		                <div class="row mt-100">
                     <div class="col-md-12">
-                        <div class="section__title mb-5">
+                        <div class="mb-5">
                             <h2><?php the_sub_field( 'title' );?></h2>
                         </div>
                         <?php foreach ($categories as $category) : ?>

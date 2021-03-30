@@ -21,19 +21,10 @@
 }
 
 @font-face {
-    font-family: 'Segoe UI';
-    src: url("./assets/fonts/SegoeUI.eot");
-    src: url("./assets/fonts/SegoeUI.eot?#iefix") format("embedded-opentype"), url("./assets/fonts/SegoeUI.woff2") format("woff2"), url("./assets/fonts/SegoeUI.woff") format("woff"), url("./assets/fonts/SegoeUI.ttf") format("truetype"), url("./assets/fonts/SegoeUI.svg#SegoeUI") format("svg");
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
     font-family: 'Avenir Next LT Pro';
     src: url("./assets/fonts/AvenirNextLTPro-Bold.eot");
     src: url("./assets/fonts/AvenirNextLTPro-Bold.eot?#iefix") format("embedded-opentype"), url("./assets/fonts/AvenirNextLTPro-Bold.woff2") format("woff2"), url("./assets/fonts/AvenirNextLTPro-Bold.woff") format("woff"), url("./assets/fonts/AvenirNextLTPro-Bold.ttf") format("truetype"), url("./assets/fonts/AvenirNextLTPro-Bold.svg#AvenirNextLTPro-Bold") format("svg");
-    font-weight: bold;
+    font-weight: 700;
     font-style: normal;
     font-display: swap;
 }
@@ -42,25 +33,16 @@
     font-family: 'Avenir Next LT Pro';
     src: url("./assets/fonts/AvenirNextLTPro-Regular.eot");
     src: url("./assets/fonts/AvenirNextLTPro-Regular.eot?#iefix") format("embedded-opentype"), url("./assets/fonts/AvenirNextLTPro-Regular.woff2") format("woff2"), url("./assets/fonts/AvenirNextLTPro-Regular.woff") format("woff"), url("./assets/fonts/AvenirNextLTPro-Regular.ttf") format("truetype"), url("./assets/fonts/AvenirNextLTPro-Regular.svg#AvenirNextLTPro-Regular") format("svg");
-    font-weight: normal;
+    font-weight: 400;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'Avenir Next LT Pro Demi';
+    font-family: 'Avenir Next LT Pro';
     src: url("./assets/fonts/AvenirNextLTPro-Demi.eot");
     src: url("./assets/fonts/AvenirNextLTPro-Demi.eot?#iefix") format("embedded-opentype"), url("./assets/fonts/AvenirNextLTPro-Demi.woff2") format("woff2"), url("./assets/fonts/AvenirNextLTPro-Demi.woff") format("woff"), url("./assets/fonts/AvenirNextLTPro-Demi.ttf") format("truetype"), url("./assets/fonts/AvenirNextLTPro-Demi.svg#AvenirNextLTPro-Demi") format("svg");
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Avenir Next LT Pro CN';
-    src: url("./assets/fonts/AvenirNextLTPro-Cn.eot");
-    src: url("./assets/fonts/AvenirNextLTPro-Cn.eot?#iefix") format("embedded-opentype"), url("./assets/fonts/AvenirNextLTPro-Cn.woff2") format("woff2"), url("./assets/fonts/AvenirNextLTPro-Cn.woff") format("woff"), url("./assets/fonts/AvenirNextLTPro-Cn.ttf") format("truetype"), url("./assets/fonts/AvenirNextLTPro-Cn.svg#AvenirNextLTPro-Cn") format("svg");
-    font-weight: normal;
+    font-weight: 500;
     font-style: normal;
     font-display: swap;
 }
@@ -69,16 +51,7 @@
     font-family: 'Cocogoose Classic';
     src: url("./assets/fonts/CocogooseClassic-Regular.eot");
     src: url("./assets/fonts/CocogooseClassic-Regular.eot?#iefix") format("embedded-opentype"), url("./assets/fonts/CocogooseClassic-Regular.woff2") format("woff2"), url("./assets/fonts/CocogooseClassic-Regular.woff") format("woff"), url("./assets/fonts/CocogooseClassic-Regular.ttf") format("truetype"), url("./assets/fonts/CocogooseClassic-Regular.svg#CocogooseClassic-Regular") format("svg");
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Cocogoose Classic';
-    src: url("./assets/fonts/CocogooseClassic-ExtraBold.eot");
-    src: url("./assets/fonts/CocogooseClassic-ExtraBold.eot?#iefix") format("embedded-opentype"), url("./assets/fonts/CocogooseClassic-ExtraBold.woff2") format("woff2"), url("./assets/fonts/CocogooseClassic-ExtraBold.woff") format("woff"), url("./assets/fonts/CocogooseClassic-ExtraBold.ttf") format("truetype"), url("./assets/fonts/CocogooseClassic-ExtraBold.svg#CocogooseClassic-ExtraBold") format("svg");
-    font-weight: 800;
+    font-weight: 400;
     font-style: normal;
     font-display: swap;
 }
