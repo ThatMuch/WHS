@@ -72,9 +72,7 @@ $text = get_sub_field( 'text' );
 					$lien = get_sub_field( 'lien' );
 					$text = get_sub_field( 'text' );
 				?>
-
 					<p class="d-none box-content"><?php echo $text ;?></p>
-
 
 	<?php endwhile; ?>
 			<div class="row align-items-center">
@@ -136,7 +134,7 @@ function hoverSigns() {
 	setTimeout(function() {
 		var svg = document.querySelectorAll('img.svg');
 		var arraySigns = [...document.getElementsByClassName('sign')];
-		arraySigns[0].classList.add('hover');
+		arraySigns[1].classList.add('hover');
 
 		arraySigns.forEach(sign => {
 			sign.addEventListener('mouseover', () => {
