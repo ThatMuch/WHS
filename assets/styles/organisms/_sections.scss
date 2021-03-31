@@ -73,8 +73,17 @@ main#sections {
     &__area {
         padding: 70px 0;
 
+        @include breakpoint(mobile) {
+            padding: 40px 0;
+        }
+
+
         &-formidable {
             padding: 70px 0 170px;
+
+            @include breakpoint(mobile) {
+                transform: translateY(105px);
+            }
         }
     }
 

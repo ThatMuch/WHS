@@ -30,7 +30,8 @@
 
     .btn-yellow {
         min-width: 315px;
-        margin-top: auto;
+        width: 315px;
+        margin: auto auto 0;
 
         &.white {
             border-color: $color_6;

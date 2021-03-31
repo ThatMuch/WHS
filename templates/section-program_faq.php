@@ -1,6 +1,10 @@
 <?php
 $taxonomy = 'faqs_categories';
-$categories = get_terms($taxonomy);
+$categories = get_terms(array(
+    "taxonomy" => $taxonomy,
+    "order" => 'DESC'
+));
+
 ?>
 <section class="section__area bg__white--five">
 	<div class="container">
@@ -17,7 +21,7 @@ $categories = get_terms($taxonomy);
                             <div class="promotion" id="promotion">
                             <?php 	$args = array(
 													'post_type'=> 'faqs',
-													'order'    => 'DESC',
+													'order'    => 'ASC',
 													'hide_empty'=> true,
 													  'tax_query' => array(
 														array(

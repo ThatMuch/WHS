@@ -13,13 +13,16 @@
 <?php get_header(); ?>
 <?php
 $taxonomy = 'faqs_categories';
-$categories = get_terms($taxonomy);
+$categories = get_terms(array(
+    "taxonomy" => $taxonomy,
+    "order" => 'DESC'
+));
 ?>
 <section class="section__area bg__white--five">
 	<div class="container">
 		                <div class="row mt-100">
                     <div class="col-md-12">
-                        <div class="section__title mb-5">
+                        <div class="mb-5">
                             <h2><?php the_sub_field( 'title' );?></h2>
                         </div>
                         <?php foreach ($categories as $category) : ?>
@@ -30,7 +33,7 @@ $categories = get_terms($taxonomy);
                             <div class="promotion" id="promotion">
                             <?php 	$args = array(
 													'post_type'=> 'faqs',
-													'order'    => 'DESC',
+													'order'    => 'ASC',
 													'hide_empty'=> true,
 													  'tax_query' => array(
 														array(

@@ -31,17 +31,17 @@
                 max-width: 100%;
                 transform: translateY(82px);
 
+                .st6, .st0, .st5, .st4 {
+                    fill: #fff;
+                }
+
                 #CTA_inspirer {
                     cursor: pointer;
 
                     &.hover {
-                        path, circle {
+                        .st0 {
                             fill: #A7CCBF;
                         }
-                    }
-
-                    path, circle {
-                        fill: #fff;
                     }
                 }
 
@@ -49,13 +49,9 @@
                     cursor: pointer;
 
                     &.hover {
-                        path, circle {
+                        .st4, .st5 {
                             fill: #FFEF9E;
                         }
-                    }
-
-                    path, circle {
-                        fill: #fff;
                     }
                 }
 
@@ -63,21 +59,9 @@
                     cursor: pointer;
 
                     &.hover {
-                        polygon {
+                        .st6 {
                             fill: #2E667A;
                         }
-
-                        path {
-                            fill: #FFEF9E;
-                        }
-
-                        text, tspan {
-                            fill: #2E667A;
-                        }
-                    }
-
-                    rect, path, polygon {
-                        fill: #fff;
                     }
 
                     .st9 {

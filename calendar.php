@@ -15,7 +15,7 @@ $taxonomy = 'events_categories';
 $categories = get_terms($taxonomy);
 ?>
 <?php get_header(); ?>
-<div class="section__area bg__white--three">
+<div class="section__area bg__white--three section__events">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12">
@@ -69,7 +69,9 @@ $categories = get_terms($taxonomy);
 														'day' => $date[1],
 														'time' => str_replace(":","h",$date[2]),
 														'title' => get_the_title(),
-														'link' => get_field('lien')
+														'link' => get_field('lien'),
+														'places' => get_field('places'),
+														'rentree' =>  get_field( 'rentree' )[0],
 													));
 												};
 
@@ -91,25 +93,27 @@ $categories = get_terms($taxonomy);
 													}
 													array_push($months[$value['month']], $value);
 												}
-
 												?>
 
 										<?php if( $the_query->have_posts() ) : ?>
-											<?php //var_dump($the_query->have_posts()) ;?>
 											<?php foreach( $months as $month => $value) : ?>
 												<div class="events__box">
-													<h2><?php echo $month;?></h2>
+													<h2 class="fw-normal"><?php echo $month;?></h2>
 													<?php foreach( $value as $event_post) : ?>
+
 													<div class="events__body">
 														<div class="events__date">
-															<p><?php echo $event_post['month'];?></p>
-															<h2><?php echo $event_post['day'];?></h2>
+															<p class="month"><?php echo $event_post['month'];?></p>
+															<p class="day"><?php echo $event_post['day'];?></p>
 														</div>
 														<div class="events__time">
 															<?php echo $event_post['time'];?>
 														</div>
 														<div class="events__text">
-															<?php echo $event_post['title'];?>
+														<p class="mb-0 <?php echo $event_post['rentree'] ? 'fw-bold': '';?>"><?php echo $event_post['title'];?></p>
+														<?php if($event_post['places']) : ;?>
+															<p class="mb-0 places"><?php echo $event_post['places'];?> places disponibles</p>
+														<?php endif ;?>
 														</div>
 														<?php if ( $event_post['link'] ) : ?>
 														<div class="events__link">
