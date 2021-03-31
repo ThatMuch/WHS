@@ -6,7 +6,7 @@ $categories = get_terms(array(
 ));
 
 ?>
-<section class="section__area bg__white--five">
+<section class="section__area bg__white--five" id="FAQ">
 	<div class="container">
 		                <div class="row mt-100">
                     <div class="col-md-12">
