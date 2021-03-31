@@ -10,6 +10,8 @@ a {
     color: $a__linkcolor;
     text-decoration: $a__textdecoration;
     transition: $transition_fast;
+    cursor: pointer;
+    display: block;
 
     &:hover {
         color: $a__hovercolor;

@@ -34,12 +34,18 @@
 <div class="sticky-top header-wrapper">
 	<?php if ( have_rows( 'tarif_classic', 'option' ) ) : ?>
 		<?php while ( have_rows( 'tarif_classic', 'option' ) ) : the_row(); ?>
-		<?php if( get_sub_field('discount') ) : ?>
-			<div class="header-top">
-				<?php echo get_sub_field('discount'); ?>% de promotion sur les places de la rentrée de MAI
-			</div>
-		<?php endif; ?>
+		<?php if ( have_rows( 'promotion' ) ) : ?>
+			<?php while ( have_rows( 'promotion' ) ) : the_row(); ?>
+				<?php if( get_sub_field('discount') ) : ?>
+					<div class="header-top">
+					<a href="<?php the_sub_field( 'link' ); ?>">
+						<?php echo get_sub_field('discount'); ?>% de promotion sur les places de la rentrée de MAI
+					</a>
+					</div>
+				<?php endif; ?>
 			<?php endwhile; ?>
+		<?php endif; ?>
+		<?php endwhile; ?>
 	<?php endif; ?>
 	<div class="header-area">
         <div class="container-fluid">

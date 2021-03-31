@@ -4,7 +4,7 @@
 			<div class="col-lg-12">
 				<div class="text-center">
                     <h1 class="f-69 c-black title mb-3">f<span class="c-yellow">o</span>r<span class="c-primary">m</span>i<span class="c-orange">d</span>a<span class="c-green">B</span>l<span class="c-gray">e</span>!</h1>
-                    <p class="f-26"><?php the_sub_field( 'text' ); ?></p>
+                    <?php the_sub_field( 'text' ); ?>
                 </div>
 		<div class="programeetree-wrapper">
 			<?php $img = get_sub_field( 'img' ); ?>

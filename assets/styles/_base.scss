@@ -45,6 +45,10 @@ html body {
     min-height: 100vh;
     background-color: $color_10 !important;
     color: $text-c;
+
+    @include breakpoint(mobile) {
+        font-size: .9rem;
+    }
 }
 
 main {
@@ -76,7 +80,8 @@ p {
     margin-bottom: 20px;
 
     strong {
-        font-family: $font_6;
+        font-family: $font_3;
+        font-weight: 500;
     }
 }
 

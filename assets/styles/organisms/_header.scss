@@ -26,11 +26,9 @@ header {
 
         h1 {
             margin: 0;
-            font-size: 40px;
             letter-spacing: .4px;
             font-family: $font_2;
-            font-weight: 400;
-            font-weight: 400;
+            font-weight: 900;
             color: transparent;
             text-transform: uppercase;
             -webkit-text-stroke: 1px #fff;
@@ -172,11 +170,14 @@ header {
 .header-top {
     background: $color_6;
     text-align: center;
-    color: $color_1;
     font-size: 15px;
     position: relative;
     text-transform: uppercase;
     padding: 10px 15px;
+
+    a {
+        color: $color_1;
+    }
 
     &::before {
         content: "";

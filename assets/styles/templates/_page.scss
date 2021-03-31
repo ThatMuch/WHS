@@ -29,3 +29,13 @@ main#page {
         }
     }
 }
+
+.privacy-policy {
+    @media screen and (min-width: 1366px) {
+        .section__area {
+            .container {
+                max-width: 800px !important;
+            }
+        }
+    }
+}

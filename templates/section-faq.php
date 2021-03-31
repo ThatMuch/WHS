@@ -2,8 +2,8 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-9 mx-auto">
-				<div class="section__title">
-					<h2 class="mb-75"><?php the_sub_field( 'title' ); ?></h2>
+				<div class="text-center">
+					<h2 ><?php the_sub_field( 'title' ); ?></h2>
 					<?php the_sub_field( 'text' ); ?>
 				</div>
 			</div>

@@ -1,16 +1,28 @@
+<?
+/**
+ * Template for ACF flexible elements
+ *
+ * @author      ThatMuch
+ * @version     0.1.0
+ * @since       mars_1.0.0
+ *
+ *
+ */
+?>
+<?php /* Template Name: Faq */ ?>
+<?php get_header(); ?>
 <?php
 $taxonomy = 'faqs_categories';
 $categories = get_terms(array(
     "taxonomy" => $taxonomy,
     "order" => 'DESC'
 ));
-
 ?>
 <section class="section__area bg__white--five">
 	<div class="container">
 		                <div class="row mt-100">
                     <div class="col-md-12">
-                        <div class="section__title mb-5">
+                        <div class="mb-5">
                             <h2><?php the_sub_field( 'title' );?></h2>
                         </div>
                         <?php foreach ($categories as $category) : ?>
@@ -54,3 +66,5 @@ $categories = get_terms(array(
                 </div>
 	</div>
 </section>
+
+<?php get_footer(); ?>

@@ -1,4 +1,4 @@
-        <div class="section__area bg__white--five pb-0">
+        <div id="tarification" class="section__area bg__white--five pb-0">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
@@ -12,29 +12,32 @@
 	<?php while ( have_rows( 'tarif_classic', 'option' ) ) : the_row(); ?>
                     <div class="col-md-6">
                         <div class="price-box bg__black">
-							<?php if( get_sub_field('discount') ) : ?>
+							<?php if( have_rows( 'promotion' ) ) : ?>
+                                    <?php while ( have_rows( 'promotion' ) ) : the_row(); ?>
 							<div class="price-box__off">
                                 <div>-<?php echo get_sub_field('discount'); ?>%</div>
                             </div>
+                            <?php endwhile; ?>
 							<?php endif; ?>
                             <div class="price-box__title">
                                 <h2><?php the_sub_field( 'title' ); ?></h2>
                             </div>
                             <div class="price-box__body">
 								<?php $price = intval(get_sub_field( 'price' )) ;?>
-								<?php $discount = intval(get_sub_field( 'discount' )) ;?>
-								<?php $newPrice = $price - ($price * ($discount / 100)) ;?>
-							<?php if (get_sub_field('discount')) : ?>
-                                <h3><?php the_sub_field( 'price' ); ?></h3>
-							<?php endif; ?>
-                                <h1><?php echo get_sub_field('discount') ? $newPrice : $price ;?></h1>
+                                <?php if ( have_rows( 'promotion' ) ) : ?>
+                                    <?php while ( have_rows( 'promotion' ) ) : the_row(); ?>
+                                        <?php if (get_sub_field('discount')) : ?>
+                                            <?php $discount = intval(get_sub_field( 'discount' )) ;
+                                            ?>
+                                            <?php $newPrice = $price - ($price * ($discount / 100)) ;?>
+                                            <h3><?php the_sub_field( 'discount' ); ?></h3>
+                                        <?php endif; ?>
+                                    <?php endwhile; ?>
+                                <?php endif; ?>
+                                <h1><?php echo get_sub_field('promotion') ? $newPrice : $price ;?></h1>
                                 <?php the_sub_field( 'text' ); ?>
                             </div>
-							<?php $link = get_sub_field( 'link' ); ?>
-		<?php if ( $link ) : ?>
-			<a href="<?php echo esc_url( $link); ?>" class="btn btn-yellow"><span>Qui peut en profiter ?</span></a>
-		<?php endif; ?>
-
+			                <button class="btn btn-yellow"><span>Qui peut en profiter ?</span></button>
                         </div>
                     </div>
 	<?php endwhile; ?>
@@ -48,12 +51,10 @@
                                 <h2><?php the_sub_field( 'titre' ); ?></h2>
                             </div>
                             <div class="price-box__body">
+                                <h1><?php echo get_sub_field('price');?></h1>
                                 <p class="f-18"><?php the_sub_field( 'text' ); ?> </p>
                             </div>
-                            <?php $link = get_sub_field( 'link' ); ?>
-		<?php if ( $link ) : ?>
-			<a href="<?php echo esc_url( $link); ?>" class="btn btn-yellow white"><span>À quel prix ?</span></a>
-		<?php endif; ?>
+			                <button class="btn btn-yellow white"><span>À quel prix ?</span></button>
                         </div>
                     </div>
 		<?php endwhile; ?>
