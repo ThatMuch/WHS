@@ -51,3 +51,9 @@ h6 {
 
     text-transform: initial;
 }
+
+.f-69 {
+    @include breakpoint(mobile) {
+        font-size: 50px !important;
+    }
+}
