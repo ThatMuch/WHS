@@ -10,7 +10,7 @@
                 <div class="row row-15">
 <?php if ( have_rows( 'tarif_classic', 'option' ) ) : ?>
 	<?php while ( have_rows( 'tarif_classic', 'option' ) ) : the_row(); ?>
-                    <div class="flipper col-md-6 col-sm-offset-1">
+                    <div class="flipper col-md-6">
                         <div class="price-box bg__black price-box__front">
 							<?php if( have_rows( 'promotion' ) ) : ?>
                                     <?php while ( have_rows( 'promotion' ) ) : the_row(); ?>
@@ -56,23 +56,23 @@
 
 <?php if ( have_rows( 'tarif_reduce', 'option' ) ) : ?>
 	<?php while ( have_rows( 'tarif_reduce', 'option' ) ) : the_row(); ?>
-                    <div class="flipper col-md-6 col-sm-offset-1">
+                    <div class="flipper col-md-6">
                         <div class="price-box bg__white--ff price-box__front">
                             <div class="price-box__title ">
                                 <h2><?php the_sub_field( 'titre' ); ?></h2>
                             </div>
                             <div class="price-box__body">
                                 <h1><?php echo get_sub_field('price');?></h1>
-                                <p class="f-18"><?php the_sub_field( 'text' ); ?> </p>
+
                             </div>
 			                <button class="btn btn-yellow white"><span>Qui peut en profiter ?</span></button>
                         </div>
                         <div class="price-box bg__white--ff price-box__back">
                             <div class="price-box__title">
-                                <h2><?php the_sub_field( 'title' ); ?></h2>
+                                <h2><?php the_sub_field( 'titre' ); ?></h2>
                             </div>
                             <div class="price-box__body">
-                                <?php the_sub_field( 'text' ); ?>
+                                <p class="f-18"><?php the_sub_field( 'text' ); ?> </p>
                             </div>
 			                <button class="btn btn-yellow white"><span>À quel prix ?</span></button>
                         </div>

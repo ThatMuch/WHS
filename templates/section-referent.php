@@ -7,7 +7,7 @@
 				<img src="<?php echo esc_url( $image['url'] ); ?>" alt="<?php echo esc_attr( $image['alt'] ); ?>" />
 			<?php endif; ?>
                     </div>
-                    <div class="col-md-9 col-lg-5 ms-auto pe-md-5">
+                    <div class="col-md-9 col-lg-7 ms-auto pe-md-5">
                         <div class="author">
                             <div class="author__name">
                                 <h2><?php the_sub_field( 'title' ); ?></h2>
