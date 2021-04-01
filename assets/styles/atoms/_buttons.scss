@@ -303,3 +303,16 @@ button.link {
         background: transparent;
     }
 }
+
+.btn-link {
+    background-color: transparent;
+    color: #fff;
+    border: 0;
+    text-transform: uppercase;
+    padding: 0;
+
+    &:hover {
+        color: #fff;
+        opacity: .8;
+    }
+}

@@ -15,11 +15,13 @@
                             </div>
                             <div class="author__text">
                                 <?php the_sub_field( 'text' ); ?>
-                                <a href="#">en savoir plus</a>
+                                <div id="text_more" class="text_more d-none"><?php the_sub_field( 'text_more' ); ?></div>
+                                <button id="toggleText" class="btn-link">en savoir plus</button>
 								<?php $link = get_sub_field( 'link' ); ?>
 								<?php if ( $link ) : ?>
 									<a href="<?php echo esc_url( $link['url'] ); ?>" target="<?php echo esc_attr( $link['target'] ); ?>" class="btn-one yellow"><span><?php echo esc_html( $link['title'] ); ?></span></a>
 								<?php endif; ?>
+
                             </div>
                         </div>
                     </div>

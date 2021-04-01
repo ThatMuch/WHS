@@ -68,5 +68,13 @@ logo.addEventListener('mouseleave',() => {
     logo.setAttribute('src','<?php echo $image[0] ;?>');
 })
 
+  /* Toggle text */
+var btnToggle = document.getElementById("toggleText");
+var textMore = document.getElementById("text_more");
+
+btnToggle.addEventListener("click", ()=> {
+  textMore.classList.toggle("d-none");
+})
+
 </script>
 </div>
