@@ -215,7 +215,7 @@ gulp.task('makepot',function () {
 gulp.task('watch',gulp.parallel('browsersync',function () {
 	watch(assets['css_watch'],gulp.series('css','cachebust'));
 	watch(assets['admin_css_watch'],gulp.series('admin_css'));
-	// watch(assets['javascript'], gulp.series('javascript'));
+	watch(assets['javascript'], gulp.series('javascript'));
 	watch('**/*.php',browserSync.reload);
 	watch('*.html',browserSync.reload);
 }));
