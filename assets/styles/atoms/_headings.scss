@@ -53,6 +53,16 @@ h6 {
 }
 
 .f-69 {
+    font-weight: 400;
+
+    span {
+        margin: 0 15px;
+
+        @include breakpoint(mobile) {
+            margin: 0;
+        }
+    }
+
     @include breakpoint(mobile) {
         font-size: 50px !important;
     }

@@ -26,7 +26,7 @@ header {
 
         h1 {
             margin: 0;
-            letter-spacing: .4px;
+            letter-spacing: 5px;
             font-family: $font_2;
             font-weight: 900;
             color: transparent;
@@ -164,6 +164,17 @@ header {
 .header-wrapper {
     width: 100vw;
 
+    &::before {
+        content: "";
+        background: url(assets/images/sommet-top.svg) no-repeat scroll 0 0;
+        position: absolute;
+        top: -50px;
+        right: 0;
+        position: absolute;
+        width: 250px;
+        height: 251px;
+    }
+
     //overflow: hidden;
 }
 
@@ -177,19 +188,6 @@ header {
 
     a {
         color: $color_1;
-    }
-
-    &::before {
-        content: "";
-        background: url(assets/images/sommet-top.svg) no-repeat scroll 0 0;
-        position: absolute;
-        top: 0;
-        right: 10%;
-        position: absolute;
-        top: 0;
-        right: 10%;
-        width: 250px;
-        height: 251px;
     }
 
     @include breakpoint(mobile) {

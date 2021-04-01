@@ -81,6 +81,11 @@ main#sections {
         &-formidable {
             padding: 70px 0 170px;
 
+            .btn {
+                min-width: inherit;
+                max-width: 500px;
+            }
+
             @include breakpoint(mobile) {
                 transform: translateY(105px);
             }

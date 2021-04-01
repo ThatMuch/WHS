@@ -14,11 +14,13 @@
 @font-face {
     font-family: 'Avenir LT 35';
     src: url("./assets/fonts/AvenirLT-Light.eot");
-    src: url("./assets/fonts/AvenirLT-Light.eot?#iefix") format("embedded-opentype"), url("./assets/fonts/AvenirLT-Light.woff2") format("woff2"), url("./assets/fonts/AvenirLT-Light.woff") format("woff"), url("./assets/fonts/AvenirLT-Light.ttf") format("truetype"), url("./assets/fonts/AvenirLT-Light.svg#./assets/fonts/AvenirLT-Light") format("svg");
+    src: url("./assets/fonts/AvenirLT-Light.eot?#iefix") format("embedded-opentype"), url("./assets/fonts/AvenirLT-Light.woff") format("woff"), url("./assets/fonts/AvenirLT-Light.ttf") format("truetype"), url("./assets/fonts/AvenirLT-Light.svg#./assets/fonts/AvenirLT-Light") format("svg");
     font-weight: 300;
     font-style: normal;
     font-display: swap;
 }
+
+@import url("https://fonts.googleapis.com/css2?family=Prompt:wght@300;500;700&display=swap");
 
 @font-face {
     font-family: 'Avenir Next LT Pro';
