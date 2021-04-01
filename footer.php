@@ -88,5 +88,13 @@ if (ua.indexOf('safari') != -1) {
   }
 }
 
+/* Flip Card */
+
+$(".flipper").click(function() {
+  var target = $( event.target );
+    $(this).toggleClass("flip");
+  return false;
+});
+
 </script>
 </div>
