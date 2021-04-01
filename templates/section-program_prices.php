@@ -14,10 +14,12 @@
                         <div class="price-box bg__black">
 							<?php if( have_rows( 'promotion' ) ) : ?>
                                     <?php while ( have_rows( 'promotion' ) ) : the_row(); ?>
-							<div class="price-box__off">
-                                <div>-<?php echo get_sub_field('discount'); ?>%</div>
-                            </div>
-                            <?php endwhile; ?>
+                                        <?php if (get_sub_field('discount')) : ?>
+                                            <div class="price-box__off">
+                                                <div>-<?php echo get_sub_field('discount'); ?>%</div>
+                                            </div>
+                                        <?php endif; ?>
+                                    <?php endwhile; ?>
 							<?php endif; ?>
                             <div class="price-box__title">
                                 <h2><?php the_sub_field( 'title' ); ?></h2>
@@ -27,14 +29,16 @@
                                 <?php if ( have_rows( 'promotion' ) ) : ?>
                                     <?php while ( have_rows( 'promotion' ) ) : the_row(); ?>
                                         <?php if (get_sub_field('discount')) : ?>
-                                            <?php $discount = intval(get_sub_field( 'discount' )) ;
-                                            ?>
+                                            <?php $discount = intval(get_sub_field( 'discount' )) ;?>
                                             <?php $newPrice = $price - ($price * ($discount / 100)) ;?>
                                             <h3><?php the_sub_field( 'discount' ); ?></h3>
-                                        <?php endif; ?>
+                                            <h1><?php echo $newPrice ;?></h1>
+                                        <?php else : ?>
+                                        <h1><?php echo $price ?></h1>
+                                    <?php    endif; ?>
                                     <?php endwhile; ?>
                                 <?php endif; ?>
-                                <h1><?php echo get_sub_field('promotion') ? $newPrice : $price ;?></h1>
+
                                 <?php the_sub_field( 'text' ); ?>
                             </div>
 			                <button class="btn btn-yellow"><span>Qui peut en profiter ?</span></button>
