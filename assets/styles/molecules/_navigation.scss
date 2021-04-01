@@ -102,7 +102,7 @@
                 }
 
                 .nav-link::after {
-                    right: -8px;
+                    right: -20px;
                 }
             }
 
@@ -117,7 +117,7 @@
 
                 .dropdown-item {
                     text-transform: uppercase;
-                    font-size: 15px;
+                    font-size: 14px;
 
                     &.active, &:active {
                         background-color: $color_3;
@@ -202,7 +202,7 @@
                     text-align: center;
                     color: $color_6;
                     letter-spacing: 0.8px;
-                    font-size: 15px;
+                    font-size: 14px;
                 }
             }
 
@@ -220,7 +220,7 @@
                 justify-content: center;
                 width: 100%;
                 left: 0;
-                font-size: 15px;
+                font-size: 14px;
                 transition: 0.2s;
 
                 @include breakpoint(mobile) {
@@ -235,11 +235,12 @@
                     width: 12px;
                     height: 8px;
                     position: absolute;
-                    right: -5px;
+                    right: -20px;
                     transition: 0.2s;
+                    top: 31%;
 
                     @include breakpoint(ipad) {
-                        right: -8px;
+                        right: -20px;
                     }
 
 
@@ -249,7 +250,7 @@
                 }
 
                 &:hover::after {
-                    right: -8px;
+                    right: -20px;
 
                     @include breakpoint(ipad) {
                         right: -12px;

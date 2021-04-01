@@ -104,4 +104,3 @@ for (let index = 0; index < arraySection.length; index++) {
     arraySection[index].getElementsByClassName('row')[0].classList.add('flex-row-reverse');
       }
   }
-

@@ -51,6 +51,15 @@ html body {
     }
 }
 
+.safari {
+    font-family: "Prompt", serif;
+    font-weight: 300;
+
+    .price-box__title h2, .promo__text .h4, .promo__text h4 {
+        font-family: "Prompt", sans-serif;
+    }
+}
+
 main {
     position: relative;
     margin-top: inherit;

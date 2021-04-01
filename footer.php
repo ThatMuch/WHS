@@ -72,9 +72,21 @@ logo.addEventListener('mouseleave',() => {
 var btnToggle = document.getElementById("toggleText");
 var textMore = document.getElementById("text_more");
 
-btnToggle.addEventListener("click", ()=> {
-  textMore.classList.toggle("d-none");
-})
+if (btnToggle) {
+	btnToggle.addEventListener("click", ()=> {
+	  textMore.classList.toggle("d-none");
+	})
+}
+
+var ua = navigator.userAgent.toLowerCase();
+
+if (ua.indexOf('safari') != -1) {
+  if (ua.indexOf('chrome') > -1) {
+    $('body').addClass('chrome');
+  } else {
+    $('body').addClass('safari');
+  }
+}
 
 </script>
 </div>
