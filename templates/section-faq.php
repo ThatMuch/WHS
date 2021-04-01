@@ -8,15 +8,15 @@
 				</div>
 			</div>
 			<div class="col-lg-12">
-				<div class="promotion" id="promotion">
+				<div class="promotion" id="faq">
 					<?php if ( have_rows( 'faq' ) ) : $i = 0; ?>
 						<?php while ( have_rows( 'faq' ) ) : the_row(); ?>
 						<div class="promotion__item">
-							<div class="promotion__title collapsed" data-bs-toggle="collapse" data-bs-target="#promotion-<?php echo $i; ?>" aria-expanded="true">
+							<div class="promotion__title collapsed" data-bs-toggle="collapse" data-bs-target="#faq-<?php echo $i; ?>" aria-expanded="true">
 								<h2><?php the_sub_field( 'question' ); ?></h2>
 								<div class="slogan"><?php the_sub_field( 'slogan' ); ?></div>
 							</div>
-							<div id="promotion-<?php echo $i; ?>" class="collapse promotion__body" data-parent="#promotion">
+							<div id="faq-<?php echo $i; ?>" class="collapse promotion__body" data-parent="#faq">
                                 <div class="promotion__text">
                                     <?php the_sub_field( 'answer' ); ?>
                                 </div>
