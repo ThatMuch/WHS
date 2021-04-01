@@ -57,6 +57,8 @@
 						<?php
 						wp_nav_menu(array(
 							'theme_location' => 'mainmenu', // Defined when registering the menu
+							 'level' => 2,
+							'child_of' => 'Professionnels',
 							'menu_id'        => 'menu-main',
 							'container'      => false,
 							'depth'          => 2,
