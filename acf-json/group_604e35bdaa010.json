@@ -904,8 +904,8 @@
                                     "delay": 0
                                 },
                                 {
-                                    "key": "field_60523656d23c8",
-                                    "label": "image",
+                                    "key": "field_6065a51315bff",
+                                    "label": "Image",
                                     "name": "image",
                                     "type": "image",
                                     "instructions": "",
@@ -916,9 +916,11 @@
                                         "class": "",
                                         "id": ""
                                     },
-                                    "return_format": "",
+                                    "uploader": "wp",
+                                    "acfe_thumbnail": 0,
+                                    "return_format": "array",
                                     "preview_size": "medium",
-                                    "library": "",
+                                    "library": "all",
                                     "min_width": "",
                                     "min_height": "",
                                     "min_size": "",
@@ -983,8 +985,8 @@
                                     "delay": 0
                                 },
                                 {
-                                    "key": "field_6052367ed23cc",
-                                    "label": "image",
+                                    "key": "field_6065a4fc15bfe",
+                                    "label": "Image",
                                     "name": "image",
                                     "type": "image",
                                     "instructions": "",
@@ -995,9 +997,11 @@
                                         "class": "",
                                         "id": ""
                                     },
-                                    "return_format": "",
+                                    "uploader": "wp",
+                                    "acfe_thumbnail": 0,
+                                    "return_format": "array",
                                     "preview_size": "medium",
-                                    "library": "",
+                                    "library": "all",
                                     "min_width": "",
                                     "min_height": "",
                                     "min_size": "",
@@ -1311,5 +1315,5 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1616435675
+    "modified": 1617274143
 }
