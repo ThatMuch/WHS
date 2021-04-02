@@ -164,16 +164,16 @@ header {
 .header-wrapper {
     width: 100vw;
 
-    &::before {
-        content: "";
-        background: url(assets/images/sommet-top.svg) no-repeat scroll 0 0;
-        position: absolute;
-        top: -50px;
-        right: 0;
-        position: absolute;
-        width: 250px;
-        height: 251px;
-    }
+    /*     &::before {
+            content: "";
+            background: url(assets/images/sommet-top.svg) no-repeat scroll 0 0;
+            position: absolute;
+            top: -50px;
+            right: 0;
+            position: absolute;
+            width: 250px;
+            height: 251px;
+        } */
 
     //overflow: hidden;
 }

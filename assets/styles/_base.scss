@@ -47,7 +47,7 @@ html body {
     color: $text-c;
 
     @include breakpoint(mobile) {
-        font-size: .9rem;
+        font-size: 17px;
     }
 }
 
@@ -55,7 +55,7 @@ html body {
     font-family: "Prompt", serif;
     font-weight: 300;
 
-    .price-box__title h2, .promo__text .h4, .promo__text h4 {
+    .price-box__title h2, .promo__text .h4, .promo__text h4, .promotion__title h2, .method__title h2 {
         font-family: "Prompt", sans-serif;
     }
 }

@@ -13,6 +13,11 @@
     position: relative;
     transition: 0.9s;
 
+    @include breakpoint(mobile) {
+        margin-bottom: 2rem;
+    }
+
+
     &:after {
         content: "";
         background: $color_1;

@@ -60,6 +60,15 @@
 
 @font-face {
     font-family: 'Cocogoose Classic';
+    src: url("./assets/fonts/CocogooseClassic-ExtraBold.eot");
+    src: url("./assets/fonts/CocogooseClassic-ExtraBold.eot?#iefix") format("embedded-opentype"), url("./assets/fonts/CocogooseClassic-ExtraBold.woff2") format("woff2"), url("./assets/fonts/CocogooseClassic-ExtraBold.woff") format("woff"), url("./assets/fonts/CocogooseClassic-ExtraBold.ttf") format("truetype"), url("./assets/fonts/CocogooseClassic-ExtraBold.svg#CocogooseClassic-ExtraBold") format("svg");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Cocogoose Classic';
     src: url("./assets/fonts/CocogooseClassic-Black.eot");
     src: url("./assets/fonts/CocogooseClassic-Black.eot?#iefix") format("embedded-opentype"), url("./assets/fonts/CocogooseClassic-Black.woff2") format("woff2"), url("./assets/fonts/CocogooseClassic-Black.woff") format("woff"), url("./assets/fonts/CocogooseClassic-Black.ttf") format("truetype"), url("./assets/fonts/CocogooseClassic-Black.svg#CocogooseClassic-Black") format("svg");
     font-weight: 900;

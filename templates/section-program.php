@@ -39,7 +39,7 @@ $text = get_sub_field( 'text' );
 					<?php endif; ?>
 					</div>
 			<div class="promo-text-box">
-						<p class="f-21"><?php echo $text ;?></p>
+						<p><?php echo $text ;?></p>
 						<div class="d-flex">
 
 						<?php if ( $lien ) : ?>
@@ -83,7 +83,7 @@ $text = get_sub_field( 'text' );
 				</div>
 				<div class="col-md-7 pl-lg-5">
 					<div class="promo-text-box px-5">
-						<p id="promo-text-box__text" class="f-21"></p>
+						<p id="promo-text-box__text"></p>
 						<div class="d-flex">
 							<a href="" target="_blank" class="btn-one">
 							<span>Formidable c'est par ici</span></a>

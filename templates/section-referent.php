@@ -19,7 +19,7 @@
                                 <button id="toggleText" class="btn-link">en savoir plus</button>
 								<?php $link = get_sub_field( 'link' ); ?>
 								<?php if ( $link ) : ?>
-									<a href="<?php echo esc_url( $link['url'] ); ?>" target="<?php echo esc_attr( $link['target'] ); ?>" class="btn-one yellow"><span><?php echo esc_html( $link['title'] ); ?></span></a>
+									<a href="<?php echo esc_url( $link['url'] ); ?>" target="<?php echo esc_attr( $link['target'] ); ?>" class="btn-one yellow mb-4"><span><?php echo esc_html( $link['title'] ); ?></span></a>
 								<?php endif; ?>
 
                             </div>

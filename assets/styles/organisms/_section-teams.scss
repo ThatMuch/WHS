@@ -5,7 +5,11 @@
 
     &__text {
         margin-top: 70px;
-        font-size: 18px;
+
+        @include breakpoint(mobile) {
+            font-size: 17px;
+        }
+
 
         h2 {
             letter-spacing: .22px;
