@@ -6,6 +6,11 @@
         line-height: 60px;
         letter-spacing: .67px;
 
+        @include breakpoint(mobile) {
+            font-size: 17px;
+        }
+
+
         h2 {
             margin-bottom: 30px;
         }
@@ -20,14 +25,21 @@
         }
 
         ul {
-            // TODO: Display list style
             padding: 0 15px;
-            list-style-type: disc !important;
-            display: list-item !important;
 
             li {
-                list-style-type: disc !important;
-                display: list-item !important;
+                &::before {
+                    content: "•";
+                    margin-right: 10px;
+
+                    @include breakpoint(mobile) {
+                        display: none;
+                    }
+                }
+
+                @include breakpoint(mobile) {
+                    font-size: 17px;
+                }
             }
         }
     }

@@ -32,9 +32,9 @@
                                             <?php $discount = intval(get_sub_field( 'discount' )) ;?>
                                             <?php $newPrice = $price - ($price * ($discount / 100)) ;?>
                                             <h3><?php the_sub_field( 'discount' ); ?></h3>
-                                            <h1><?php echo $newPrice ;?></h1>
+                                            <h1><?php echo $newPrice ;?> €</h1>
                                         <?php else : ?>
-                                        <h1><?php echo $price ?></h1>
+                                        <h1><?php echo $price ?> €</h1>
                                     <?php    endif; ?>
                                     <?php endwhile; ?>
                                 <?php endif; ?>
@@ -62,7 +62,7 @@
                                 <h2><?php the_sub_field( 'titre' ); ?></h2>
                             </div>
                             <div class="price-box__body">
-                                <h1><?php echo get_sub_field('price');?></h1>
+                                <h1><?php echo get_sub_field('price');?> €</h1>
 
                             </div>
 			                <button class="btn btn-yellow white"><span>Qui peut en profiter ?</span></button>

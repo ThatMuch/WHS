@@ -72,7 +72,7 @@ $text = get_sub_field( 'text' );
 					$lien = get_sub_field( 'lien' );
 					$text = get_sub_field( 'text' );
 				?>
-					<p class="d-none box-content"><?php echo $text ;?></p>
+					<div class="d-none box-content"><?php echo $text ;?></div>
 
 	<?php endwhile; ?>
 			<div class="row align-items-center">
@@ -81,12 +81,14 @@ $text = get_sub_field( 'text' );
 						<img src="<?php echo get_stylesheet_directory_uri();?>/assets/images/panneaux_programme.svg" alt="" class="svg"/>
 					</div>
 				</div>
-				<div class="col-md-7 pl-lg-5">
+				<div class="col-md-7 pl-lg-5" style="z-index: 1000">
 					<div class="promo-text-box px-5">
 						<p id="promo-text-box__text"></p>
 						<div class="d-flex">
-							<a href="" target="_blank" class="btn-one">
-							<span>Formidable c'est par ici</span></a>
+							<?php if ( $lien ) : ?>
+							<a href="<?php echo esc_url( $lien['url'] ); ?>" target="<?php echo esc_attr( $lien['target'] ); ?>" class="btn-one">
+							<span><?php echo esc_html( $lien['title'] ); ?></span></a>
+						<?php endif; ?>
 						</div>
 					</div>
 				</div>

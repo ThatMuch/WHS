@@ -29,7 +29,7 @@
 			<?php if (get_sub_field('text' ) ) :?>
 			                    <div class="col-md-12">
                         <div class="pro__card text-center">
-                            <p><?php the_sub_field( 'text' ) ;?></p>
+                            <strong><?php the_sub_field( 'text' ) ;?></strong>
                         </div>
                     </div>
 			<?php endif; ?>

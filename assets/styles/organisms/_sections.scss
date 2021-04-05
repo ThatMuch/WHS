@@ -105,6 +105,10 @@ main#sections {
         p {
             font-size: 18px;
             letter-spacing: .67px;
+
+            @include breakpoint(mobile) {
+                font-size: 17px;
+            }
         }
     }
 }

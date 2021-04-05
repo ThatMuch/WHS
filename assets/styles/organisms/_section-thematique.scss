@@ -5,6 +5,11 @@
     font-size: 18px;
     padding: 40px 15px;
 
+    @include breakpoint(mobile) {
+        font-size: 17px;
+    }
+
+
     &__image {
         display: flex;
         align-items: center;

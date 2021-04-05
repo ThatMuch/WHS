@@ -15,6 +15,7 @@
 
     @include breakpoint(mobile) {
         margin-bottom: 2rem;
+        font-size: 17px;
     }
 
 
@@ -63,6 +64,11 @@
         position: relative;
         z-index: 1;
         font-size: 18px;
+
+        @include breakpoint(mobile) {
+            font-size: 17px;
+        }
+
 
         &::before {
             content: "\«";
