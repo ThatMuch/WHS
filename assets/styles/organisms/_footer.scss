@@ -137,14 +137,20 @@
             flex-wrap: wrap;
             justify-content: center;
 
+            @include breakpoint(mobile) {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+
             li {
                 flex: 0 0 33.33%;
                 max-width: 33.33%;
                 text-align: center;
 
                 @include breakpoint(mobile) {
-                    flex: 0 0 50%;
-                    max-width: 50%;
+                    flex: inherit;
+                    max-width: inherit;
                 }
 
 
@@ -157,7 +163,8 @@
                     letter-spacing: 1.25px;
 
                     @include breakpoint(mobile) {
-                        font-size: 15px;
+                        font-size: 13px;
+                        display: block;
                     }
                 }
             }

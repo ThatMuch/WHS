@@ -5,7 +5,8 @@
 <style type="text/css">
 	.st0{fill:#A7CCBF;stroke:#323530;stroke-width:2;}
 	.st1{fill:none;stroke:#323530;stroke-width:2;}
-	.st2{enable-background:new    ;}
+	.st2{enable-background:new; stroke-width: 1px;
+    stroke: #323530;}
 	.st3{fill:#323530;}
 	.st4{fill:#FFEF9E;stroke:#323530;stroke-width:2;stroke-miterlimit:10;}
 	.st5{fill:#FFEF9E;stroke:#323530;}
@@ -109,7 +110,8 @@
 				c-0.5-0.3-1-0.3-1.6,0L155.7,75.2z"/>
 		</g>
 	</g>
-	<g id="CTA_former" class="sign" transform="translate(210.006 968.721)">
+	<g id="CTA_former" class="sign" transform="translate(210.006 968.721)" style="stroke-width: 2px;
+    stroke: #323530;">
 		<path id="Union_21" class="st4" d="M161,623.3V136.7L13,118.6c-7-0.8-12-7.1-11.3-14c0.4-2.8,1.7-5.5,3.8-7.5l0.2-0.2l23.7-18.7
 			L10.9,54.4l-0.1-0.2c-1.5-2.4-2.2-5.3-1.9-8.1c1-7,7.4-11.8,14.3-10.9l293.2,36l1.2,0.9l45.2,35.4l0.4,0.5
 			c5.4,6.6,4.5,16.3-2,21.7c-0.2,0.2-0.5,0.4-0.7,0.5l-0.5,0.4l-53.8,24L180,139.1v484.2L161,623.3z"/>
