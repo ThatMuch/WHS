@@ -171,3 +171,34 @@
         }
     }
 }
+
+.footer__credits {
+    background-color: #1f4350;
+    color: rgba($color: #fff, $alpha: 0.5);
+    text-align: center;
+    position: relative;
+    font-size: .8rem;
+
+    &__thatmuch {
+        position: absolute;
+        top: 50%;
+        right: 35px;
+        transform: translate(0, -50%);
+        width: 120px;
+
+        img {
+            width: 100px;
+            opacity: .5;
+            transition-duration: $transition_slow;
+
+            @include breakpoint(tablet) {
+                width: 100%;
+            }
+
+
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+}
