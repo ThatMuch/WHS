@@ -186,6 +186,13 @@
         transform: translate(0, -50%);
         width: 120px;
 
+        @include breakpoint(mobile) {
+            position: relative;
+            margin: 10px auto 0;
+            right: 0;
+        }
+
+
         img {
             width: 100px;
             opacity: .5;
