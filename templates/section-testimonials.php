@@ -16,7 +16,7 @@ $the_query = new WP_Query( $args );
 		<div class="row row-0">
 			<?php if($the_query->have_posts()) : ?>
 				<?php while($the_query->have_posts()) : $the_query->the_post(); ?>
-				<div class="col-lg-4">
+				<div class="col-lg-4 mb-2">
 					<div class="testimonials" style="background-image: url(<?php the_post_thumbnail_url() ?>)">
 						<div class="testimonials__title">
 							<h2><?php the_title(); ?></h2>

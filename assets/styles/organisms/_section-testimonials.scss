@@ -14,7 +14,6 @@
     transition: 0.9s;
 
     @include breakpoint(mobile) {
-        margin-bottom: 2rem;
         font-size: 15px;
     }
 
