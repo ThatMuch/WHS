@@ -101,6 +101,11 @@
             width: 350px;
             bottom: -51px;
             left: 0;
+            opacity: .8;
+
+            &:hover {
+                opacity: 1;
+            }
 
             @include breakpoint(tablet) {
                 background-size: 150px;

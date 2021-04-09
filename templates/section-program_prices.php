@@ -83,7 +83,7 @@
 
                     <div class="col-md-12">
                         <div class="price-box bg__black p-4">
-                            <p class="mb-0"><?php the_field( 'group_discount', 'option' ); ?></p>
+                            <div><?php the_field( 'group_discount', 'option' ); ?></div>
                         </div>
                     </div>
 <?php if ( have_rows( 'advantages', 'option' ) ) : ?>
