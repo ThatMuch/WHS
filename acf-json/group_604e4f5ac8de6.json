@@ -255,7 +255,7 @@
             "key": "field_604e5612b8dd7",
             "label": "Reduction de groupe",
             "name": "group_discount",
-            "type": "text",
+            "type": "wysiwyg",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -265,10 +265,10 @@
                 "id": ""
             },
             "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
         },
         {
             "key": "field_604e55d5b8dd4",
@@ -352,5 +352,5 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1617014808
+    "modified": 1617984172
 }
