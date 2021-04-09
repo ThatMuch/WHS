@@ -15,6 +15,11 @@
 
     @include breakpoint(mobile) {
         font-size: 15px;
+        color: $color_6;
+
+        &:after {
+            top: 0 !important;
+        }
     }
 
 
