@@ -22,6 +22,11 @@ function whs_acf_op_init() {
             'redirect'    => false,
             'position'     => 2,
         ));
+        $child = acf_add_options_sub_page(array(
+            'page_title'  => __('Bannière des évènements'),
+            'menu_title'  => __('Bannière des évènements'),
+            'parent_slug' => $parent['menu_slug'],
+        ));
 
         // Add sub page.
         $child = acf_add_options_sub_page(array(
@@ -42,11 +47,12 @@ function whs_acf_op_init() {
             'parent_slug' => $parent['menu_slug'],
         ));
         // Add sub page.
-        $child = acf_add_options_sub_page(array(
+    /*     $child = acf_add_options_sub_page(array(
             'page_title'  => __('Support'),
             'menu_title'  => __('Support'),
             'parent_slug' => $parent['menu_slug'],
-        ));
+        )); */
+
 
 
             /**

@@ -47,6 +47,12 @@
 		<?php endif; ?>
 		<?php endwhile; ?>
 	<?php endif; ?>
+<?php if ( get_field('text', 'option') ) : ?>
+	<div class="header-top">
+		<a href="<?php echo  site_url(); ?>/calendrier"><?php echo get_field('text', 'option'); ?></a>
+	</div>
+<?php endif; ?>
+
 	<div class="header-area">
         <div class="container-fluid">
 			<div class="navbar navbar-expand-lg align-items-center">
