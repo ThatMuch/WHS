@@ -27,6 +27,11 @@ function whs_acf_op_init() {
             'menu_title'  => __('Bannière des évènements'),
             'parent_slug' => $parent['menu_slug'],
         ));
+        $child = acf_add_options_sub_page(array(
+            'page_title'  => __('Mail Chimp'),
+            'menu_title'  => __('Mail Chimp'),
+            'parent_slug' => $parent['menu_slug'],
+        ));
 
         // Add sub page.
         $child = acf_add_options_sub_page(array(

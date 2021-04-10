@@ -14,7 +14,7 @@
 			<?php $link = get_sub_field( 'link' ); ?>
 			<?php if ( $link ) : ?>
 				<div class="programee-button">
-					<a data-bs-toggle="modal" data-bs-target="#ContactModal" class="btn-one yellow center"><span>le programme c'est par ici !</span></a>
+					<a data-bs-toggle="modal" data-bs-target="#ModalEtudiant" class="btn-one yellow center"><span>le programme c'est par ici !</span></a>
 				</div>
 			<?php endif; ?>
 

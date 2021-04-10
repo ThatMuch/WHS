@@ -4,9 +4,9 @@
     "fields": [
         {
             "key": "field_605a1f5dcd9eb",
-            "label": "Formulaire MailChimp",
-            "name": "formulaire_mailchimp",
-            "type": "cf7",
+            "label": "Ecole",
+            "name": "formulaire_ecole",
+            "type": "acfe_code_editor",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -15,9 +15,58 @@
                 "class": "",
                 "id": ""
             },
-            "allow_null": 0,
-            "multiple": 0,
-            "disable": ""
+            "default_value": "",
+            "placeholder": "",
+            "mode": "text\/html",
+            "lines": 1,
+            "indent_unit": 4,
+            "maxlength": "",
+            "rows": "",
+            "max_rows": ""
+        },
+        {
+            "key": "field_6071712da6bc9",
+            "label": "Etudiant",
+            "name": "formulaire_etudiant",
+            "type": "acfe_code_editor",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "mode": "text\/html",
+            "lines": 1,
+            "indent_unit": 4,
+            "maxlength": "",
+            "rows": "",
+            "max_rows": ""
+        },
+        {
+            "key": "field_6071712ba6bc8",
+            "label": "Entreprise",
+            "name": "formulaire_entreprise",
+            "type": "acfe_code_editor",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "mode": "text\/html",
+            "lines": 1,
+            "indent_unit": 4,
+            "maxlength": "",
+            "rows": "",
+            "max_rows": ""
         }
     ],
     "location": [
@@ -25,7 +74,7 @@
             {
                 "param": "options_page",
                 "operator": "==",
-                "value": "acf-options-whs-settings"
+                "value": "acf-options-mail-chimp"
             }
         ]
     ],
@@ -44,5 +93,5 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1616575277
+    "modified": 1618047316
 }

@@ -148,18 +148,51 @@
 	<div id="content" class="site-content <?php if(is_home()){echo "bg__white--four";}  ;?>">
 
 	<!-- Modal -->
-<div class="modal fade" id="ContactModal" tabindex="-1" aria-labelledby="ContactModalLabel" aria-hidden="true" data-bs-backdrop="static">
+<div class="modal fade" id="ModalEtudiant" tabindex="-1" aria-labelledby="ModalEtudiantLabel" aria-hidden="true" data-bs-backdrop="static">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="ContactModalLabel">Réservez votre place</h5>
+        <h5 class="modal-title" id="ModalEtudiantLabel">Recevoir le programme</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <?php if ( get_field('formulaire_mailchimp', 'option') ) : ?>
-			<?php echo do_shortcode(get_field('formulaire_mailchimp', 'option')); ?>
+        <?php if ( get_field('formulaire_ecole', 'option') ) : ?>
+			<?php echo do_shortcode(get_field('formulaire_ecole', 'option')); ?>
 		<?php endif; ?>
+      </div>
+    </div>
+  </div>
+</div>
 
+	<!-- Modal -->
+<div class="modal fade" id="ModalEntreprise" tabindex="-1" aria-labelledby="ModalEntrepriseLabel" aria-hidden="true" data-bs-backdrop="static">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="ModalEntrepriseLabel">Recevoir le programme entreprise</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <?php if ( get_field('formulaire_entreprise', 'option') ) : ?>
+			<?php echo do_shortcode(get_field('formulaire_entreprise', 'option')); ?>
+		<?php endif; ?>
+      </div>
+    </div>
+  </div>
+</div>
+
+	<!-- Modal -->
+<div class="modal fade" id="ModalEcole" tabindex="-1" aria-labelledby="ModalEcoleLabel" aria-hidden="true" data-bs-backdrop="static">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="ModalEcoleLabel">Recevoir le programme école</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <?php if ( get_field('formulaire_ecole', 'option') ) : ?>
+			<?php echo do_shortcode(get_field('formulaire_ecole', 'option')); ?>
+		<?php endif; ?>
       </div>
     </div>
   </div>
