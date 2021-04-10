@@ -122,10 +122,11 @@ $categories = get_terms($taxonomy); ?>
 												?>
 
 											<?php if( $the_query->have_posts() ) : ?>
-											<?php //var_dump($the_query->have_posts()) ;?>
+											<?php $y = 0; ?>
 											<?php foreach( $months as $month => $value) : ?>
 												<div class="events__box">
 													<h2 class="fw-normal"><?php echo $month;?></h2>
+													<?php $j = 0; ?>
 													<?php foreach( $value as $event_post) : ?>
 													<div class="events__body">
 														<div class="events__date">
@@ -143,17 +144,17 @@ $categories = get_terms($taxonomy); ?>
 														</div>
 														<?php if ( $event_post['link'] ) : ?>
 														<div class="events__link">
-															<a data-bs-toggle="modal" data-bs-target="#EventModal"
+															<a data-bs-toggle="modal" data-bs-target="#EventModal-<?php echo $y.'-'.$j;?>"
 															class="btn-one yellow"><span>Réservez votre place</span></a>
 														</div>
 														<?php endif; ?>
 													</div>
 	<!-- Modal -->
-<div class="modal fade" id="EventModal" tabindex="-1" aria-labelledby="EventModalLabel" aria-hidden="true" data-bs-backdrop="static">
+<div class="modal fade" id="EventModal-<?php echo $y.'-'.$j;?>" tabindex="-1" aria-labelledby="EventModalLabel-<?php echo $y.'-'.$j;?>" aria-hidden="true" data-bs-backdrop="static">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="EventModalLabel">Réservez votre place</h5>
+        <h5 class="modal-title" id="EventModalLabel-<?php echo $y.'-'.$j;?>">Réservez votre place</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
@@ -168,9 +169,9 @@ $categories = get_terms($taxonomy); ?>
     </div>
   </div>
 </div>
-										<?php  endforeach; ?>
+										<?php  $j++; endforeach; ?>
 										</div>
-										<?php  endforeach; ?>
+										<?php  $y++; endforeach; ?>
 										<?php endif;
 										wp_reset_postdata(); ?>
 

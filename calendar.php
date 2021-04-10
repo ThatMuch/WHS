@@ -96,63 +96,59 @@ $categories = get_terms($taxonomy);
 												?>
 
 										<?php if( $the_query->have_posts() ) : ?>
+											<?php $y = 0; ?>
 											<?php foreach( $months as $month => $value) : ?>
 												<div class="events__box">
 													<h2 class="fw-normal"><?php echo $month;?></h2>
+													<?php $j = 0; ?>
 													<?php foreach( $value as $event_post) : ?>
-
-													<div class="events__body">
-														<div class="events__date">
-															<p class="month"><?php echo $event_post['month'];?></p>
-															<p class="day"><?php echo $event_post['day'];?></p>
+														<div class="events__body">
+															<div class="events__date">
+																<p class="month"><?php echo $event_post['month'];?></p>
+																<p class="day"><?php echo $event_post['day'];?></p>
+															</div>
+															<div class="events__time">
+																<?php echo $event_post['time'];?>
+															</div>
+															<div class="events__text">
+																<p class="mb-0 <?php echo $event_post['rentree'] ? 'fw-bold': '';?>"><?php echo $event_post['title'];?></p>
+																<?php if($event_post['places']) : ;?>
+																	<p class="mb-0 places"><?php echo $event_post['places'];?> places disponibles</p>
+																<?php endif ;?>
+															</div>
+															<?php if ( $event_post['link'] ) : ?>
+															<div class="events__link">
+																<a data-bs-toggle="modal" data-bs-target="#EventModal-<?php echo $y.'-'.$j;?>" class="btn-one yellow"><span>Réservez votre place</span></a>
+															</div>
+															<?php endif; ?>
 														</div>
-														<div class="events__time">
-															<?php echo $event_post['time'];?>
+														<!-- Modal -->
+													<div class="modal fade" id="EventModal-<?php echo $y.'-'.$j;?>" tabindex="-1" aria-labelledby="EventModalLabel-<?php echo $y.'-'.$j;?>" aria-hidden="true" data-bs-backdrop="static">
+														<div class="modal-dialog modal-dialog-centered">
+															<div class="modal-content">
+																<div class="modal-header">
+																	<h5 class="modal-title" id="EventModalLabel-<?php echo $y.'-'.$j;?>">Réservez votre place</h5>
+																	<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+																</div>
+																<div class="modal-body">
+																	<iframe id="inlineFrameExample"
+																		title="Inline Frame Example"
+																		width="100%"
+																		height="600"
+																		src="<?php echo $event_post['link'];?>">
+																	</iframe>
+																</div>
+															</div>
 														</div>
-														<div class="events__text">
-														<p class="mb-0 <?php echo $event_post['rentree'] ? 'fw-bold': '';?>"><?php echo $event_post['title'];?></p>
-														<?php if($event_post['places']) : ;?>
-															<p class="mb-0 places"><?php echo $event_post['places'];?> places disponibles</p>
-														<?php endif ;?>
-														</div>
-														<?php if ( $event_post['link'] ) : ?>
-														<div class="events__link">
-															<a data-bs-toggle="modal" data-bs-target="#EventModal" class="btn-one yellow"><span>Réservez votre place</span></a>
-														</div>
-														<?php endif; ?>
 													</div>
-
-	<!-- Modal -->
-<div class="modal fade" id="EventModal" tabindex="-1" aria-labelledby="EventModalLabel" aria-hidden="true" data-bs-backdrop="static">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="EventModalLabel">Réservez votre place</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-			<iframe id="inlineFrameExample"
-				title="Inline Frame Example"
-				width="100%"
-				height="600"
-				src="<?php echo $event_post['link'];?>">
-			</iframe>
-
-      </div>
-    </div>
-  </div>
-</div>
-
-										<?php  endforeach; ?>
+											<?php $j++; endforeach; ?>
 										</div>
-										<?php  endforeach; ?>
-										<?php endif;
-										wp_reset_postdata(); ?>
-
-									</div>
-								</div>
-
+									<?php $y++; endforeach; ?>
+								<?php endif;
+								wp_reset_postdata(); ?>
 							</div>
+						</div>
+					</div>
 						<?php $i++; endforeach; ?>
 					</div>
 				</div>
