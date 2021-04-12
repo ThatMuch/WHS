@@ -73,7 +73,7 @@
 							'fallback_cb'    => 'Bootstrap_NavWalker::fallback', // For menu fallback
 						));
 						?>
-						<button data-bs-toggle="modal" data-bs-target="#ContactModal" class="btn-one wow-modal-id-1"><span>Nous contacter</span></button>
+						<a href="<?php echo  site_url(); ?>/contact" class="btn-one wow-modal-id-1"><span>Nous contacter</span></a>
 					</div>
 					    <button class="navbar-toggler menu-collapse" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
                             <span></span>
