@@ -79,6 +79,10 @@
                 left: 50%;
             }
 
+            &.dropdown {
+                margin-right: 2.5rem;
+            }
+
             &:hover {
                 .dropdown-menu {
                     visibility: visible;
