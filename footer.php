@@ -36,7 +36,6 @@
 						<img src="<?php echo $image[0]; ?>" alt="We Hate School">
 					</div>
 					<div class="footer__text d-flex align-items-center">
-						<img class="me-3" src="<?php echo get_stylesheet_directory_uri().'/assets/images/location.svg'; ?>" alt="">
 						<span><?php the_field( 'adress', 'option' ); ?></span>
 					</div>
 					<div class="footer__menu">

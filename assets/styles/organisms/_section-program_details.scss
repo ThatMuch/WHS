@@ -19,6 +19,10 @@
         &.bg__green {
             color: $color_6;
             line-height: 44px;
+
+            @include breakpoint(mobile) {
+                line-height: 35px;
+            }
         }
 
         &.bg__black {
