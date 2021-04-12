@@ -26,7 +26,7 @@
                             <p><?php the_sub_field( 'lead' ); ?></p>
 							<?php $link = get_sub_field( 'link' ); ?>
 							<?php if ( $link ) : ?>
-								<a data-bs-toggle="modal" data-bs-target="#ModalEtudiant" target="<?php echo esc_attr( $link['target'] ); ?>" class="btn-one yellow center"><span><?php echo esc_html( $link['title'] ); ?></span></a>
+								<a href="<?php echo esc_attr( $link['url'] );?>" target="<?php echo esc_attr( $link['target'] ); ?>" class="btn-one yellow center"><span><?php echo esc_html( $link['title'] ); ?></span></a>
 							<?php endif; ?>
                         </div>
                     </div>
