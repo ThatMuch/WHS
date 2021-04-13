@@ -248,7 +248,7 @@ button.link {
     text-indent: -999px;
     overflow: hidden;
     position: absolute;
-    z-index: 99;
+    z-index: 1001 !important;
 
     &:hover {
         transform: scale(0.9);
