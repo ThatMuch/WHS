@@ -143,20 +143,17 @@ function hoverSigns() {
 				switch (sign.getAttribute('id')) {
 					case "CTA_inspirer":
 						sign.classList.add('hover');
-						arraySigns[1].classList.remove('hover');
-						arraySigns[0].classList.remove('hover');
+						arraySigns.filter(item => item != sign).map(item => item.classList.remove('hover'));
 						content.innerText = arrayTexts[2].innerText;
 						break;
 					case "CTA_former":
 						sign.classList.add('hover');
-						arraySigns[2].classList.remove('hover');
-						arraySigns[1].classList.remove('hover');
+						arraySigns.filter(item => item != sign).map(item => item.classList.remove('hover'));
 						content.innerText = arrayTexts[0].innerText;
 						break;
 					case "CTA_accompagner":
 						sign.classList.add('hover');
-						arraySigns[2].classList.remove('hover');
-						arraySigns[0].classList.remove('hover');
+						arraySigns.filter(item => item != sign).map(item => item.classList.remove('hover'));
 						content.innerText = arrayTexts[1].innerText;
 						break;
 
