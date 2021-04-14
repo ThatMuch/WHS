@@ -49,9 +49,8 @@
 
         .nav-item {
             position: relative;
-            min-width: 135px;
+            min-width: 186px;
             min-height: 44px;
-            margin-right: 1rem;
 
             &:last-child {
                 position: relative;
@@ -63,6 +62,7 @@
             }
 
             @include breakpoint(ipad) {
+                margin-right: 1rem;
                 min-width: 115px;
             }
 
@@ -80,7 +80,9 @@
             }
 
             &.dropdown {
-                margin-right: 2.5rem;
+                @include breakpoint(tablet) {
+                    margin-right: 4.5rem;
+                }
             }
 
             &:hover {
@@ -107,7 +109,7 @@
                 }
 
                 .nav-link::after {
-                    right: -20px;
+                    right: 6px;
                 }
             }
 
