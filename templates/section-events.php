@@ -118,17 +118,17 @@ $categories = get_terms($taxonomy); ?>
 														<?php if ( $event_post['link'] ) : ?>
 														<div class="events__link">
 															<a
-															data-bs-toggle="modal" data-bs-target="#EventModal-<?php echo $y.'-'.$j;?>"
+															data-bs-toggle="modal" data-bs-target="#EventModal-<?php echo $i.'-'.$y.'-'.$j;?>"
 															class="btn-one yellow"><span>Réserver votre place</span></a>
 														</div>
 														<?php endif; ?>
 													</div>
 	<!-- Modal -->
-<div class="modal fade" id="EventModal-<?php echo $y.'-'.$j;?>" tabindex="-1" aria-labelledby="EventModalLabel-<?php echo $y.'-'.$j;?>" aria-hidden="true" data-bs-backdrop="static">
+<div class="modal fade" id="EventModal-<?php echo $i.'-'.$y.'-'.$j;?>" tabindex="-1" aria-labelledby="EventModalLabel-<?php echo $i.'-'.$y.'-'.$j;?>" aria-hidden="true" data-bs-backdrop="static">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="EventModalLabel-<?php echo $y.'-'.$j;?>">Réservez votre place</h5>
+        <h5 class="modal-title" id="EventModalLabel-<?php echo $i.'-'.$y.'-'.$j;?>">Réservez votre place</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
