@@ -61,6 +61,11 @@
                 }
             }
 
+            @include breakpoint(desktop) {
+                margin-right: 1rem;
+            }
+
+
             @include breakpoint(ipad) {
                 margin-right: 1rem;
                 min-width: 115px;
@@ -80,7 +85,7 @@
             }
 
             &.dropdown {
-                @include breakpoint(ipad) {
+                @include breakpoint(desktop) {
                     margin-right: 4.5rem;
                 }
             }
