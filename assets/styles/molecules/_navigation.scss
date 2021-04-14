@@ -80,7 +80,7 @@
             }
 
             &.dropdown {
-                @include breakpoint(tablet) {
+                @include breakpoint(ipad) {
                     margin-right: 4.5rem;
                 }
             }
