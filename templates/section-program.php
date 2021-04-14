@@ -130,7 +130,7 @@ convertImages('img.svg', hoverSigns());
 const arrayTexts = [...document.getElementsByClassName('box-content')];
 var content = document.getElementById('promo-text-box__text');
 
-content.innerText = arrayTexts[0].innerText;
+content.innerHTML = arrayTexts[0].innerHTML;
 
 function hoverSigns() {
 	setTimeout(function() {
@@ -144,21 +144,21 @@ function hoverSigns() {
 					case "CTA_inspirer":
 						sign.classList.add('hover');
 						arraySigns.filter(item => item != sign).map(item => item.classList.remove('hover'));
-						content.innerText = arrayTexts[2].innerText;
+						content.innerHTML = arrayTexts[2].innerHTML;
 						break;
 					case "CTA_former":
 						sign.classList.add('hover');
 						arraySigns.filter(item => item != sign).map(item => item.classList.remove('hover'));
-						content.innerText = arrayTexts[0].innerText;
+						content.innerHTML = arrayTexts[0].innerHTML;
 						break;
 					case "CTA_accompagner":
 						sign.classList.add('hover');
 						arraySigns.filter(item => item != sign).map(item => item.classList.remove('hover'));
-						content.innerText = arrayTexts[1].innerText;
+						content.innerHTML = arrayTexts[1].innerHTML;
 						break;
 
 					default:
-						content.innerText = arrayTexts[0].innerText;
+						content.innerHTML = arrayTexts[0].innerHTML;
 						break;
 				}
 			});
