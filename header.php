@@ -156,8 +156,8 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <?php if ( get_field('formulaire_ecole', 'option') ) : ?>
-			<?php echo do_shortcode(get_field('formulaire_ecole', 'option')); ?>
+        <?php if ( get_field('formulaire_etudiant', 'option') ) : ?>
+			<?php echo do_shortcode(get_field('formulaire_etudiant', 'option')); ?>
 		<?php endif; ?>
       </div>
     </div>
