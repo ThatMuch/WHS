@@ -72,7 +72,7 @@
                                 <h2><?php the_sub_field( 'titre' ); ?></h2>
                             </div>
                             <div class="price-box__body">
-                                <p class="f-18"><?php the_sub_field( 'text' ); ?> </p>
+                                <p><?php the_sub_field( 'text' ); ?> </p>
                             </div>
 			                <button class="btn btn-yellow white"><span>À quel prix ?</span></button>
                         </div>
