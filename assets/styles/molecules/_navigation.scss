@@ -15,8 +15,8 @@
 }
 
 .navbar-brand {
-    width: 18rem;
-    height: 70px;
+    width: 12rem;
+    height: calc(#{$size-navbar} - 20px);
 
     img {
         width: 100%;
