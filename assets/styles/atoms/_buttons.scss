@@ -5,9 +5,6 @@
  * @since       mars_1.0.0.0
  *
  */
-a {
-    cursor: pointer;
-}
 
 .btn-bullets {
     height: initial;
@@ -24,6 +21,7 @@ button, .btn {
     letter-spacing: 1px;
     line-height: normal;
     min-height: 48px;
+    display: block;
 
     //transition-duration: $transition_slow;
 

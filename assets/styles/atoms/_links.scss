@@ -11,7 +11,7 @@ a {
     text-decoration: $a__textdecoration;
     transition: $transition_fast;
     cursor: pointer;
-    display: block;
+    display: inline-block;
 
     &:hover {
         color: $a__hovercolor;
