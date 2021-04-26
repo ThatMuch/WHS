@@ -112,7 +112,7 @@ $categories = get_terms($taxonomy); ?>
 														<div class="events__text">
 															<p class="mb-0 <?php echo $event_post['rentree'] ? 'fw-bold': '';?>"><?php echo $event_post['title'];?></p>
 														<?php if($event_post['places']) : ;?>
-															<p class="mb-0 places"><?php echo $event_post['places'];?> places disponibles</p>
+															<p class="mb-0 places">plus que <?php echo $event_post['places'];?> places disponibles</p>
 														<?php endif ;?>
 														</div>
 														<?php if ( $event_post['link'] ) : ?>
