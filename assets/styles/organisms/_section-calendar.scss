@@ -7,7 +7,7 @@
 .events {
     &__box {
         font-size: 18px;
-        margin-bottom: 40px;
+        margin-bottom: 30px;
         letter-spacing: -0.4px;
         border-bottom: 1px solid $color_17;
 
@@ -32,6 +32,7 @@
         }
 
         @include breakpoint(mobile) {
+            padding: 25px 0 10px;
             display: block;
         }
     }
@@ -56,6 +57,7 @@
 
             @include breakpoint(mobile) {
                 margin: 0;
+                line-height: 1.5;
             }
         }
 
@@ -70,6 +72,7 @@
                 font-size: 15px;
                 margin-right: .3rem;
                 font-weight: 600;
+                line-height: 1.5;
             }
         }
     }
