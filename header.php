@@ -19,7 +19,7 @@
   />
 	<?php mars_gtm('head') ?>
 	<!--=== OPEN-GRAPH TAGS ===-->
-	<?php mars_ogtags() ?>
+	<?php // mars_ogtags() ?>
 	<!--=== PRELOAD FONTS ===-->
 	<?php // mars_preload_fonts() ?>
 	<!--=== WP HEAD ===-->
