@@ -3,6 +3,18 @@
     "title": "Programme - Sections",
     "fields": [
         {
+            "key": "field_604e36091f43e",
+            "label": "",
+            "name": "sections",
+            "type": "flexible_content",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
             "acfe_flexible_advanced": 0,
             "acfe_flexible_stylised_button": 0,
             "acfe_flexible_hide_empty_message": 0,
@@ -32,18 +44,6 @@
             },
             "acfe_flexible_layouts_state": "",
             "acfe_flexible_layouts_remove_collapse": 0,
-            "key": "field_604e36091f43e",
-            "label": "",
-            "name": "sections",
-            "type": "flexible_content",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
             "layouts": {
                 "layout_604e3610e5563": {
                     "key": "layout_604e3610e5563",
@@ -1109,6 +1109,25 @@
                     "display": "block",
                     "sub_fields": [
                         {
+                            "key": "field_60bf7528461b9",
+                            "label": "title",
+                            "name": "title",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
                             "key": "field_605236d1d23d2",
                             "label": "titre",
                             "name": "titre",
@@ -1289,7 +1308,7 @@
             {
                 "param": "page",
                 "operator": "!=",
-                "value": "131"
+                "value": "87"
             }
         ]
     ],
@@ -1308,12 +1327,5 @@
     ],
     "active": true,
     "description": "",
-    "acfe_display_title": "",
-    "acfe_autosync": [
-        "json"
-    ],
-    "acfe_form": 0,
-    "acfe_meta": "",
-    "acfe_note": "",
-    "modified": 1617274143
+    "modified": 1623160183
 }

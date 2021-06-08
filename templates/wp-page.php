@@ -22,7 +22,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12 text-center">
-                        <h1 class="f-69 c-white title">f<span class="c-yellow">o</span>r<span class="c-blue">m</span>i<span class="c-orange">d</span>a<span class="c-green">B</span>l<span class="c-gray">e</span>!</h1>
+                        <h1 class="f-69 c-white title"></h1>
 						<?php if( get_sub_field('content') ) : ?>
 							<div class="f-22"><?php echo get_sub_field('content'); ?></div>
 						<?php endif; ?>
