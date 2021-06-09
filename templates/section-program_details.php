@@ -3,7 +3,7 @@
 		<div class="row">
 			<div class="col-md-12">
 				<div class="section__title">
-					<h2>formidable c'est : </h2>
+					<h2>We are free c'est : </h2>
 				</div>
 			</div>
 		</div>
