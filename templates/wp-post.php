@@ -23,7 +23,7 @@
 	</div>
 	<div class="col-md-9 ps-lg-5">
 		<h5 class="mt-1 post__title"><?php the_title(); ?></h5>
-		<p><?php echo excerpt(30); ?></p>
+		<p><?php echo excerpt(50); ?></p>
 		<a href="<?php the_permalink() ;?>" target="_blank" class="link">lire plus</a>
 	</div>
 </div>
