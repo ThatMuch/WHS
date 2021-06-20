@@ -475,7 +475,27 @@
                     "name": "referent",
                     "label": "Référent",
                     "display": "block",
-                    "sub_fields": [],
+                    "sub_fields": [
+                        {
+                            "key": "field_60cd2218ea625",
+                            "label": "toto",
+                            "name": "toto",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        }
+                    ],
                     "min": "",
                     "max": "",
                     "acfe_flexible_render_template": false,
@@ -653,5 +673,5 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1624055703
+    "modified": 1624056361
 }
