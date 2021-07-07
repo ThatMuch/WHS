@@ -15,11 +15,13 @@
 <?php get_header(); ?>
 <main id="blog" class="blog section__area bg__white--four line__white--five">
   <section class="container">
+  <div class="mb-5">
   <?php  the_content() ?>
+  </div>
       <div class=" load-more-target">
           <?php
           $args = array(
-            'post_type' => 'post',
+            'post_type' => 'podcast-post',
 
           );
           $wp_query = new WP_Query( $args );
@@ -27,7 +29,7 @@
           if ( $wp_query->have_posts() ) {
               while ( $wp_query->have_posts() ) {
                 $wp_query->the_post();
-                    get_template_part('templates/wp', 'post');
+                    get_template_part('templates/wp', 'post-podcast');
               }
             }
           ?>
