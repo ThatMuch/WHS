@@ -54,6 +54,7 @@
     .post-thumbnail {
         width: 100%;
         height: 480px;
+        margin-bottom: 1rem;
 
         img {
             object-fit: cover;
@@ -63,7 +64,6 @@
     }
 
     &-links {
-        margin-top: 1rem;
         justify-content: space-around;
     }
 
