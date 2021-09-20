@@ -3,7 +3,9 @@
 		<div class="row">
 			<div class="col-md-12">
 				<div class="section__title">
-					<h2>We are free c'est : </h2>
+					<?php if ( get_sub_field('section_title') ) : ?>
+						<h2><?php echo get_sub_field('section_title'); ?></h2>
+					<?php endif; ?>
 				</div>
 			</div>
 		</div>
