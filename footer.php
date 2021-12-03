@@ -72,14 +72,14 @@
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js" integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG" crossorigin="anonymous"></script>
 
 <script>
-var logo = document.getElementById('logo_brand');
-console.log(logo);
-logo.addEventListener('mouseover',() => {
-    logo.setAttribute('src','<?php echo get_stylesheet_directory_uri().'/assets/images/Gif_Logo_WHS.gif'; ?>');
-})
-logo.addEventListener('mouseleave',() => {
-    logo.setAttribute('src','<?php echo $image[0] ;?>');
-})
+// var logo = document.getElementById('logo_brand');
+// console.log(logo);
+// logo.addEventListener('mouseover',() => {
+//     logo.setAttribute('src','<?php // echo get_stylesheet_directory_uri().'/assets/images/Gif_Logo_WHS.gif'; ?>');
+// })
+// logo.addEventListener('mouseleave',() => {
+//     logo.setAttribute('src','<?php // echo $image[0] ;?>');
+// })
 
 
 var ua = navigator.userAgent.toLowerCase();
