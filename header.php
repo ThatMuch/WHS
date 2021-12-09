@@ -73,7 +73,14 @@
 							'fallback_cb'    => 'Bootstrap_NavWalker::fallback', // For menu fallback
 						));
 						?>
-						<a href="<?php echo  site_url(); ?>/contact" class="btn-one wow-modal-id-1"><span>Nous contacter</span></a>
+						<?php if ( have_rows( 'cta_header', 'option' ) ) : ?>
+						<?php while ( have_rows( 'cta_header', 'option' ) ) : the_row(); ?>
+							<?php $link = get_sub_field( 'link' ); ?>
+							<?php if ( $link ) : ?>
+								<a href="<?php echo esc_url( $link['url'] ); ?>" target="<?php echo esc_attr( $link['target'] ); ?>" class="btn-one wow-modal-id-1"><span><?php echo esc_html( $link['title'] ); ?></span></a>
+							<?php endif; ?>
+						<?php endwhile; ?>
+					<?php endif; ?>
 					</div>
 					    <button class="navbar-toggler menu-collapse" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
                             <span></span>
