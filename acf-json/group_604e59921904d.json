@@ -15,7 +15,7 @@
                 "class": "",
                 "id": ""
             },
-            "display_format": "F j H:i",
+            "display_format": "F j H:i Y",
             "return_format": "Y-m-d H:i:s",
             "first_day": 1
         },

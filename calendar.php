@@ -62,7 +62,7 @@ $categories = get_terms($taxonomy);
 													$the_query->the_post();
 													$full_date = date_create_from_format('Y-m-d H:i:s', get_field('date'));
 													$date = explode(' ', date_i18n('F j H:i', $full_date->getTimestamp()));
-
+													printf(get_field('date'));
 													array_push($formatted_posts, array(
 														'date'=> $full_date,
 														'month' => $date[0],
@@ -166,7 +166,9 @@ $categories = get_terms($taxonomy);
 						<?php if( get_sub_field('content') ) : ?>
 							<div class="f-22"><?php echo get_sub_field('content'); ?></div>
 						<?php endif; ?>
+						<?php if( get_sub_field('link') ) : ?>
                         <a href="<?php the_sub_field( 'link' ); ?>" target="_blank" class="btn btn-yellow mt-40"><span>réserver un créneau avec le fondateur</span></a>
+						<?php endif; ?>
                     </div>
                 </div>
             </div>
