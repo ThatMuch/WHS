@@ -12,7 +12,7 @@
  *              - `gulp watch` (to watch for changes and compile if anything is being modified)
  *              - add vendor-requirements to gulp-vendors.json, they will be compiled/bundled by `gulp` (restart `gulp watch`)
  *
- * Author: mars
+ * Author: whs
  *
  * Version: 2.3.1
  *
@@ -26,32 +26,32 @@ var browsersync_proxy = "http://localhost:10038";
 
 // default asset paths
 var assets = {
-	css: ['assets/styles/style.scss'],
-	css_watch: ['assets/styles/**/*.scss'],
-	admin_css: ['assets/AdminStyles/style.scss'],
-	admin_css_watch: ['assets/AdminStyles/**/*.scss'],
-	javascript: ['assets/scripts/*.js'],
-	images: ['assets/images/*.*'],
-	fonts: ['assets/fonts/*.*']
+    css: ['assets/styles/style.scss'],
+    css_watch: ['assets/styles/**/*.scss'],
+    admin_css: ['assets/AdminStyles/style.scss'],
+    admin_css_watch: ['assets/AdminStyles/**/*.scss'],
+    javascript: ['assets/scripts/*.js'],
+    images: ['assets/images/*.*'],
+    fonts: ['assets/fonts/*.*']
 }
 
 var build_files = [
-	'**',
-	'!node_modules',
-	'!node_modules/**',
-	'!bower_components',
-	'!bower_components/**',
-	'!dist',
-	'!dist/**',
-	'!sass',
-	'!sass/**',
-	'!.git',
-	'!.git/**',
-	'!package.json',
-	'!.gitignore',
-	'!gulpfile.js',
-	'!.editorconfig',
-	'!.jshintrc'
+    '**',
+    '!node_modules',
+    '!node_modules/**',
+    '!bower_components',
+    '!bower_components/**',
+    '!dist',
+    '!dist/**',
+    '!sass',
+    '!sass/**',
+    '!.git',
+    '!.git/**',
+    '!package.json',
+    '!.gitignore',
+    '!gulpfile.js',
+    '!.editorconfig',
+    '!.jshintrc'
 ];
 
 // vendors are loaded from gulp-vendors.json
@@ -67,7 +67,7 @@ var rename = require("gulp-rename");
 var order = require("gulp-order");
 var browserSync = require('browser-sync').create();
 // css
-var sass = require('gulp-sass');
+var sass = require('gulp-sass')(require('sass'));
 var cleanCSS = require('gulp-clean-css');
 var autoprefixer = require('gulp-autoprefixer');
 // cache busting
@@ -102,16 +102,16 @@ gulp.task('clean:javascript',function () { return del(['dist/*.js']) });
 /––––––––––––––––––––––––*/
 // initialize Browser Sync
 gulp.task('browsersync',function () {
-	browserSync.init({
-		proxy: browsersync_proxy,
-		notify: false,
-		open: false,
-		snippetOptions: {
-			whitelist: ['/wp-admin/admin-ajax.php'],
-			blacklist: ['/wp-admin/**']
-		},
-		// reloadDelay: 800
-	});
+    browserSync.init({
+        proxy: browsersync_proxy,
+        notify: false,
+        open: false,
+        snippetOptions: {
+            whitelist: ['/wp-admin/admin-ajax.php'],
+            blacklist: ['/wp-admin/**']
+        },
+        // reloadDelay: 800
+    });
 });
 
 
@@ -121,16 +121,16 @@ gulp.task('browsersync',function () {
 // actions: compile, minify, prefix, rename
 // to:      ./style.min.css
 gulp.task('css',gulp.series('clean:css',function () {
-	return gulp
-		.src(assets['css'].concat(vendors['css']))
-		.pipe(plumber({ errorHandler: notify.onError("<%= error.message %>") }))
-		.pipe(concat('style.min.css'))
-		.pipe(sass())
-		.pipe(autoprefixer('last 2 version',{ cascade: false }))
-		.pipe(cleanCSS())
-		.pipe(rename('./style.min.css'))
-		.pipe(gulp.dest('./'))
-		.pipe(browserSync.stream());
+    return gulp
+        .src(assets['css'].concat(vendors['css']))
+        .pipe(plumber({ errorHandler: notify.onError("<%= error.message %>") }))
+        .pipe(concat('style.min.css'))
+        .pipe(sass())
+        .pipe(autoprefixer('last 2 version',{ cascade: false }))
+        .pipe(cleanCSS())
+        .pipe(rename('./style.min.css'))
+        .pipe(gulp.dest('./'))
+        .pipe(browserSync.stream());
 }));
 /* ADMIN CSS
 /––––––––––––––––––––––––*/
@@ -138,16 +138,16 @@ gulp.task('css',gulp.series('clean:css',function () {
 // actions: compile, minify, prefix, rename
 // to:      ./style.min.css
 gulp.task('admin_css',gulp.series('clean:admin_css',function () {
-	return gulp
-		.src(assets['admin_css'])
-		.pipe(plumber({ errorHandler: notify.onError("<%= error.message %>") }))
-		.pipe(concat('admin_style.min.css'))
-		.pipe(sass())
-		.pipe(autoprefixer('last 2 version',{ cascade: false }))
-		.pipe(cleanCSS())
-		.pipe(rename('./admin_style.min.css'))
-		.pipe(gulp.dest('./'))
-		.pipe(browserSync.stream());
+    return gulp
+        .src(assets['admin_css'])
+        .pipe(plumber({ errorHandler: notify.onError("<%= error.message %>") }))
+        .pipe(concat('admin_style.min.css'))
+        .pipe(sass())
+        .pipe(autoprefixer('last 2 version',{ cascade: false }))
+        .pipe(cleanCSS())
+        .pipe(rename('./admin_style.min.css'))
+        .pipe(gulp.dest('./'))
+        .pipe(browserSync.stream());
 }));
 
 
@@ -157,13 +157,13 @@ gulp.task('admin_css',gulp.series('clean:admin_css',function () {
 // actions: create busted version of file
 // to:      dist/style-[hash].min.css
 gulp.task('cachebust',gulp.series('clean:cachebust','css',function () {
-	return gulp
-		.src('./style.min.css')
-		.pipe(rev())
-		.pipe(gulp.dest('./'))
-		.pipe(rev.manifest({ merge: true }))
-		.pipe(gulp.dest('./'))
-		.pipe(browserSync.reload({ stream: true }));
+    return gulp
+        .src('./style.min.css')
+        .pipe(rev())
+        .pipe(gulp.dest('./'))
+        .pipe(rev.manifest({ merge: true }))
+        .pipe(gulp.dest('./'))
+        .pipe(browserSync.reload({ stream: true }));
 }));
 
 
@@ -174,18 +174,18 @@ gulp.task('cachebust',gulp.series('clean:cachebust','css',function () {
 // to:      ./script.min.css
 // note:    modernizr.js is concatinated first in .pipe(order)
 gulp.task('javascript',gulp.series('clean:javascript',function () {
-	return gulp
-		.src(assets['javascript'].concat(vendors['javascript']))
-		.pipe(order([
-			'assets/scripts/modernizr.js',
-			'assets/scripts/*.js'
-		],{ base: './' }))
-		.pipe(plumber({ errorHandler: notify.onError("<%= error.message %>") }))
-		.pipe(concat('script.min.js'))
-		.pipe(uglify())
-		.pipe(rename('./script.min.js'))
-		.pipe(gulp.dest('./'))
-		.pipe(browserSync.stream());
+    return gulp
+        .src(assets['javascript'].concat(vendors['javascript']))
+        .pipe(order([
+            'assets/scripts/modernizr.js',
+            'assets/scripts/*.js'
+        ],{ base: './' }))
+        .pipe(plumber({ errorHandler: notify.onError("<%= error.message %>") }))
+        .pipe(concat('script.min.js'))
+        .pipe(uglify())
+        .pipe(rename('./script.min.js'))
+        .pipe(gulp.dest('./'))
+        .pipe(browserSync.stream());
 }));
 
 /* LANGUAGES
@@ -194,17 +194,17 @@ gulp.task('javascript',gulp.series('clean:javascript',function () {
 // actions: Generates pot files for WordPress plugins and themes.
 // to:      ./languages
 gulp.task('makepot',function () {
-	return gulp
-		.src(['**/*.php'])
-		.pipe(wpPot({
-			domain: 'mars',
-			destFile: 'mars.pot',
-			package: 'mars',
-			bugReport: 'https://example.com/bugreport/',
-			team: 'mars <>'
-		}))
-		.pipe(gulp.dest('languages/mars.pot'))
-		.pipe(browserSync.reload({ stream: true }));
+    return gulp
+        .src(['**/*.php'])
+        .pipe(wpPot({
+            domain: 'whs',
+            destFile: 'whs.pot',
+            package: 'whs',
+            bugReport: 'https://example.com/bugreport/',
+            team: 'whs <>'
+        }))
+        .pipe(gulp.dest('languages/whs.pot'))
+        .pipe(browserSync.reload({ stream: true }));
 });
 
 
@@ -213,32 +213,32 @@ gulp.task('makepot',function () {
 // watch for modifications in
 // styles, scripts, images, php files, html files
 gulp.task('watch',gulp.parallel('browsersync',function () {
-	watch(assets['css_watch'],gulp.series('css','cachebust'));
-	watch(assets['admin_css_watch'],gulp.series('admin_css'));
-	watch(assets['javascript'], gulp.series('javascript'));
-	watch('**/*.php',browserSync.reload);
-	watch('*.html',browserSync.reload);
+    watch(assets['css_watch'],gulp.series('css','cachebust'));
+    watch(assets['admin_css_watch'],gulp.series('admin_css'));
+    watch(assets['javascript'],gulp.series('javascript'));
+    watch('**/*.php',browserSync.reload);
+    watch('*.html',browserSync.reload);
 }));
 
 gulp.task('build-clean',function () {
-	return del(['dist/**/*']);
+    return del(['dist/**/*']);
 });
 
 gulp.task('build-copy',function () {
-	return gulp
-		.src(build_files)
-		.pipe(gulp.dest('dist/mars'));
+    return gulp
+        .src(build_files)
+        .pipe(gulp.dest('dist/whs'));
 });
 
 gulp.task('build-zip',function () {
-	return gulp
-		.src('dist/**/*')
-		.pipe(zip('mars.zip'))
-		.pipe(gulp.dest('dist'));
+    return gulp
+        .src('dist/**/*')
+        .pipe(zip('whs.zip'))
+        .pipe(gulp.dest('dist'));
 });
 
 gulp.task('build-delete',function () {
-	return del(['dist/**/*','!dist/mars.zip']);
+    return del(['dist/**/*','!dist/whs.zip']);
 });
 
 
@@ -248,5 +248,5 @@ gulp.task('build-delete',function () {
 gulp.task('default',gulp.series('css','cachebust'));
 
 gulp.task('build',
-	gulp.series('default','build-clean','build-copy','build-zip','build-delete')
+    gulp.series('default','build-clean','build-copy','build-zip','build-delete')
 );

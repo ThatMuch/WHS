@@ -14,9 +14,10 @@
 			<?php $link = get_sub_field( 'link' ); ?>
 			<?php if ( $link ) : ?>
 				<div class="programee-button">
-					<a data-bs-toggle="modal" data-bs-target="#ModalEtudiant" class="btn-one yellow center"><span>le programme c'est par ici !</span></a>
+					<a href="<?php echo esc_url( $link['url'] ); ?>" target="<?php echo esc_attr( $link['target'] ); ?>" class="btn-one yellow center"><span><?php echo esc_html( $link['title'] ); ?></span></a>
 				</div>
 			<?php endif; ?>
+
 
 		</div>
 			</div>

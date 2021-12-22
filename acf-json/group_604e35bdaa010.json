@@ -117,7 +117,7 @@
                             "key": "field_604e37091f442",
                             "label": "Lien",
                             "name": "link",
-                            "type": "file",
+                            "type": "link",
                             "instructions": "Fichier à télécharger",
                             "required": 0,
                             "conditional_logic": 0,
@@ -126,11 +126,7 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "return_format": "array",
-                            "library": "all",
-                            "min_size": "",
-                            "max_size": "",
-                            "mime_types": ""
+                            "return_format": "array"
                         }
                     ],
                     "min": "",
@@ -259,24 +255,24 @@
                                     "maxlength": ""
                                 },
                                 {
-                            "key": "field_61485d0957873",
-                            "label": "Titre de section",
-                            "name": "section_title",
-                            "type": "text",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": "",
-                            "maxlength": ""
-                        },
+                                    "key": "field_61485d0957873",
+                                    "label": "Titre de section",
+                                    "name": "section_title",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "maxlength": ""
+                                },
                                 {
                                     "key": "field_604e39a6947ff",
                                     "label": "Texte",
@@ -1333,7 +1329,8 @@
             "acfe_flexible_modal_edit": {
                 "acfe_flexible_modal_edit_enabled": 0,
                 "acfe_flexible_modal_edit_size": "large"
-            }
+            },
+            "acfe_flexible_async": []
         }
     ],
     "location": [
@@ -1365,6 +1362,7 @@
     ],
     "active": true,
     "description": "",
+    "show_in_rest": 0,
     "acfe_display_title": "",
     "acfe_autosync": [
         "json"
@@ -1372,5 +1370,5 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1623229429
+    "modified": 1640178070
 }

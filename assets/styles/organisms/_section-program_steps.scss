@@ -204,18 +204,6 @@
     margin: 30px auto 0;
     position: relative;
 
-    &::before {
-        content: "";
-        background: url(assets/images/download.svg) no-repeat scroll 0 0;
-        position: absolute;
-        width: 20px;
-        height: 20px;
-        left: 50%;
-        margin-left: -10px;
-        z-index: 2;
-        top: -10px;
-    }
-
     .btn-one {
         font-family: $font_3;
         font-size: 12px;
